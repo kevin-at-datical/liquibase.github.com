@@ -4,12 +4,16 @@ title: Docs | rollbackOneChangeSet Command
 ---
 
 # Liquibase Commands: `rollbackOneChangeSet`
-The `rollbackOneChangeSet` command reverts (rolls back) one non-sequential *changeSet* made during a previous commit to your database. It is only available for Liquibase Pro users.
+The `rollbackOneChangeSet` command reverts (rolls back) one non-sequential *changeSet* made during a previous change to your database. It is only available for Liquibase Pro users.
 
 ## Uses
-The `rollbackOneChangeSet` command is typically used when you want to undo a change made to your database and revert it to a previous state without affecting the other changes made in the same commit. 
+The `rollbackOneChangeSet` command is typically used when you want to undo a change made to your database and revert it to a previous state without affecting the other changes made to your database. 
 
-While the `rollback` command reverts all changes made in a previous commit, The `rollbackOneChangeSet` command allows you to target (cherry-pick) a specific *changeSet* without impacting the rest of changes made in the same commit.
+While the `rollback` command reverts all *changeSets* most recently deployed to your database, the `rollbackOneChangeSet` command allows you to target (cherry-pick) a specific *changeSet* without impacting the others.
+
+<div align="center"><img src="/images/documentation/rollback_pro-targeted.jpg" width="450px" alt="Image example of targeted rollback" /></div>
+<br />
+The image above shows *changeSets* A through I, with *changeSet* I being the most recently deployed. As you can see, the `rollbackOneChangeSet` command allows you to target *changeSet* B and revert it to its previous state without impacting the others.
 
 ## The Impacts of `rollbackOneChangeSet`
 Like any cherry-picking tool, using the `rollbackOneChangeSet` command comes with risks which may be unintended. 
@@ -18,10 +22,10 @@ Like any cherry-picking tool, using the `rollbackOneChangeSet` command comes wit
 
 The `rollbackOnechangeSetSql` command **(Coming Soon)** allows you to inspect the rollback SQL and search for any potential mistakes before you executing `rollbackOneChangeset`.
 
-`rollbackOneChangeSet` also requires the use of a `--force` flag. To indicate that you intend to use this command.
+Because the use of `rollbackOneChangeSet` comes with a risk of unintended consequences, it also requires a `--force` flag to indicate that you intend to run the command.
 
 ## Running the `rollbackOneChangeSet` Command
-Before running the `rollbackOneChangeSet` command, gather the following information from your DATABASECHANGELOGTABLE:
+Before running the `rollbackOneChangeSet` command, gather the following information from your *changeLog* or DATABASECHANGELOGTABLE:
 - The Author ID of the *changeSet you want to revert*
 - The *changeSet* ID of the *changeSet you want to revert*
 - The File Name (*changeSet* path) of the *changeSet you want to revert*
