@@ -9,7 +9,7 @@ The `rollbackOneChangeSet` command reverts (rolls back) one non-sequential *chan
 ## Uses
 The `rollbackOneChangeSet` command is typically used when you want to undo a change made to your database and revert it to a previous state without affecting any other changes made to your database. 
 
-While the `rollback` command reverts all *changeSets* deployed to the most recently applied tag, the `rollbackOneChangeSet` command allows you to target (cherry-pick) a specific *changeSet* without impacting *changeSets* that came before or after it.
+While the `rollback` command reverts all *changeSets* deployed to the most recently applied tag based on mode, the `rollbackOneChangeSet` command allows you to target (cherry-pick) a specific *changeSet* without impacting *changeSets* that came before or after it.
 
 <div align="center"><img src="/images/documentation/rollback_pro-targeted.jpg" width="450px" alt="Image example of targeted rollback" /></div>
 <br />

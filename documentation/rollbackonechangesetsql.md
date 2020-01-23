@@ -3,23 +3,23 @@ layout: default
 title: Docs | rollbackOneChangeSetSql Command 
 ---
 
-# Liquibase Commands: `rollbackOneChangeSet`
+# Liquibase Commands: `rollbackOneChangeSetSql`
 The `rollbackOneChangeSetSql` command is a helper command that allows you to inspect the SQL Liquibase will run to revert the *changeSet* specified in the [`rollbackOneChangeSet`](/documentation/rollbackonechangeset.html) command. It is only available for Liquibase Pro users.
 
 ## Uses
 The `rollbackOneChangeSetSql` command is typically used when you want inspect the raw SQL that Liquibase uses to revert your *changeSet* when you run `rollbackOneChangeSet` command, so that you don't unintentionally make a mistake.
 
-## Running the `rollbackOneChangeSet` Command
-Before running the `rollbackOneChangeSet` command, gather the following information from your *changeLog*:
+## Running the `rollbackOneChangeSetSql` Command
+Before running the `rollbackOneChangeSetS` command, gather the following information from your *changeLog*:
 - The Author ID of the *changeSet* you want to revert
 - The *changeSet* ID of the *changeSet* you want to revert
 - The File Name (*changeSet* path) of the *changeSet* you want to revert
 
-Then run the `rollbackOneChangeSet` command, with your information:
+Then run the `rollbackOneChangeSetSql` command, with your information:
 
 {% highlight text %}
 
-liquibase --changeLogFile=postgres_lbpro_master_changelog.xml rollbackOneChangeSet --changeSetAuthor="Liquibase Pro User" --changeSetId="1::createProc-proschema" --changeSetPath=postgres_lbpro_master_changelog.xml --force
+Waiting on Syntax
 
 {% endhighlight %}
 
