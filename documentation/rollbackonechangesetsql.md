@@ -10,16 +10,16 @@ The `rollbackOneChangeSetSql` command is a helper command that allows you to ins
 The `rollbackOneChangeSetSql` command is typically used when you want inspect the raw SQL that Liquibase uses to revert your *changeSet* when you run `rollbackOneChangeSet` command, so that you don't unintentionally make a mistake.
 
 ## Running the `rollbackOneChangeSetSql` Command
-Before running the `rollbackOneChangeSetS` command, gather the following information from your *changeLog*:
+Before running the `rollbackOneChangeSetSql` command, gather the following information from your *changeLog*:
 - The Author ID of the *changeSet* you want to revert
 - The *changeSet* ID of the *changeSet* you want to revert
-- The File Name (*changeSet* path) of the *changeSet* you want to revert
+- The file name (*changeSet* path) of the *changeSet* you want to revert
 
 Then run the `rollbackOneChangeSetSql` command, with your information:
 
 {% highlight text %}
 
-Waiting on Syntax
+Waiting on Syntax Info
 
 {% endhighlight %}
 
@@ -51,6 +51,6 @@ When successful, the `rollbackOneChangeSetSql` command produces the following ou
 
 {% highlight text %}
 
-Waiting for OUTPUT INFO to be given
+Waiting on Output Info
 
 {% endhighlight %}
