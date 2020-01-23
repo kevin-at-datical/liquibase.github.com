@@ -25,8 +25,6 @@ Waiting on Syntax Info
 
 For more command specific help, type `liquibase rollbackonechangesetSQL -- help` into the command prompt.
 
-<br />
-
 ### `rollbackOneChangeSetSql` Global & Command Parameters
 
  Parameter | Definition | Requirement

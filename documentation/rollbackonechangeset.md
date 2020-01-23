@@ -40,8 +40,6 @@ liquibase --changeLogFile=postgres_lbpro_master_changelog.xml rollbackOneChangeS
 
 For more command specific help, type `liquibase rollbackonechangeset -- help` into the command prompt.
 
-<br />
-
 ### `rollbackOneChangeSet` Global & Command Parameters
 
  Parameter | Definition | Requirement
