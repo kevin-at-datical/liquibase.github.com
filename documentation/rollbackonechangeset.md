@@ -26,7 +26,7 @@ Also, the use of `rollbackOneChangeSet` comes with **risk of unintended conseque
 
 ## Running the `rollbackOneChangeSet` Command
 Before running the `rollbackOneChangeSet` command, gather the following information from your *changeLog*:
-- The Author ID of the *changeSet* you want to revert
+- The Author of the *changeSet* you want to revert
 - The *changeSet* ID of the *changeSet* you want to revert
 - The file name (*changeSet* path) of the *changeSet* you want to revert
 
@@ -34,26 +34,31 @@ Then run the `rollbackOneChangeSet` command, with your information:
 
 {% highlight text %}
 
-liquibase --changeLogFile=postgres_lbpro_master_changelog.xml rollbackOneChangeSet --changeSetAuthor="Liquibase Pro User" --changeSetId="1::createProc-proschema" --changeSetPath=postgres_lbpro_master_changelog.xml --force
+liquibase --changeLogFile=changelog.xml rollbackOneChangeSet --changeSetAuthor="Liquibase Pro User" --changeSetId="1::createProc-proschema" --changeSetPath=changelog.xml --force
 
 {% endhighlight %}
 
-For more command specific help, type `liquibase rollbackonechangeset -- help` into the command prompt.
+For more command specific help, type `liquibase rollbackonechangeset --help` into the command prompt.
 
-### `rollbackOneChangeSet` Global & Command Parameters
+### `rollbackOneChangeSet` Global Parameters
 
  Parameter | Definition | Requirement
  --- | --- | --- 
- `--changeLogFile` | The root *changelog* | Required
- `--url` | The JDBC database connection URL | Required
- `--username` | The database username | Required
- `--password` | The database password | Required
- `--liquibaseProLicenseKey` | Your Liquibase Pro licence key | Required
- `--changesetId` |The changeset ID from the *changelog*. | Required
- `--changesetAuthor` | The name of the author for the changeset id | Required
- `--changesetPath` | The path to the *changelog* containing the *changeSet* you want to roll back | Required
- `--force` | A required tag which indicates you intend to use this feature. | Required
- `--rollbackScript=` | The path to the script to use to perform the rollback | Optional *
+ --changeLogFile | The root *changelog* | Required
+ --url | The JDBC database connection URL | Required
+ --username | The database username | Required
+ --password | The database password | Required
+ --liquibaseProLicenseKey | Your Liquibase Pro licence key | Required
+
+### `rollbackOneChangeSet` Command Parameters
+
+ Parameter | Definition | Requirement
+ --- | --- | --- 
+ --changesetId |The changeset ID from the *changelog*. | Required
+ --changesetAuthor | The name of the author for the changeset | Required
+ --changesetPath | The path to the *changelog* containing the *changeSet* you want to roll back | Required
+ --force | A required paramater which indicates you intend to use this feature. | Required
+ --rollbackScript | The path to the script to use to perform the rollback | Optional *
 
 > &#42; This option is only needed if the rollback is not already defined in the *changelog*, and if it is not a rollback that is automatically provided by Liquibase.
 
@@ -62,7 +67,7 @@ When successful, the `rollbackOneChangeSet` command produces the following outpu
 
 {% highlight text %}
 
-Rolling Back Changeset:third_changelog.xml::1::logicalFilePath::changeset::AuthorName (generated)
+Rolling Back Changeset: changelog.xml::1::createProc-proschema::Liquibase Pro User
 Liquibase: Rollback has been successful.
 
 {% endhighlight %}
