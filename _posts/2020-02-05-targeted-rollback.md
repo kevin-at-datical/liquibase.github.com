@@ -1,9 +1,9 @@
 ---
 layout: default
 subnav: subnav_blog.md
-title: Introducing Targeted Rollbacks
+title: Introducing Targeted Rollback
 ---
-# Introducing Targeted Rollbacks
+# Introducing Targeted Rollback
 
 In our most [recent Liquibase community survey](https://www.liquibase.org/2020/01/top-10-findings-liquibase-survey.html), we learned that many Liquibase users are interested in a feature that allows them to rollback a specific change. Well, we have good news.
 
