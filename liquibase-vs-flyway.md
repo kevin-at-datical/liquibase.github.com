@@ -19,6 +19,91 @@ extraJavascriptFiles:
     <div class="landing-page__main-content__text">
       <p><i>Understand the differences and similarities of these two database migration tools so you can decide which one will work best for your use case, team structure, and workflow.</i></p> 
       <p>Anyone who has ever developed software will tell you, you shouldn’t develop application code without version control. The same is true for database code. With the rise of Agile and DevOps methodologies that are needed to accomplish continuous integration and deployment, it’s more important than ever to apply CI/CD to databases. There are two leading open source tools for database version control: Liquibase and Flyway. Both have become popular options for versioning and organizing database changes, deploying changes when they need to be deployed, and tracking what’s been deployed.</p>
+      
+  <table>
+  <colgroup>
+    <col width="70%" />
+    <col width="15%" />
+    <col width="15%" />
+  </colgroup>
+  <thead>
+    <tr class="header">
+      <th></th>
+      <th>Flyway</th>
+      <th>Liquibase</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td markdown="span">Diff (Compare two databases)</td>
+      <td markdown="span">-</td>
+      <td markdown="span">check</td>
+    </tr>
+    <tr>
+      <td markdown="span">Rollback last change</td>
+      <td markdown="span">$</td>
+      <td markdown="span">check</td>
+    </tr>
+     <tr>
+      <td markdown="span">Targeted rollback for any single change</td>
+      <td markdown="span">-</td>
+      <td markdown="span">$</td>
+    </tr>
+     <tr>
+      <td markdown="span">Targeted rollback for a set of changes</td>
+      <td markdown="span">-</td>
+      <td markdown="span">$</td>
+    </tr>
+    <tr>
+      <td markdown="span">Defining changes</td>
+      <td markdown="span">SQL</td>
+      <td markdown="span">SQL, XML, YAML, JSON</td>
+    </tr>
+    <tr>
+      <td markdown="span">Java-based migrations</td>
+      <td markdown="span">check</td>
+      <td markdown="span">not yet</td>
+    </tr>
+     <tr>
+      <td markdown="span">Repeatable migrations</td>
+      <td markdown="span">check</td>
+      <td markdown="span">check</td>
+    </tr>
+     <tr>
+      <td markdown="span">Dry runs</td>
+      <td markdown="span">$</td>
+      <td markdown="span">check*</td>
+    </tr>
+    <tr>
+      <td markdown="span">Preconditions</td>
+      <td markdown="span">-</td>
+      <td markdown="span">check</td>
+    </tr>
+    <tr>
+      <td markdown="span">Selective deployments</td>
+      <td markdown="span">Many files</td>
+      <td markdown="span">One file</td>
+    </tr>
+     <tr>
+      <td markdown="span">Manage the order of changes</td>
+      <td markdown="span">Harder</td>
+      <td markdown="span">Easy</td>
+    </tr>
+    <tr>
+      <td markdown="span">Ability to work with stored logic</td>
+      <td markdown="span">-</td>
+      <td markdown="span">check</td>
+    </tr>
+    <tr>
+      <td markdown="span">Changelog `<includes>` for easy team collaboration</td>
+      <td markdown="span">-</td>
+      <td markdown="span">check</td>
+    </tr>
+  </tbody>
+</table>
+* <i>Includes most commands.</i>
+<br>
+<p>
       <p><b>Here’s what Flyway and Liquibase have in common:</b>
       <ul>
         <li>Use a migrations-based approach to database change</li>
