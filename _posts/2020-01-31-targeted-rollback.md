@@ -28,11 +28,11 @@ With Targeted Rollback, you can select the changeset you’d like to remove with
 
 <img src="/blog/images/rollback_targeted_explosion.jpg">
 
-**Rollback** is the only official technique for altering your DATABASECHANGELOG table (the master table of changeset deployments which tracks which changesets have already been applied). If you need to make changes to this table, **Targeted Rollback** is an official and precise way to do it (and way better than manipulating that table by hand).
+**Rollback** is the only official technique for altering your `DATABASECHANGELOG` table (the master table of changeset deployments which tracks which changesets have already been applied). If you need to make changes to this table, **Targeted Rollback** is an official and precise way to do it (and way better than manipulating that table by hand).
 
 ## Why Use Targeted Rollback?
 
-Here’s an example of when a **Targeted Rollback** is extremely useful. It’s common for many developers to work on a lot of different tables and parts of a database schema that relate to different elements or areas of the business. If you need to rollback one Localization table schema change but have since deployed dozens of additional changesets to the Products and Users tables, it’s quite handy to target the bad change in the Localization table and just roll it back. **Targeted Rollback** leaves the unrelated changes to the Products and Users tables in place and removes the changeset record from the DATABASECHANGELOG table, too.
+Here’s an example of when a **Targeted Rollback** is extremely useful. It’s common for many developers to work on a lot of different tables and parts of a database schema that relate to different elements or areas of the business. If you need to rollback one Localization table schema change but have since deployed dozens of additional changesets to the Products and Users tables, it’s quite handy to target the bad change in the Localization table and just roll it back. **Targeted Rollback** leaves the unrelated changes to the Products and Users tables in place and removes the changeset record from the `DATABASECHANGELOG` table, too.
 
 ## RollbackOneChangeset Workflow
 
@@ -41,23 +41,23 @@ Here’s a general workflow a Liquibase Pro user would take to target a change t
 2. Dave inspects the changelog to collect the id and author params from the specific changeset, as well as the file path of the changelog.
 3. Dave considers the impact of the rollback, maybe chats with a fellow dev or two, or a DBA if there is one, and decides he understands and is comfortable with impacts of the rollback.
 4. Dave enters the following in the command line:
-liquibase <global parameters> rollbackOneChangesetSQL <command parameters>
+``` bashliquibase <global parameters> rollbackOneChangesetSQL <command parameters>``` 
 5. Dave inspects the rollback SQL presented in STDOUT and acknowledges this is where life has led, and that's fine.
 6. Dave enters the following in the command line:
-liquibase <global parameters> rollbackOneChangeset <command parameters> --force
+``` bashliquibase <global parameters> rollbackOneChangeset <command parameters> --force``` 
 7. Dave inspects the STDOUT info and then performs whatever dev/test/UAT tasks he has planned to prove to himself and his team that Targeted Rollback was good and useful and well worth paying for.
 8. Next, Dave has to account for the newly rolled back changes in downstream environments.
 9. Dave needs to decide whether or not he wants to remove the changeset from the changelog file. 
 
 ## Be careful out there!
 
-Much like git cherry-pick or git rebase, targeted rollback is powerful. Remember that with great rollback power comes great database responsibility. **Targeted Rollback** is a powerfully easy way to really mess up objects in your database, so it is important to look for potential unintended consequences, which is why it is a great idea to always execute rollbackOneChangesetSQL before rollbackOneChangeset. 
+Much like git cherry-pick or git rebase, targeted rollback is powerful. Remember that with great rollback power comes great database responsibility. **Targeted Rollback** is a powerfully easy way to really mess up objects in your database, so it is important to look for potential unintended consequences, which is why it is a great idea to always execute `rollbackOneChangesetSQL` before `rollbackOneChangeset`. 
 
 ### Some guardrails
 Since targeted rollbacks, like all rollbacks, can be detrimental when misused, we added some guardrails. 
-The --force flag is required to execute the rollbackOneChangeset command, serving as a clear indicator that you wish to proceed. Think of this as a safety on a firearm. Just pulling the trigger isn't enough, you have to disable the safety and then pull the trigger.
+The `--force` flag is required to execute the `rollbackOneChangeset` command, serving as a clear indicator that you wish to proceed. Think of this as a safety on a firearm. Just pulling the trigger isn't enough, you have to disable the safety and then pull the trigger.
 
-The helper command, rollbackonechangesetSQL allows you to inspect the rollback SQL before you execute rollbackOneChangeset. We’ve documented this in the suggested workflow so that it’s easier to remember to use this helper command.
+The helper command, `rollbackonechangesetSQL` allows you to inspect the rollback SQL before you execute rollbackOneChangeset. We’ve documented this in the suggested workflow so that it’s easier to remember to use this helper command.
 
 ## FAQs
 
@@ -70,4 +70,4 @@ No. We are not yet offering the capability to automatically delete or comment ou
 
 ## Try Targeted Rollbacks Out for Yourself!
 
-Download the latest version of Liquibase 3.8.6 and sign up for a free license key. Simply sign up and you’ll have a Pro license key sent to you immediately. Once you’ve set up the key, check out our documentation for details on how the new targeted rollbacks work. Let us know if you run into any unexpected issues.
+[Download the latest version of Liquibase (3.8.6)](https://download.liquibase.org/download-community/) and [sign up for a free license key](https://download.liquibase.org/liquibase-pro-trial-request-form/). Once you sign up, you’ll get a Pro license key immediately. Once you’ve set up the key, [check out our documentation](/documentation/rollbackonechangeset.html) for details on how the new targeted rollbacks work. Let us know if you run into any unexpected issues.
