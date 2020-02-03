@@ -20,7 +20,7 @@ For more information about provisioning the Oracle Autonomous Database Processin
 
 ### Downloading Wallet
 To Download and install Wallet: 
-1. Login to your Oracle Cloud account > Select **Autonomous Transaction Processing** > click on **autonomous database link** > **DB Connection** > **Download Wallet**.
+1. Login to your Oracle Cloud account > Select **Autonomous Transaction Processing**/**Data Warehouse** > click on **autonomous database link** > **DB Connection** > **Download Wallet**.
 2. Enter a password for the Wallet and download the `.zip` file.
 3. Record the Wallet password somewhere safe.  For this example, let’s call this password `my_wallet_password`.
 4. Unzip the Wallet and place it somewhere safe in your file system.
@@ -132,7 +132,7 @@ CREATE TABLE "department"
 
 2. Open the command prompt.  Navigate to the `LiquibaseATP-ADW` directory.  
 3. Run the following command: `liquibase update`.
-4. Sign in to your Oracle Cloud account and navigate to Autonomous Database.
+4. Sign in to your Oracle Cloud account and navigate to **Autonomous Database** or **Data Warehouse**.
 5. Click on **tools tab** > **Open SQL Developer Web** and enter your Database username and password.
 
 You should see a new **department** table added to the database.  
@@ -161,7 +161,7 @@ For this example:
 -	**DATABASECHANGELOGLOCK** – This table is used internally by Liquibase to manage access to the *changelog* table during deployment.
 <br/><br/>
 
-## **Oracle ATP related links:**
+## **Oracle ATP & ADW related links:**
 - [Java Connectivity with Autonomous Database](https://www.oracle.com/technetwork/database/application-development/jdbc/documentation/atp-5073445.html)
 - [Oracle Database JDBC drivers](https://www.oracle.com/database/technologies/appdev/jdbc-downloads.html)
 - [Oracle Cloud: Autonomous Transaction Processing (ATP) - Create Service](https://oracle-base.com/articles/vm/oracle-cloud-autonomous-transaction-processing-atp-create-service#create-atp-service)
