@@ -160,7 +160,7 @@ extraJavascriptFiles:
 
   </div>
     <div class="landing-page__main-content__cta">
-      {% include components/buttons/cta.html ctaText="Try Liquibase Pro Free for 14 Days" ctaHref="https://download.liquibase.org/liquibase-pro-trial-request-form/" %}
+      {% include components/buttons/cta.html ctaText="Try Liquibase Pro Free for 30 Days" ctaHref="https://download.liquibase.org/liquibase-pro-trial-request-form/" %}
     </div>
   </div>
   <div class="landing-page__cta-block span-6 push-2">
