@@ -10,5 +10,5 @@
 <li><a href="/informix.html"><span>Informix Tutorial</span></a></li>
 <li><a href="/sqlite.html"><span>SQLite Tutorial</span></a></li>
 <li><a href="/documentation/tutorials/h2.html"><span>H2 Database Tutorial</span></a></li>
-<li><a href="/documentation/tutorials/oracle_autonomous_transaction_processing_database.html"><span>Oracle ATP Tutorial</span></a></li>
+<li><a href="/documentation/tutorials/oracle_autonomous_transaction_processing_database.html"><span>Oracle ATP & ADW Tutorial</span></a></li>
 

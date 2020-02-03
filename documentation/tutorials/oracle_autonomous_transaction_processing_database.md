@@ -3,14 +3,14 @@ layout: default
 title: Oracle ATP Tutorial | Liquibase Docs
 subnav: subnav_tutorials.md
 ---
-# Oracle ATP Tutorial
-The purpose of this document is to guide you through the process of creating a new Liquibase project with an Oracle Autonomous Transaction Processing (ATP) database. 
+# Oracle ATP & ADW Tutorial
+The purpose of this document is to guide you through the process of creating a new Liquibase project with an Oracle Autonomous Transaction Processing (ATP) or Autonomous Data Warehouse (ADW) database. 
 
-In this tutorial, you will generate an example project and follow the instructions to apply and learn concepts associated with creating new Liquibase Projects with Oracle ATP.
+In this tutorial, you will generate an example project and follow the instructions to apply and learn concepts associated with creating new Liquibase Projects with Oracle ATP or ADW.
 
-> **Note:** This example assumes that you have created an Oracle Free tier ATP Database via the Oracle Cloud web console and that you have created an Access Control List during provision with your IP address.
+> **Note:** This example assumes that you have created an Oracle Free tier ATP or ADW Database via the Oracle Cloud web console and that you have created an Access Control List during provision with your IP address.
 
-For more information about Provision Oracle Autonomous Database Processing via the Oracle Cloud web console, please see Oracle ATP related links at the bottom of this page.
+For more information about provisioning the Oracle Autonomous Database Processing or Autonomous Datawarehouse via the Oracle Cloud web console, please see Oracle ATP and ADW related links at the bottom of this page.
 
 ## Prerequisites
 - If you have not installed the latest version of Liquibase, navigate to [https://download.liquibase.org/download](https://download.liquibase.org/download) to install the software application.
@@ -44,10 +44,10 @@ In the wallet folder open the `sqlnet.ora` and make sure that `SSL_SERVER_DN_MAT
 You are now ready to start the tutorial!
 
 ## Tutorial
-To create a Liquibase project with an Oracle ATP database, begin with the following steps:
-1. Create a new project folder and name it `LiquibaseATP`.
-2. Place the `ojdbc` jar driver file in the `LiquibaseATP` project directory.
-3. In your LiquibaseATP folder, create an empty text file.
+To create a Liquibase project with an Oracle ATP or ADW database, begin with the following steps:
+1. Create a new project folder and name it `LiquibaseATP-ADW`.
+2. Place the `ojdbc` jar driver file in the `LiquibaseATP-ADW` project directory.
+3. In your LiquibaseATP-ADW folder, create an empty text file.
 4. Rename the text file to `myChangeLog.xml`.
 >**Note:** *Changelog* files contain a sequence of *changeSets*, each of which make small changes to the structure of your database. Instead of creating an empty *changelog* file in step 3, you can also use an existing database to generate a *changelog*. For more information see the [Database Changelog File](/documentation/databasechangelog.html) topic.
 
@@ -71,7 +71,7 @@ To add this *changelog* template:
 <br/>
 
 ### Step Two: Create a `liquibase.properties` file
-- In your LiquibaseATP folder create a new text file.
+- In your LiquibaseATP-ADW folder create a new text file.
 - Rename the text file to `liquibase.properties`.
 - Edit the `liquibase.properties` file to add the following properties:
 
@@ -120,8 +120,7 @@ To add your *changeSets*:
 </databaseChangeLog>
 {% endhighlight %}
 
-> **Note:** This create table *changeSet* is XML format.  The corresponding
-> SQL statement should look like the following:
+> **Note:** This create table *changeSet* is XML format.  The corresponding SQL statement should look like the following:
 
 {% highlight sql %}
 CREATE TABLE "department"
@@ -131,9 +130,9 @@ CREATE TABLE "department"
   );
 {% endhighlight %}
 
-2. Open the command prompt.  Navigate to the LiquibaseATP directory.  
+2. Open the command prompt.  Navigate to the `LiquibaseATP-ADW` directory.  
 3. Run the following command: `liquibase update`.
-4. Sign in to your Oracle Cloud account and navigate to Autonomous Database
+4. Sign in to your Oracle Cloud account and navigate to Autonomous Database.
 5. Click on **tools tab** > **Open SQL Developer Web** and enter your Database username and password.
 
 You should see a new **department** table added to the database.  
