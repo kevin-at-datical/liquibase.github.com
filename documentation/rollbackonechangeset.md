@@ -26,7 +26,7 @@ It is a best practice to run the [`rollbackOneChangeSetSql`](/documentation/roll
 Also, the use of `rollbackOneChangeSet` comes with **risk of unintended consequences**, because of this, the command requires a `--force` flag to indicate that you intend to run the command.
 
 ## Running the `rollbackOneChangeSet` Command
-Before running the `rollbackOneChangeSet` command, gather the following information from your *changeLog*:
+Before running the `rollbackOneChangeSet` command, gather the following information from your DATABASECHANGELOG table:
 - The Author of the *changeSet* you want to revert
 - The *changeSet* ID of the *changeSet* you want to revert
 - The file name (*changeSet* path) of the *changeSet* you want to revert
