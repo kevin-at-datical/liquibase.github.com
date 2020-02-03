@@ -31,6 +31,8 @@ Before running the `rollbackOneChangeSet` command, gather the following informat
 - The *changeSet* ID of the *changeSet* you want to revert
 - The file name (*changeSet* path) of the *changeSet* you want to revert
 
+>**Note:** The `--rollbackScript` is only needed if the rollback is not already defined in the *changelog*, and if it is not a rollback that is automatically provided by Liquibase.
+
 Then run the `rollbackOneChangeSet` command, with your information:
 
 {% highlight text %}
