@@ -33,7 +33,7 @@ For more command specific help, type `liquibase rollbackonechangesetSQL --help` 
  --url | The JDBC database connection URL | Required
  --username | The database username | Required
  --password | The database password | Required
- --liquibaseProLicenseKey | Your Liquibase Pro licence key | Required
+ --liquibaseProLicenseKey | Your Liquibase Pro license key | Required
  --outputFile | The path to the file where the Rollback SQL will be written | Optional *
 
 > &#42; If not specified, Rollback SQL output goes to `STDOUT`.
@@ -42,8 +42,8 @@ For more command specific help, type `liquibase rollbackonechangesetSQL --help` 
 
  Parameter | Definition | Requirement
  --- | --- | ---
- --changesetId |The changeset ID from the *changelog*. | Required
- --changesetAuthor | The name of the author for the changeSet | Required
+ --changesetId |The *changeSet* ID from the *changelog*. | Required
+ --changesetAuthor | The name of the author for the *changeSet* | Required
  --changesetPath | The path to the *changelog* containing the *changeSet* you want to roll back | Required
  --rollbackScript | The path to the script to use to perform the rollback | Optional **
 

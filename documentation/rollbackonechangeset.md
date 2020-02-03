@@ -51,16 +51,16 @@ For more command specific help, type `liquibase rollbackonechangeset --help` int
  --url | The JDBC database connection URL | Required
  --username | The database username | Required
  --password | The database password | Required
- --liquibaseProLicenseKey | Your Liquibase Pro licence key | Required
+ --liquibaseProLicenseKey | Your Liquibase Pro license key | Required
 
 ### `rollbackOneChangeSet` Command Parameters
 
  Parameter | Definition | Requirement
  --- | --- | --- 
- --changesetId |The changeset ID from the *changelog*. | Required
- --changesetAuthor | The name of the author for the changeset | Required
+ --changesetId |The *changeSet* ID from the *changelog*. | Required
+ --changesetAuthor | The name of the author for the *changeSet* | Required
  --changesetPath | The path to the *changelog* containing the *changeSet* you want to roll back | Required
- --force | A required paramater which indicates you intend to use this feature. | Required
+ --force | A required parameter which indicates you intend to use this feature. | Required
  --rollbackScript | The path to the script to use to perform the rollback | Optional *
 
 > &#42; This option is only needed if the rollback is not already defined in the *changelog*, and if it is not a rollback that is automatically provided by Liquibase.
