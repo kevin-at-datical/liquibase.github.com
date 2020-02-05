@@ -51,10 +51,8 @@ If you run the command line migrator without any arguments, you will get a help 
 <tr><td>rollbackSQL &lt;tag&gt;</td><td>Writes SQL to roll back the database to the state it was in when the tag was applied to STDOUT.</td></tr>
 <tr><td>rollbackToDateSQL &lt;date/time&gt;</td><td>Writes SQL to roll back the database to the state it was in at the given date/time version to STDOUT.</td></tr>
 <tr><td>rollbackCountSQL &lt;value&gt;</td><td>Writes SQL to roll back the last &lt;value&gt; change sets to STDOUT.</td></tr>
-<!-- not until 3.8.6
 <tr><td><a href="/documentation/rollbackonechangeset.html">rollbackOneChangeSet</a></td><td>Rolls back a single changeset without needing to roll back other already applied changesets. <span style="color: #fd8c00">Liquibase Pro Feature</span></td></tr>
 <tr><td><a href="/documentation/rollbackonechangeset.html">rollbackOneChangeSetSQL</a></td><td>Writes SQL to roll back a single changest to STDOUT. <span style="color: #fd8c00">Liquibase Pro Feature</span></td></tr>
-end new 3.8.6 features -->
 <tr><td>futureRollbackSQL</td><td>Writes SQL to roll back the database to the current state after the changes in the changeslog have been applied.</td></tr>
 <tr><td>updateTestingRollback</td><td>Updates the database, then rolls back changes before updating again.</td></tr>
 </table>
