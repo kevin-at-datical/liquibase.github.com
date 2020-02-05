@@ -1,0 +1,90 @@
+.home-banner-area {
+  padding-bottom: 2.5rem;
+}
+.banner-content {
+  width: 50%;
+  h1,
+  p {
+    color: map-get($colors, white);
+  }
+}
+.heading-sub-text {
+  font-size: 22px;
+  padding-right: 10rem;
+  p {
+    margin-bottom: 4.5rem;
+    line-height: 1.5;
+  }
+}
+.banner-image {
+  width: 50%;
+  text-align: right;
+}
+.banner-btns {
+  a.button:nth-child(1) {
+    margin-right: 15px;
+  }
+}
+.banner-logos-container {
+}
+.trusted-bar {
+  position: relative;
+  text-align: center;
+  line-height: 1;
+  span {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    @include font(rhot, bold, weight);
+    font-size: 13px;
+    color: map-get($colors, gblue70);
+    position: relative;
+    top: 5px;
+    line-height: 1;
+  }
+  &:before,
+  &:after {
+    content: "";
+    background-image: url(../img/trusted-line1.svg);
+    background-repeat: no-repeat;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 15px;
+    width: calc(50% - 75px);
+  }
+  &:after {
+    background-image: url(../img/trusted-line2.svg);
+    right: 0;
+    background-position: right;
+  }
+}
+.banner-logos {
+  padding: 18px 0 13px 0;
+}
+.banner-logo {
+  float: left;
+  margin-right: 1.69%;
+  text-align: center;
+  width: 15.25%;
+  &:nth-child(6n + 6) {
+    margin-right: 0;
+  }
+  span {
+    display: table-cell;
+    vertical-align: middle;
+    height: 77px;
+    line-height: 0.5;
+  }
+}
+.hello-bar-container {
+  background-color: map-get($colors, sblue);
+  padding: 25px 0;
+}
+.hello-bar {
+  span {
+    font-size: 24px;
+    color: map-get($colors, white);
+    @include font(rhot, med, weight);
+    margin-right: 35px;
+  }
+}

@@ -1,0 +1,66 @@
+.testimonials-container {
+  background-image: url(../img/gray-gradient.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 9rem 0 12rem 0;
+  .owl-theme .owl-dot {
+    span {
+      background: transparent !important;
+      border: 1px solid map-get($colors, dgblue);
+    }
+  }
+  button.owl-dot.active span {
+    background: map-get($colors, dgblue) !important;
+  }
+}
+.testimonials-area {
+  h2 {
+    text-align: center;
+    span {
+      @include font(rhot, reg, weight);
+      font-size: 36px;
+      display: block;
+      line-height: 1.2;
+    }
+  }
+}
+.testimonial-box {
+  float: left;
+  width: 31%;
+  margin-right: 3.5%;
+  margin-bottom: 40px;
+  min-height: 231px;
+  background-image: url(../img/testimonial-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border: 1px solid map-get($colors, white);
+  @include border-radius(10px);
+  padding: 3.5rem;
+  text-align: center;
+}
+.testimonial-text {
+  color: map-get($colors, dblue);
+  font-size: 2.2rem;
+  line-height: 1.25;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  &.big-text {
+    font-size: 3.2rem;
+  }
+}
+.client-name {
+  @include font(rhot, bold, weight);
+  span {
+    @include font(rhot, reg, weight);
+  }
+}
+.slider-area {
+  .item {
+    &:nth-child(3n + 3) {
+      .testimonial-box {
+        margin-right: 0;
+      }
+    }
+  }
+}

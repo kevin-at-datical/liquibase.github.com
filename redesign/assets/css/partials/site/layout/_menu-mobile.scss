@@ -1,0 +1,378 @@
+.hb-mobile {
+  display: none;
+}
+@media (max-width: 1199px) {
+  .hb-desktop {
+    display: none;
+  }
+  .hb-mobile {
+    display: block;
+  }
+  .main-menu {
+    width: 100%;
+    text-align: left;
+    position: initial;
+    padding: 0;
+    float: none;
+    margin-bottom: 2rem;
+  }
+
+  .header-btns a,
+  .header-btns a.button {
+    padding: 19px 24px;
+  }
+  .header-btns {
+    float: none;
+    width: 100%;
+    text-align: left;
+    display: block;
+  }
+  .menu-overlay .main-menu ul ul .submenu-icon {
+    top: 4px;
+    left: 5px;
+  }
+  .menu-overlay .main-menu ul ul ul {
+    padding-top: 12px;
+  }
+  .right-header,
+  .left-header {
+    width: 100%;
+    float: none;
+  }
+
+  .menu-overlay .main-menu {
+    ul {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      width: 100%;
+
+      li {
+        padding: 0;
+        margin: 0;
+        position: relative;
+        display: block;
+        opacity: 1;
+
+        a,
+        a:visited {
+          color: map-get($colors, white) !important;
+          padding: 7px 7px 2px 0;
+          line-height: 1;
+          text-transform: uppercase;
+          border-left: 0;
+          font-weight: 500;
+          display: block;
+          border-bottom: none;
+          display: block;
+          position: relative;
+          font-size: 24px;
+          text-transform: capitalize;
+        }
+
+        &.current-menu-item > a,
+        &.current-menu-parent > a,
+        a:hover {
+          border-bottom: none;
+          color: map-get($colors, lblue) !important;
+        }
+      }
+
+      ul {
+        display: none;
+        padding-left: 2rem;
+        position: relative;
+        top: initial;
+        left: initial;
+        opacity: initial;
+        visibility: initial;
+        overflow: visible;
+        box-shadow: none;
+        border: none;
+        &::before {
+          display: none;
+        }
+
+        li {
+          padding: 14px 0;
+
+          a,
+          a:visited {
+            padding: 5px 5px 5px 15px;
+            text-transform: inherit;
+            border-left: 0;
+            font-size: 20px;
+            font-weight: 300;
+          }
+
+          a:hover {
+            border-left: 0;
+          }
+
+          &.current-menu-item a,
+          &.current-menu-parent a {
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+  .main-menu ul li.menu-item-has-children,
+  .white-header .main-menu ul li.menu-item-has-children {
+    background: none;
+  }
+  .menu-overlay {
+    background: url(../img/mobile-menu-bg.png) no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    overflow: visible;
+    box-sizing: border-box;
+    z-index: 99;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+
+  .menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+    background-color: map-get($colors, dgray);
+  }
+  .no-overflow {
+    .logo {
+      top: 25px;
+    }
+    .color-logo {
+      display: none !important;
+    }
+    .transparent-logo {
+      display: block !important;
+    }
+  }
+  header .menu-container {
+    padding: 140px 5% 1rem 5%;
+    opacity: 0;
+    height: 100%;
+    @include transition(all, 0.4s, ease-in-out);
+    transition-delay: 0.25s;
+    box-sizing: border-box;
+  }
+
+  header .menu-overlay.open .menu-container {
+    opacity: 1;
+    padding: 140px 5% 1rem 5%;
+  }
+
+  header.shrink .menu-container {
+    padding: 140px 5% 1rem 5%;
+  }
+
+  header.shrink .menu-overlay.open .menu-container {
+    opacity: 1;
+    padding: 140px 5% 1rem 5%;
+  }
+
+  .menu-content {
+    height: 100%;
+    max-height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .menu-content::-webkit-scrollbar-track {
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .menu-content::-webkit-scrollbar {
+    width: 3px;
+    background-color: transparent;
+    position: relative;
+    left: 5px;
+    box-shadow: none;
+  }
+
+  .menu-content::-webkit-scrollbar-thumb {
+    // background-color: darken(map-get($colors, red), 6%);
+    box-shadow: none;
+    border-radius: 2px;
+  }
+
+  .header-btns {
+    float: none;
+    width: 100%;
+    opacity: 0;
+    @include transition(all, 0.55s, ease-in-out);
+    transition-delay: 0.4s;
+    padding-top: 10px;
+  }
+
+  .menu-overlay.open .header-btns {
+    opacity: 1;
+    padding-top: 0;
+  }
+
+  .menu-btn {
+    display: block;
+    position: fixed;
+    top: 35px;
+    right: 5%;
+    height: 21px;
+    width: 33px;
+    cursor: pointer;
+    z-index: 99999;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+
+  header.shrink .menu-btn {
+    top: 27px;
+    span {
+      background: map-get($colors, dblue);
+    }
+  }
+
+  .menu-btn.active .top {
+    -webkit-transform: translateY(11px) translateX(0) rotate(-45deg);
+    transform: translateY(11px) translateX(0) rotate(-45deg);
+    background: map-get($colors, white);
+    @include transition(all, 0.3s, ease-in-out);
+  }
+
+  .menu-btn.active .middle {
+    opacity: 0;
+    background: map-get($colors, white);
+  }
+
+  .menu-btn.active .bottom {
+    -webkit-transform: translateY(-7px) translateX(0) rotate(45deg);
+    transform: translateY(-7px) translateX(0) rotate(45deg);
+    background: map-get($colors, white);
+    @include transition(all, 0.3s, ease-in-out);
+  }
+
+  .menu-btn span {
+    background: map-get($colors, dblue);
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+  .white-header .menu-btn span {
+    background: map-get($colors, white);
+  }
+  .menu-btn.active span {
+    left: 3px;
+  }
+
+  .menu-btn span:nth-of-type(2) {
+    top: 9px;
+  }
+
+  .menu-btn span:nth-of-type(3) {
+    top: 18px;
+  }
+
+  li.menu-item-has-children .submenu-icon {
+    position: relative;
+    z-index: 99999;
+    top: 3px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    background-image: url(../img/menu-dropdown-white.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .no-overflow .main-menu ul li a {
+    display: inline-block;
+  }
+  li.menu-item-has-children.active > .submenu-icon {
+    background-image: url(../img/menu-up.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.logged-in.admin-bar header .menu-btn {
+  top: 70px;
+}
+
+.logged-in.admin-bar header.shrink .menu-btn {
+  top: 64px;
+}
+
+.no-overflow .logged-in.admin-bar .left-header {
+  top: 32px;
+}
+
+.no-overflow .logged-in.admin-bar .menu-overlay {
+  top: 32px;
+  height: calc(100vh - 32px);
+}
+
+@media (max-width: 782px) {
+  .logged-in.admin-bar header .menu-btn {
+    top: 68px;
+  }
+
+  .logged-in.admin-bar header.shrink .menu-btn {
+    top: 62px;
+  }
+
+  .no-overflow .logged-in.admin-bar .left-header {
+    top: 46px;
+  }
+
+  .no-overflow .logged-in.admin-bar .menu-overlay {
+    top: 46px;
+    height: calc(100vh - 46px);
+  }
+
+  #wpadminbar {
+    position: fixed !important;
+  }
+}
+.menu-overlay.open {
+  a.login-icon {
+    display: none;
+  }
+  a.button {
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+}
+.no-overflow .menu-overlay.open ul ul {
+  transition: none;
+  padding-left: 0;
+  padding-top: 5px;
+}
+.no-overflow {
+  header.shrink .main-menu ul li a {
+    padding-bottom: 7px;
+  }
+  .white-header.shrink .main-menu ul li.menu-item-has-children {
+    background: none;
+  }
+  .colored-logo {
+    display: none;
+  }
+  .white-logo {
+    display: block;
+  }
+  .white-header .main-menu ul ul li a,
+  .white-header .main-menu ul ul li a:visited {
+    color: #fff;
+  }
+}
