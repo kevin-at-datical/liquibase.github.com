@@ -1,7 +1,7 @@
 ---
 layout: side-search
 title: Docs | LB Installer Run First Update 
-subnav: subnav_quickstart.md
+subnav: subnav_workflows.md
 includeDaticalBox: true
 ---
 
