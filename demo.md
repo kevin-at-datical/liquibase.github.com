@@ -10,7 +10,7 @@ extraJavascriptFiles:
 
 <div class="landing-page">
   <div class="landing-page__main-content span-12">
-    <h1>Get a Liquibase Demo</h1>
+    <h1 style="margin-top: 24px">Get a Liquibase Demo</h1>
     <div class="landing-page__main-content__text">
       See how Liquibase helps teams track, version, and deploy database schema changes and get your questions answered.
     </div>
@@ -53,6 +53,9 @@ extraJavascriptFiles:
       }
       .mktoLogicalField {
         width: 100% !important;
+      }
+      .mktoForm .mktoOffset {
+        height: 0;
       }
     </style>
   </div>
