@@ -1,7 +1,7 @@
 ---
 layout: side-search
 title: Docs | Installer Workspace Setup 
-subnav: subnav_quickstart.md
+subnav: subnav_workflows.md
 includeDaticalBox: true
 ---
 # Installer: Setting Up your Workspace

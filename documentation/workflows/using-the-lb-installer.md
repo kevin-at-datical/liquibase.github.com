@@ -1,7 +1,7 @@
 ---
 layout: side-search
 title: Docs | Using the Liquibase Installer 
-subnav: subnav_quickstart.md
+subnav: subnav_workflows.md
 includeDaticalBox: true
 ---
 # Using the Liquibase Installer

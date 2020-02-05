@@ -1,7 +1,7 @@
 ---
 layout: side-search
 title: Docs | Liquibase Developer Workflow 
-subnav: subnav_quickstart.md
+subnav: subnav_workflows.md
 includeDaticalBox: true
 ---
 # Liquibase Developer Workflow
