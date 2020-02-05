@@ -17,7 +17,7 @@ In this tutorial, you will learn how to get up and running with Liquibase.
 
 If you are brand new to Liquibase, we recommend you begin by downloading the <a href="https://download.liquibase.org/download/?frm=n" target="_blank">Liquibase Installer</a>. You can then skip ahead to the <a href="/documentation/workflows/using-the-lb-installer.html">Using the Liquibase Installer</a> topic to learn more about the Liquibase Developer Workflow.
 
-### What if I rather manually install Liquibase?
+### What if I would rather manually install Liquibase?
 If you choose not to use the Liquibase installer (which comes with tons of example files to help you learn the Liquibase Develop workflow **before** using your own database), then you can view the [Liquibase Installation Documentation](/documentation/installation/index.html) for more information on other ways to download and install Liquibase.
 </div>
 </div>
@@ -28,9 +28,11 @@ If you choose not to use the Liquibase installer (which comes with tons of examp
 
 Liquibase allows you to specify options on the command line which means the Liquibase CLI does not require configuration. 
 
-However, creating a liquibase.properties file allows you to input default values so you don't have to specify them in the CLI unless you want to. Liquibase will always override a `liquibase.properties` file in favor of a CLI command.
+However, creating a liquibase.properties file allows you to save default values so you don't have to specify them in the CLI unless you want to. 
+Liquibase will always override a `liquibase.properties` file in favor of a value specified on the command line.
 
-If you used the installer, your Liquibase download includes example `liquibase.properties` files for both XML and SQL formats in your Liquibase directory. We recommend that you move on to the <a href="/documentation/workflows/using-the-lb-installer.html">Using the Liquibase Installer</a> topic next.
+If you used the installer, your Liquibase download includes example `liquibase.properties` files for both XML and SQL formats in your Liquibase directory. 
+We recommend that you move on to the <a href="/documentation/workflows/using-the-lb-installer.html">Using the Liquibase Installer</a> topic next.
 
 ### What if I installed manually?
 
@@ -87,6 +89,6 @@ Choosing this path means that you can define your own changes in SQL format. Liq
 
 ## Summary
 In this tutorial we covered:
--   Downloading & Extracting Liquibase
+-   Downloading & Installing Liquibase
 -   How to Configure Liquibase
 -   Choosing your Path
