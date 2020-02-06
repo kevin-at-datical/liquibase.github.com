@@ -11,7 +11,7 @@ extraStyleSheets:
         <a href="https://register.gotowebinar.com/register/7994594529968763394" target="_blank" style="width: calc(50% - 16px);">
             <img src="/images/lb-comm-meetup-small-banner.jpg" alt="Liquibase Community Meetup Banner" style="width: 100%;">
         </a>
-        <a href="https://register.gotowebinar.com/register/5354907904678290179" target="_blank" style="width: calc(50% - 16px);">
+        <a href="https://www.liquibase.org/demo" target="_blank" style="width: calc(50% - 16px);">
             <img src="/images/lb-demo-small-banner.jpg" alt="Liquibase Demo Banner" style="width: 100%;">
         </a>
     </div>
