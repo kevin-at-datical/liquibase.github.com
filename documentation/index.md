@@ -37,11 +37,11 @@ includeDaticalBox: true
   <div class="docs-column">
     <div align="center"><h4><u><b>Liquibase Commands</b></u></h4></div>
     <ul>
-        <li><a href="update.html">Update</a></li>
-        <li><a href="rollback.html">Rollback</a></li>
-        <li><a href="diff.html">Diff</a></li>
-        <li><a href="dbdoc.html">DBDoc</a></li>
-        <li><a href="snapshot.html">Snapshot</a></li>
+        <li><a href="update.html">update</a></li>
+        <li><a href="rollback.html">rollback</a></li>
+        <li><a href="diff.html">diff</a></li>
+        <li><a href="dbdoc.html">dbDoc</a></li>
+        <li><a href="snapshot.html">snapshot</a></li>
         <li><a href="diffChangeLog.html">diffChangeLog</a></li>
         <li><a href="generating_changelogs.html">generateChangeLog</a></li>
         <li><a href="rollbackonechangeset.html">rollbackOneChangeSet</a></li>
