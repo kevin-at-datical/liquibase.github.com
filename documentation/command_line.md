@@ -115,7 +115,8 @@ the schema in JSON format, and that JSON snapshot can serve as a comparison data
 
 <table>
 <tr><th>Option</th><th>Description</th></tr>
-<tr><td>--classpath=&lt;value&gt;</td><td>Classpath containing migration files and JDBC Driver.  </td></tr>
+<tr><td>--classpath=&lt;value&gt;</td><td>Classpath containing migration files and JDBC Driver. List multiple items using the standard 
+          path separator for your platform, which is a colon (:) on Mac/Linux, and a semicolon (;) on Windows.</td></tr>
 <tr><td>--contexts=&lt;value&gt;</td><td>ChangeSet <a href="/documentation/contexts.html">contexts</a> to execute.  </td></tr>
 <tr><td>--defaultSchemaName=&lt;schema&gt;</td><td>Specifies the default schema to use for managed database objects and for Liquibase control tables.  </td></tr>
 <tr><td>--databaseClass=&lt;custom.DatabaseImpl&gt;</td><td>Specifies a custom <a href="/javadoc/liquibase/database/Database.html">Database</a> implementation to use  </td></tr>
