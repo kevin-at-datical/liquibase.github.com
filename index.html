@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +8,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Liquibase</title>
+    
+    {% include partials/favicons.html %}
+
     <link rel="stylesheet" href="redesign/assets/css/bundle.min.css" />
+    
+    {% include tracking-codes/reddit.tracking-code.html %}
 </head>
 
 <body>
@@ -557,6 +565,10 @@
     </footer>
     <script type="text/javascript" src="redesign/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="redesign/assets/js/bundle.min.js"></script>
+    
+    <!-- Legacy Tracking Codes -->
+    {% include tracking-codes/google-analytics.tracking-code.html %}
+    {% include tracking-codes/google-analytics-outbound.tracking-code.html %}
 </body>
 
 </html>

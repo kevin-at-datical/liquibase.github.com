@@ -128,4 +128,4 @@ extraStyleSheets:
 </p>
 
 {% include tracking-codes/hotjar.tracking-code.html %}
-{% include tracking-codes/stackoverflow-tracking-code.html %}
+{% include tracking-codes/stack-overflow.tracking-code.html %}
