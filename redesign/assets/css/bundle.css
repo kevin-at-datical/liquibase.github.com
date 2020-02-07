@@ -2801,7 +2801,7 @@ a.button.gray:hover, a.button:visited.gray:hover { background-image: url(../img/
 
 .testimonials-area h2 span { font-weight: 400; font-size: 36px; display: block; line-height: 1.2; }
 
-.testimonial-box { float: left; width: 31%; margin-right: 3.5%; margin-bottom: 40px; min-height: 231px; background-image: url(../img/testimonial-bg.png); background-repeat: no-repeat; background-position: center center; background-size: cover; border: 1px solid #ffffff; border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -o-border-radius: 10px; padding: 3.5rem; text-align: center; }
+.testimonial-box { float: left; width: 31%; margin-right: 3.5%; margin-bottom: 40px; min-height: 231px; background-image: url(../img/testimonial-bg.png); background-repeat: no-repeat; background-position: center center; background-size: cover; border: 1px solid #ffffff; border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -o-border-radius: 10px; padding: 3.5rem; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 
 .testimonial-text { color: #001e59; font-size: 2.2rem; line-height: 1.25; font-style: italic; margin-bottom: 1.5rem; }
 

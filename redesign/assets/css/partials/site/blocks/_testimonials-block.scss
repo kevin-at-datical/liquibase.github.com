@@ -38,6 +38,9 @@
   @include border-radius(10px);
   padding: 3.5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .testimonial-text {
   color: map-get($colors, dblue);
