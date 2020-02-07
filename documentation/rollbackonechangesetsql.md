@@ -52,8 +52,21 @@ For more command specific help, type `liquibase rollbackonechangesetSQL --help` 
 ## Output
 When successful, the `rollbackOneChangeSetSql` command produces the following output:
 
-{% highlight text %}
+{% highlight sql %}
 
-Waiting on Output Info
+-- Lock Database
+UPDATE databasechangeloglock SET LOCKED = TRUE, LOCKEDBY = '2605:a601:ab18:0:205:1bff:feb1:45b2%eth1 (2605:a601:ab18:0:205:1bff:feb1:45b2%eth1)', LOCKGRANTED = '2020-02-05 18:37:18.034' WHERE ID = 1 AND LOCKED = FALSE;
+-- *********************************************************************
+-- Rollback changeset 'postgres_lbpro_master_changelog.xml::4::functionForTrigger::Liquibase Pro User'
+-- *********************************************************************
+-- Change Log: postgres_lbpro_master_changelog.xml
+-- Ran at: 2/5/20 6:37 PM
+-- Against: intuser@jdbc:postgresql://localhost:5432/intuserdb?currentSchema=PROSCHEMA
+-- Liquibase version: 3.8.6-local-SNAPSHOT
+-- *********************************************************************
+-- Rolling Back ChangeSet: postgres_lbpro_master_changelog.xml::4::functionForTrigger::Liquibase Pro User
+DELETE FROM "databasechangelog" WHERE ID = '4::functionForTrigger' AND AUTHOR = 'Liquibase Pro User' AND FILENAME = 'postgres_lbpro_master_changelog.xml';
+-- Release Database Lock
+UPDATE databasechangeloglock SET LOCKED = FALSE, LOCKEDBY = NULL, LOCKGRANTED = NULL WHERE ID = 1;
 
 {% endhighlight %}
