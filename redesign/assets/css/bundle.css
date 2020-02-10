@@ -2762,6 +2762,8 @@ a.button.gray:hover, a.button:visited.gray:hover { background-image: url(../img/
 /*-------------------------------------------------
 >> Styles for Compare Block
 -------------------------------------------------*/
+.compare-block-container h5 { min-height: 52px; }
+
 .compare-lists-area { position: relative; }
 
 .compare-list-left { float: left; width: 45%; text-align: right; position: relative; z-index: 1; }
