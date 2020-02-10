@@ -14,19 +14,19 @@ With Liquibase 3.8.6, Community users can still undo changes in reverse order st
 ## How Rollbacks work in Liquibase Community
 Below is a group of changesets labeled a through x, with x being the most recently deployed change. Let’s assume I want to roll back changeset b.
 
-<img src="/blog/images/rollback_community_first.jpg">
+<img src="/blog/images/rollback_community_first.jpg" style="max-width:100%; height:auto;">
 
-<img src="/blog/images/rollback_community_second.jpg">
+<img src="/blog/images/rollback_community_second.jpg" style="max-width:100%; height:auto;">
 
 In order to undo **changeset b**, I have to roll back changesets x through c in reverse order. It’s a domino effect. 
 
-<img src="/blog/images/rollback_community_last.jpg">
+<img src="/blog/images/rollback_community_last.jpg" style="max-width:100%; height:auto;">
 
 ## How Targeted Rollbacks work in Liquibase Pro
 
 With Targeted Rollback, you can select the changeset you’d like to remove without rolling back any other changes that were deployed. It’s like a surgical strike. 
 
-<img src="/blog/images/rollback_targeted_explosion.jpg">
+<img src="/blog/images/rollback_targeted_explosion.jpg" style="max-width:100%; height:auto;">
 
 **Rollback** is the only official technique for altering your `DATABASECHANGELOG` table (the master table of changeset deployments which tracks which changesets have already been applied). If you need to make changes to this table, **Targeted Rollback** is an official and precise way to do it (and way better than manipulating that table by hand).
 
@@ -41,10 +41,10 @@ Here’s a general workflow a Liquibase Pro user would take to target a change t
 2. Dave inspects the changelog to collect the id and author params from the specific changeset, as well as the file path of the changelog.
 3. Dave considers the impact of the rollback, maybe chats with a fellow dev or two, or a DBA if there is one, and decides he understands and is comfortable with impacts of the rollback.
 4. Dave enters the following in the command line:
-``` bashliquibase <global parameters> rollbackOneChangesetSQL <command parameters>``` 
+``` liquibase <global parameters> rollbackOneChangesetSQL <command parameters>``` 
 5. Dave inspects the rollback SQL presented in STDOUT and acknowledges this is where life has led, and that's fine.
 6. Dave enters the following in the command line:
-``` bashliquibase <global parameters> rollbackOneChangeset <command parameters> --force``` 
+``` liquibase <global parameters> rollbackOneChangeset <command parameters> --force``` 
 7. Dave inspects the STDOUT info and then performs whatever dev/test/UAT tasks he has planned to prove to himself and his team that Targeted Rollback was good and useful and well worth paying for.
 8. Next, Dave has to account for the newly rolled back changes in downstream environments.
 9. Dave needs to decide whether or not he wants to remove the changeset from the changelog file. 
