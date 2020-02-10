@@ -1,10 +1,10 @@
 ---
 layout: default
 subnav: subnav_blog.md
-title: Recent Liquibase Articles, December 2019
+title: Recent Liquibase Articles, February 2020
 author: Steve Donie
 ---
-# Recent Liquibase Articles, December 2019
+# Recent Liquibase Articles, February 2020
 
 Here are some articles and other interesting things written by the many people around
 the world that are using Liquibase.
