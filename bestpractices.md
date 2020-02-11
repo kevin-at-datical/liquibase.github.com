@@ -88,7 +88,7 @@ Include a `<rollback>` clause whenever a change doesn't support out of box rollb
 
 ## Reference Data Management ##
 
-Leverage Liquibase to manage your Reference Data. Environment separation (DEV, QA, PROD) can be achieved using "context".
+Leverage Liquibase to manage your Reference Data. Environment separation (DEV, QA, PROD) can be achieved using "context". [Learn about Liquibase contexts.](https://www.liquibase.org/documentation/contexts.html)
 
 ## Procedure for the developer ##
 
@@ -98,10 +98,13 @@ Leverage Liquibase to manage your Reference Data. Environment separation (DEV, Q
 * Test the new application code together with the database change;
 * Commit both the changeSet and the application code.
 
+## Using Liquibase to Achieve CI/CD for Databases
+Database schema migrations are an essential task for every software project. [Learn how to integrate Liquibase into your process to achieve CI/CD for databases](http://www.liquibase.org/cicd-for-databases.html). 
+
 ## Consider Liquibase Pro or Datical ##
 
 ### Liquibase Pro ###
-<a href="https://download.liquibase.org/" target="_blank">Liquibase Pro</a> offers an extra layer of support so you don't have to go it alone. While Liquibase is a great starting point, teams that want best practices on how to make the most of Liquibase may find Liquibase Pro better suited to their needs. Liquibase Pro also adds functions for procedural database code.
+<a href="https://download.liquibase.org/" target="_blank">Liquibase Pro</a> offers an extra layer of support so you don't have to go it alone. While Liquibase is a great starting point, teams that want best practices on how to make the most of Liquibase may find Liquibase Pro better suited to their needs. Liquibase Pro also adds features like [Targeted Rollback](https://www.liquibase.org/documentation/rollbackonechangeset.html) and the ability to work with [Stored Logic](https://www.liquibase.org/documentation/changes/index.html).
 
 ### Datical ###
 Datical is a commercial product which builds on the core Liquibase functionality. Beyond versioning and managing database changes, Datical bridges the gap between development and operations with capabilities that enable a fully unified and automated path for database code. 
