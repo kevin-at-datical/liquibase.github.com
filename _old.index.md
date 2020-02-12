@@ -11,7 +11,7 @@ extraStyleSheets:
         <a href="https://register.gotowebinar.com/register/7994594529968763394" target="_blank" style="width: calc(50% - 16px);">
             <img src="/images/lb-comm-meetup-small-banner.jpg" alt="Liquibase Community Meetup Banner" style="width: 100%;">
         </a>
-        <a href="https://register.gotowebinar.com/register/5354907904678290179" target="_blank" style="width: calc(50% - 16px);">
+        <a href="https://www.liquibase.org/demo" target="_blank" style="width: calc(50% - 16px);">
             <img src="/images/lb-demo-small-banner.jpg" alt="Liquibase Demo Banner" style="width: 100%;">
         </a>
     </div>
@@ -43,6 +43,7 @@ extraStyleSheets:
                <ul>
                 <li>Open source</li>
                 <li>Database changes stored in a variety of formats including XML, YAML, JSON, and SQL</li>
+                <li>Basic rollbacks</li>
 			    <li>Active online community with forum support</li>
 			    </ul>
             </div>
@@ -66,9 +67,11 @@ extraStyleSheets:
             </div>
             <div class="lb-choose-path__path__text">
                 <ul>
-                    <li>Snapshots and reverse engineering for Stored Logic Objects</li>
-                    <li>Guidance and best practices for your specific use case(s) from a named support engineer</li>
-                    <li>Technical support from Liquibase experts</li>
+                    <li>Targeted rollbacks to undo one change or an entire set of changes </li>
+                    <li>Expanded Stored Logic functionality, including snapshots and rollbacks</li>
+                    <li>Easier-to-use changelog</li>
+                    <li>Advanced, personalized support from Liquibase experts</li>
+
 		    
 			          </ul>
             </div>

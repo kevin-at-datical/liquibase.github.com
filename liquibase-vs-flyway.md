@@ -47,8 +47,8 @@ extraJavascriptFiles:
       <p>Let’s face it, rework happens. It happens to all of us, every day. Nobody gets everything right the first time.</p>
       <p>Flyway can be pretty unforgiving when it comes to reworking database changes and performing selective deployments.</p>
       <p><b>Reworking changes</b></p>
-      With Flyway, users have two options for reworking changes: roll everything back or purchase their Pro or Enterprise offerings for undo functionality. With the open source version of Flyway, there’s no real way to automate or clean up an environment where a bad change has been deployed.
-      <p>The free version of Liquibase allows you to undo changes you have made to your database, either automatically or via custom rollback SQL with the <a href="https://www.liquibase.org/documentation/rollback.html" target="_blank">rollback command.</a></p>
+      <p>With Flyway, users have two options for reworking changes: roll everything back or purchase their Pro or Enterprise offerings for undo functionality. With the open source version of Flyway, there’s no real way to automate or clean up an environment where a bad change has been deployed.</p>
+      <p>The free version of Liquibase allows you to undo changes you have made to your database, either automatically or via custom rollback SQL with the <a href="https://www.liquibase.org/documentation/rollback.html" target="_blank">rollback command.</a>Liquibase Pro also adds <a href="https://www.liquibase.org/2020/01/targeted-rollback.html" target="_blank">Targeted Rollbacks</a>, which allow users to rollback a specific change or set of specific changes without rolling everything else back.</p>
       <p><b>Selective deployments</b></p>
       <p>If your use case requires you to selectively deploy changes, it’s harder to do that with Flyway than it is with Liquibase. Let’s say you want to only deploy to a test environment and you’re managing scripts that populate certain configuration or test data to that environment. With Flyway, you would have to set up a different configuration (properties file) for each of the affected environments in order to only apply certain changes to those specific databases. Since Liquibase uses one ledger (changelog), it’s more straightforward to <a href="https://www.liquibase.org/2014/11/contexts-vs-labels.html" target="_blank">add labels and contexts</a> to ensure that this is set up in one place.</p>
       <p><b>Liquibase preconditions</b></p>
@@ -76,23 +76,23 @@ extraJavascriptFiles:
 
   </div>
     <div class="landing-page__main-content__cta">
-      {% include components/buttons/cta.html ctaText="Try Liquibase Pro Free for 14 Days" ctaHref="https://download.liquibase.org/liquibase-pro-trial-request-form/" %}
+      {% include components/buttons/cta.html ctaText="Try Liquibase Pro" ctaHref="https://download.liquibase.org/" %}
     </div>
   </div>
   <div class="landing-page__cta-block span-6 push-2">
     <hr class="landing-page__horizontal-rule landing-page__horizontal-rule--centered">
     <div class="landing-page__cta-block__heading">
       <h2>
-        Take Liquibase Pro for a spin!
+        Take Liquibase for a spin!
       </h2>
     </div>
     <div class="landing-page__cta-block__text">
       <p>
-        Get a free 30-day trial of Liquibase Pro. If you decide you don't want the Pro features, simply keep using the open source version.
+        Try Liquibase or get a 30-free trial of Liquibase Pro.
       </p>
     </div>
     <div class="landing-page__cta-block__cta">
-      {% include components/buttons/cta.html ctaText="Try Liquibase Pro" ctaHref="https://download.liquibase.org/liquibase-pro-trial-request-form/" %} <i>No credit card required.</i> 
+      {% include components/buttons/cta.html ctaText="Try Liquibase" ctaHref="https://download.liquibase.org/" %}
     </div>
   </div>
 </div>

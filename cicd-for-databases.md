@@ -82,23 +82,23 @@ extraStyleSheets:
 
   </div>
     <div class="landing-page__main-content__cta">
-      {% include components/buttons/cta.html ctaText="Try Liquibase Pro Free for 30 Days" ctaHref="https://download.liquibase.org/liquibase-pro-trial-request-form/" %}
+      {% include components/buttons/cta.html ctaText="Try Liquibase" ctaHref="https://download.liquibase.org/" %}
     </div>
   </div>
   <div class="landing-page__cta-block span-6 push-2">
     <hr class="landing-page__horizontal-rule landing-page__horizontal-rule--centered">
     <div class="landing-page__cta-block__heading">
       <h2>
-        Take Liquibase Pro for a spin!
+        Take Liquibase for a spin!
       </h2>
     </div>
     <div class="landing-page__cta-block__text">
       <p>
-        Get a free 30-day trial of Liquibase Pro. If you decide you don't want the Pro features, simply keep using the open source version.
+        Try Liquibase or get a free 30-day trial of Liquibase Pro.
       </p>
     </div>
     <div class="landing-page__cta-block__cta">
-      {% include components/buttons/cta.html ctaText="Try Liquibase Pro" ctaHref="https://download.liquibase.org/liquibase-pro-trial-request-form/" %} <i>No credit card required.</i> 
+      {% include components/buttons/cta.html ctaText="Try Liquibase" ctaHref="https://download.liquibase.org/" %} 
     </div>
   </div>
 </div>
