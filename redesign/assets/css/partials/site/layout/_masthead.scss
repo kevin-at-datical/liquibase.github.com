@@ -1,0 +1,22 @@
+.home-banner-container {
+  background-image: url(../img/banner-bg.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
+.banner-inner-container {
+  background-image: url(../img/home-banner-bg.png);
+  background-repeat: no-repeat;
+  padding: 13rem 0 0 0;
+  background-position: top -11px left calc(50% + 800px);
+  .banner-container {
+    text-align: center;
+    padding: 8.5rem 0 2.5rem 0;
+    p {
+      color: map-get($colors, dblue);
+    }
+  }
+}
+.banner-container {
+  padding: 19rem 0 3rem 0;
+}

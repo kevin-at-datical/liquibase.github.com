@@ -1,0 +1,87 @@
+ul,
+ol {
+  margin: 0 0 4.5rem 2.5rem;
+}
+
+ul {
+  list-style: none;
+  margin: 0 0 5rem 0;
+}
+
+.wp-block-glide-section-block,
+.page-content,
+.banner-container {
+  ul {
+    list-style: none;
+    li {
+      padding-left: 20px;
+      line-height: 1.4;
+      margin-bottom: 1.5rem;
+      position: relative;
+      color: map-get($colors, dblue);
+      &:before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background-image: url(../img/list-bg.png);
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: 100%;
+        position: absolute;
+        left: 0;
+        top: 10px;
+      }
+    }
+  }
+}
+
+.wp-block-glide-section-block,
+.page-content,
+.banner-container {
+  ol li {
+    position: relative;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    counter-increment: list;
+    padding-left: 25px;
+    &:before {
+      color: map-get($colors, headings);
+      @include font(rhot, med, weight);
+      content: counter(list) ".";
+      left: 0;
+      top: 0px;
+      position: absolute;
+      width: 26px;
+    }
+  }
+}
+
+ol {
+  list-style: none;
+  margin: 0 0 5rem 0;
+}
+
+ul li,
+ol li {
+  margin: 0 0 1rem 0;
+}
+
+ul ul,
+ol ol {
+  margin: 2rem 0 0 5rem;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+  margin-left: 2rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  margin: 0 0 4rem 0;
+}
