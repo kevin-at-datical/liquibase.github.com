@@ -26,3 +26,16 @@ the world that are using Liquibase.
   
   Quick reddit post to r/devops showing an example of a whole lot of cool technologies being used together. Has links to 
   the source code for the example.
+
+* [Convince Your Team to Try Liquibase](https://medium.com/@texorcist/convince-your-team-to-try-liquibase-976741cd9613)
+  10 February 2020
+  
+  Datical's CTO Robert Reeves discusses all the reasons you should be using Liquibase, and how you can help convince
+  others in your organization that you should be using it.
+
+* [Want to get the developer experience right? Focus on the basics](https://jaxenter.com/developer-experience-166985.html?utm_source=twitter&utm_medium=social&utm_campaign=1week)
+  5 February 2020
+  
+  Robert Reeves with another great article on why it is important to have a great developer onboarding experience,
+  and the basic things your organization should have in place to make that happen. No surprise that a database schema change tool
+  is a key factor!
