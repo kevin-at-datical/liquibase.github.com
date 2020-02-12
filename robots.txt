@@ -1,2 +1,2 @@
-User-agent: *
-Disallow: /javadoc/
+user-agent: *
+disallow: /javadoc/
