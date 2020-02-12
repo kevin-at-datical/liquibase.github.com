@@ -1,0 +1,173 @@
+@media (min-width: 1024px) {
+  .main-menu ul li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    overflow: visible;
+  }
+  .main-menu ul ul {
+    animation-delay: 0.6s;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    @include transition(all, 0.3s, ease-in-out);
+  }
+}
+header.shrink {
+  .main-menu {
+    top: 23px;
+  }
+}
+.main-menu {
+  text-align: center;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  line-height: 1;
+  right: 0;
+  @include transition(all, 0.3s, ease-in-out);
+  top: 35px;
+  margin-right: 10px;
+  ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    li {
+      margin: 0 18px;
+      padding: 0;
+      display: inline-block;
+      position: relative;
+      line-height: 1;
+      &.menu-item-has-children {
+        background: url(../img/menu-dropdown.svg) no-repeat right 12px;
+        padding-right: 20px;
+        box-sizing: border-box;
+      }
+
+      &.last-menu-item {
+        margin: 0 0 0 20px;
+      }
+
+      a,
+      a:visited {
+        padding: 0 0 0 0;
+        display: inline-block;
+        font-size: 16px;
+        color: map-get($colors, dblue);
+        @include font(rhot, med, weight);
+        line-height: 1;
+        border: 0;
+        position: relative;
+        &:after {
+          content: "";
+          -webkit-transition: all 0.4s ease-in-out;
+          transition: all 0.4s ease-in-out;
+          height: 3px;
+          width: 0;
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -o-border-radius: 10px;
+          display: block;
+          margin: 12px auto 0 auto;
+          background-color: #ef6f0e;
+        }
+      }
+      &.current-menu-item a,
+      &.current-menu-parent a,
+      a:hover {
+        border: 0;
+        color: map-get($colors, brightblue);
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+
+    ul {
+      opacity: 0;
+      border-bottom: 1px solid #f6f6f8;
+      visibility: hidden;
+      padding: 24px;
+      @include border-radius(8px);
+      position: absolute;
+      top: 35px;
+      left: -70px;
+      z-index: 99999;
+      overflow: hidden;
+      background-color: map-get($colors, white);
+      text-align: left;
+      @include transition(all, 0.4s, ease-in-out);
+      text-align: left;
+      width: 245px;
+      box-shadow: 0px 0px 10px rgba(66, 175, 223, 0.3);
+      &:before {
+        content: "";
+        box-shadow: 0px 15px 45px rgba(66, 175, 223, 0.1);
+        width: 1px;
+        height: 17px;
+        position: absolute;
+        top: -10px;
+        left: 0px;
+        right: 0;
+        margin: auto;
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-bottom: 14px solid #ffffff;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+
+      li {
+        display: block;
+        margin: 0 0 15px 0;
+        &:last-child {
+          margin: 0;
+        }
+
+        a,
+        a:visited {
+          font-size: 16px;
+          padding: 0 !important;
+          display: block;
+          line-height: 1.2;
+          box-sizing: border-box;
+          position: relative;
+          color: map-get($colors, body-clr);
+          @include transition(all, 0.3s, ease-in-out);
+          &:after {
+            display: none;
+          }
+        }
+
+        a:hover {
+          color: map-get($colors, brightblue) !important;
+        }
+
+        &.current-menu-item a,
+        &.current-menu-parent a {
+          border-bottom: none;
+        }
+      }
+      ul {
+        top: -10px;
+        left: 220px;
+
+        &:before {
+          display: none;
+          content: "";
+          width: 1px;
+          height: 1px;
+          position: absolute;
+          top: 12px;
+          left: -5px;
+          margin: auto;
+          border-left: none;
+          border-top: 3px solid transparent;
+          border-bottom: 3px solid transparent;
+          border-right: 4px solid map-get($colors, white);
+        }
+      }
+    }
+  }
+}

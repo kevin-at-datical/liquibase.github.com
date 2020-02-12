@@ -1,0 +1,178 @@
+input[type="text"],
+input[type="password"],
+input[type="search"],
+.input-comments,
+.search-input,
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+input[type="range"] {
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(83, 101, 135, 0.5);
+  outline: none;
+  background-color: map-get($colors, white);
+  @include font-size(1.6);
+  padding: 0 0 0 2rem;
+  margin: 0 0 3.8rem 0;
+  color: map-get($colors, dblue);
+  max-width: 100%;
+  @include font(rhot, reg, weight);
+  @include transition(all, 0.4s, ease-in-out);
+  @include border-radius(5px);
+  &:focus {
+    border: 1px solid rgba(83, 101, 135, 0.8);
+  }
+}
+
+input[type="file"] {
+  padding: 0.9rem;
+}
+
+select {
+  height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(83, 101, 135, 0.5);
+  outline: none;
+  background-color: map-get($colors, white);
+  @include font-size(1.8);
+  padding: 0 0 0 2rem;
+  margin: 0 0 4.8rem 0;
+  color: map-get($colors, dblue);
+  max-width: 100%;
+  @include font(rhot, reg, weight);
+  @include transition(all, 0.4s, ease-in-out);
+  @include border-radius(5px);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  background: #fff url(../img/select-arrow.svg) no-repeat calc(100% - 20px)
+    center;
+  cursor: pointer;
+  color: rgba(83, 101, 135, 0.8);
+}
+
+option {
+  font-weight: 300 !important;
+}
+
+input[type="range"] {
+  padding: 0;
+  border: none;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #b6cbd7;
+  color: map-get($colors, black);
+  padding: 1rem 0 0 2rem;
+  margin: 0 0 2rem 0;
+  box-sizing: border-box;
+  @include font(rhot, reg, family weight);
+  background-color: map-get($colors, white);
+  @include font-size(1.7);
+  outline: none;
+  @include transition(all, 0.4s, ease-in-out);
+  height: 160px;
+  resize: none;
+  @include border-radius(5px);
+  &:focus {
+    border: 1px solid map-get($colors, brightblue);
+    box-shadow: 0px 0px 10px rgba(66, 175, 223, 0.5);
+  }
+}
+.gform_wrapper {
+  ul {
+    margin: 0;
+
+    li {
+      list-style-type: none;
+      background: none;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+.gfields {
+  margin: 0;
+}
+.gfield {
+  box-sizing: border-box;
+  margin-bottom: 0;
+  position: relative;
+}
+ul {
+  li {
+    &.gfield.half-input-field {
+      width: 48%;
+      margin-right: 4%;
+      float: left;
+    }
+    &.gfield {
+      list-style-image: none;
+      padding-left: 0;
+      float: none;
+      width: 100%;
+      list-style: none;
+    }
+  }
+}
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(#586d7e, 0.7);
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(#586d7e, 0.7);
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: rgba(#586d7e, 0.7);
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(#586d7e, 0.7);
+}
+.gfield label {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding-left: 0;
+  color: rgba(83, 101, 135, 0.8);
+  cursor: text;
+  font-size: 18px;
+  margin-bottom: 0;
+  @include transition(all, 0.4s, ease-in-out);
+  -moz-transform: scale(1, 1) rotateY(0);
+  -ms-transform: scale(1, 1) rotateY(0);
+  -webkit-transform: scale(1, 1) rotateY(0);
+  transform: scale(1, 1) rotateY(0);
+  line-height: 1;
+}
+
+form .gfield > .gfield_label.out {
+  @include transition(all, 0.4s, ease-in-out);
+  letter-spacing: 1px;
+  padding-left: 0;
+  left: 20px;
+  top: 10px;
+  font-size: 14px;
+  color: #8e9aa6;
+  @include font(rhot, reg, weight);
+  -moz-transform: scale(1, 1) rotateY(0);
+  -ms-transform: scale(1, 1) rotateY(0);
+  -webkit-transform: scale(1, 1) rotateY(0);
+  transform: scale(1, 1) rotateY(0);
+}

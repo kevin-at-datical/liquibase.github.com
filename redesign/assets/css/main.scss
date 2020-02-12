@@ -1,0 +1,137 @@
+/*!
+Theme Name: Liquibase Theme
+Theme URI: http://glidedesign.com
+Author: Team Glide
+Author URI: http://glidedesign.com/team
+Description: WordPress theme by Glide Design
+Version: 1.0
+*/
+
+/*------------------------------------------------------------------
+>>>                      TABLE OF CONTENTS:                      <<<
+--------------------------------------------------------------------
+> Materalize
+> Variables
+	>> Colors
+	>> Columns
+> Mixins
+> Fonts
+> Defaults
+	>> Normalize
+	>> Forms Defaults
+	>> Clearings
+> Typography
+	>> Headings
+	>> Copy
+> Elements
+	>> Lists
+	>> Quotes
+	>> Tables
+	>> Images
+	>> Links
+> Forms
+	>> Buttons
+	>> Fields
+	>> Form Elements
+> Media
+	>> Captions
+	>> Galleries
+> WordPress Core
+	>> Accessibility
+	>> Alignments
+	>> Posts & Pages
+	>> Pagination
+	>> Comments
+	>> Widgets
+> Site
+	>> Layout
+		>>> Header
+		>>> Footer
+	>> Theme
+	>> Blog
+	>> Single
+	>> Home Page
+	>> About Us
+	>> Contact Us
+	>> Burgers Landing
+	>> Single Burger
+	>> Blocks
+> Responsive
+	>> Regular Queries
+	>> Extra Queries
+> Import Fonts
+> Vendors
+	> Owl Carousel
+	> Slick Nav
+------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+> Materialize
+------------------------------------------------------------------*/
+@import "materialize/materialize";
+
+/*------------------------------------------------------------------
+> Variables
+------------------------------------------------------------------*/
+@import "partials/variables/variables";
+
+/*------------------------------------------------------------------
+> Mixins
+------------------------------------------------------------------*/
+@import "partials/mixins/mixins";
+
+/*------------------------------------------------------------------
+> Fonts
+------------------------------------------------------------------*/
+@import "partials/fonts/fonts";
+
+/*------------------------------------------------------------------
+> Defaults
+------------------------------------------------------------------*/
+@import "partials/defaults/defaults";
+
+/*------------------------------------------------------------------
+> Typography
+------------------------------------------------------------------*/
+@import "partials/typography/typography";
+
+/*------------------------------------------------------------------
+> Elements
+------------------------------------------------------------------*/
+@import "partials/elements/elements";
+
+/*------------------------------------------------------------------
+> Forms
+------
+------------------------------------------------------------*/
+@import "partials/forms/forms";
+
+/*------------------------------------------------------------------
+> Media
+------------------------------------------------------------------*/
+@import "partials/media/media";
+
+/*------------------------------------------------------------------
+> Site
+------------------------------------------------------------------*/
+@import "partials/site/site";
+
+/*------------------------------------------------------------------
+> Responsive
+------------------------------------------------------------------*/
+@import "partials/responsive/responsive";
+
+/*------------------------------------------------------------------
+> Import Fonts
+------------------------------------------------------------------*/
+@import "partials/fonts/import-fonts";
+
+/*------------------------------------------------------------------
+> Vendor CSS Starts Here
+------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+> Owl Carousel
+------------------------------------------------------------------*/
+@import "vendor/owl-carousel/owl.carousel.scss";
+@import "vendor/owl-carousel/owl.theme.default.scss";
