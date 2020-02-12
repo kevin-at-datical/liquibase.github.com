@@ -39,6 +39,9 @@
     <link href="/css/liquibase.css" rel="stylesheet">
     <link href="/css/prism.coy.css" rel="stylesheet">
 
+    <!-- Liquibase Progressive Redesign Compatibility Styles -->
+    {% include partials/progressive-redesign-compatibility.html %}
+
     {% if page.extraStyleSheets %}
       {% for styleSheet in page.extraStyleSheets %}
         <link href="/css/{{ styleSheet }}.css" rel="stylesheet">
@@ -79,7 +82,13 @@
       {% include components/staging-ribbon.html %}
     {% endif %}
     
-    {{ content }}
+    <div class="liq-redesign liq-redesign--legacy-compatible-header">
+      {% include components/redesign/header.html %}
+    </div>
+
+    <div class="liq-redesign__legacy-container">
+      {{ content }}
+    </div>
 
     <script>
       $(document).ready(function () {
@@ -112,6 +121,8 @@
 
     {% include tracking-codes/google-analytics-outbound.tracking-code.html %}
 
+    <script type="text/javascript" src="/redesign/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/redesign/assets/js/bundle.min.js"></script>
 
     {% if page.extraJavascriptFiles %}
       {% for javascriptFile in page.extraJavascriptFiles %}
@@ -121,6 +132,8 @@
       {% endfor %}
     {% endif %}
 
-  {% include components/footer.html %}
+  <div class="liq-redesign">
+    {% include components/redesign/footer.html %}
+  </div>
   </body>
 </html>
