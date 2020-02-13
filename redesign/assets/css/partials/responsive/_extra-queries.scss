@@ -1,0 +1,59 @@
+@media only screen and (min-width: 1200px) and (max-width: 1320px) {
+  .logo-box {
+    margin-bottom: 20px;
+  }
+  .cta-form {
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      font-size: 20px;
+      width: calc(100% - 227px);
+      padding-right: 40px;
+    }
+    input[type="submit"] {
+      width: 235px;
+      padding: 10px 75px 14px 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .space-xs {
+    height: 15px;
+  }
+  .space-s {
+    height: 30px;
+  }
+  .space-m {
+    height: 45px;
+  }
+  .space-l {
+    height: 60px;
+  }
+  .space-xl {
+    height: 75px;
+  }
+  .space-xxl {
+    height: 90px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .space-xs {
+    height: 10px;
+  }
+  .space-s {
+    height: 20px;
+  }
+  .space-m {
+    height: 40px;
+  }
+  .space-l {
+    height: 40px;
+  }
+  .space-xl {
+    height: 50px;
+  }
+  .space-xxl {
+    height: 60px;
+  }
+}
