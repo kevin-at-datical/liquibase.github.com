@@ -1,0 +1,15 @@
+.liq-redesign {
+  &--legacy-compatible-header {
+    height: 130px;
+    background: #416692;
+    background: linear-gradient(to right, #003761 0%,#3e6793 100%);
+    background-image: url('/redesign/assets/img/banner-bg.png');
+    background-repeat: no-repeat;
+  }
+
+  &__legacy-container {
+    .container {
+      padding-top: 36px;
+    }
+  }
+}

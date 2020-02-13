@@ -1,0 +1,70 @@
+.cta-container {
+  padding: 7rem 6.8rem 5.2rem 6.8rem;
+  background: url(../img/cta-bg.png) no-repeat right top,
+    linear-gradient(104.51deg, #1b1b1b -1.48%, #000000 103.31%);
+  border-radius: 10px;
+}
+.cta-content {
+  h2,
+  p {
+    color: map-get($colors, white);
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+.no-credit {
+  display: block;
+  background-image: url(../img/ok-white-icon.svg);
+  background-repeat: no-repeat;
+  background-position: left 5px;
+  line-height: 1;
+  padding-left: 32px;
+  color: map-get($colors, white);
+  font-size: 20px;
+}
+.cta-form {
+  position: relative;
+  margin-top: 17px;
+  ul {
+    margin-bottom: 0;
+    li {
+      margin-bottom: 0;
+    }
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="search"],
+  .input-comments,
+  .search-input,
+  input[type="email"],
+  input[type="url"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="date"],
+  input[type="file"],
+  input[type="range"] {
+    font-size: 20px;
+    width: calc(100% - 240px);
+    padding-right: 40px;
+  }
+  input[type="submit"] {
+    position: absolute;
+    right: 7px;
+    top: 0;
+    @include border-radius(0 5px 5px 0);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background: url(../img/submit-arrow.svg) no-repeat right 20px top 12px,
+      url(../img/form-btn-bg.png) no-repeat left top;
+    width: 264px;
+    padding: 10px 75px 14px 30px;
+    &:hover {
+      background: url(../img/submit-arrow.svg) no-repeat right 20px top 12px,
+        url(../img/form-button-hvr-bg.png) no-repeat left top;
+      background-size: initial, cover;
+    }
+  }
+  input.gfield-small-input {
+    padding-top: 15px;
+  }
+}

@@ -1,0 +1,37 @@
+.icon-with-discription {
+  h3 {
+    max-width: 580px;
+    margin: 0 auto 5.5rem auto;
+  }
+}
+.description-column {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  box-sizing: border-box;
+
+  p {
+    font-size: 20px;
+    padding: 0 7rem;
+  }
+
+  &.valign-wrapper {
+    display: block;
+  }
+}
+.description-icon {
+  text-align: center;
+  height: 94px;
+  display: table;
+  width: 94px;
+  margin: 0 auto 3rem auto;
+  span {
+    display: table-cell;
+    vertical-align: middle;
+    height: 94px;
+    line-height: 0.5;
+  }
+}
+.description-button {
+  margin-top: 3rem;
+}
