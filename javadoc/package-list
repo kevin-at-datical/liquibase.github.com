@@ -24,6 +24,7 @@ liquibase.diff.output
 liquibase.diff.output.changelog
 liquibase.diff.output.changelog.core
 liquibase.diff.output.report
+liquibase.example
 liquibase.exception
 liquibase.executor
 liquibase.executor.jvm
