@@ -78,3 +78,12 @@ and incorporating them into this site:
 * double check the diffs and then commit the changes. 
 
 
+### Javadocs
+The third generated section is the javadocs. These are on the site in [the javdoc section](/javadoc/). 
+
+As with the maven docs:
+* clone the [liquibase core source code](https://github.com/liquibase/liquibase)
+* run `mvn -DskipTests package site` to compile and package the code, and then generate maven-style site documentation. Most of that documentation will not get used.
+* copy files from `liquibase/liquibase-core/target/apidocs` to `liquibase.github.com/javadoc`
+ selecting   * There is a shell script in the root of this project `copyJavaDocs.sh` that will copy the correct files for you.
+* double check the diffs and then commit the changes. 
