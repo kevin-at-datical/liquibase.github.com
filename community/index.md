@@ -6,7 +6,7 @@ includeDaticalBox: true
 
 # User and Developer Community #
 
-**Have Question On How To Use Liquibase?**
+**Have Questions On How To Use Liquibase?**
 
 Most questions on general Liquibase usage are best handled on Stack Overflow using the "liquibase" tag [http://stackoverflow.com/tags/liquibase](http://stackoverflow.com/tags/liquibase).
 
