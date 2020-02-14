@@ -4,6 +4,9 @@ title: Docs | rollbackOneChangeSetSql Command
 ---
 
 # Liquibase Commands: `rollbackOneChangeSetSql`
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/1AH5SKuSyRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+<br />
 The `rollbackOneChangeSetSql` command is a helper command that allows you to inspect the SQL Liquibase will run to revert the *changeSet* specified in the [`rollbackOneChangeSet`](/documentation/rollbackonechangeset.html) command. It is only available for Liquibase Pro users.
 
 ## Uses
