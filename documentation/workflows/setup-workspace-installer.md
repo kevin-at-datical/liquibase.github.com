@@ -1,5 +1,5 @@
 ---
-layout: side-search
+layout: default
 title: Docs | Installer Workspace Setup 
 subnav: subnav_workflows.md
 includeDaticalBox: true

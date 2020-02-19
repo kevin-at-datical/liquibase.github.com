@@ -1,5 +1,5 @@
 ---
-layout: side-search
+layout: default
 title: Docs | Database Change Management Approaches 
 subnav: subnav_quickstart.md
 includeDaticalBox: true

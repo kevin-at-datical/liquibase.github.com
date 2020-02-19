@@ -1,5 +1,5 @@
 ---
-layout: side-search
+layout: default
 title: Docs | Using Version Control Systems 
 subnav: subnav_quickstart.md
 includeDaticalBox: true

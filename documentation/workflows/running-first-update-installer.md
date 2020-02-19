@@ -1,5 +1,5 @@
 ---
-layout: side-search
+layout: default
 title: Docs | LB Installer Run First Update 
 subnav: subnav_workflows.md
 includeDaticalBox: true

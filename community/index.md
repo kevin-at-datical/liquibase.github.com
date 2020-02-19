@@ -1,5 +1,5 @@
 ---
-layout: side-search
+layout: default
 title: Community
 includeDaticalBox: true
 ---
