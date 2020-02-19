@@ -66,7 +66,7 @@ This option is also operating outside of Liquibase and when you do not have a ba
 With this option, you connect to the database and beat it into the state you desire. It’s unequivocally the worst of all options. If you ever want these fixes to apply to other environments, it will definitely require some combination of using `validCheckSum`, `diffChangelog`, `changelogSync`, etc. depending on the specifics of what you actually do by hand. Undoubtedly, it is STRONGLY recommended you do NOT use this option, and that you talk your DBAs out of resorting to this option; bribe them if you must!
 
 ## Targeted Rollback
-Starting with Liquibase 3.8.6, Pro users can take advantage of Targeted Rollback. These rollbacks allow you to target one `changeSet` to rollback, without affecting all the other `changeSets` which followed it. Think "git cherry pick" for rollbacks. [Learn more about Targeted Rollbacks](https://www.liquibase.org/2020-02-targeted-rollback.html).
+Starting with Liquibase 3.8.6, Pro users can take advantage of Targeted Rollback. These rollbacks allow you to target one `changeSet` to rollback, without affecting all the other `changeSets` which followed it. Think "git cherry pick" for rollbacks. [Learn more about Targeted Rollbacks](https://www.liquibase.org/2020/02/targeted-rollback.html).
 
 ## Summing it up
 Bad database changes happen. Depending on your situation and needs, there are several ways to handle a bad database change when you’re using Liquibase. We always recommend rolling forward whenever possible, but it’s good to know all of your options.
