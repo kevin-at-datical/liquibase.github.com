@@ -4,10 +4,10 @@ title: Docs | rollbackOneUpdateSql Command
 ---
 
 # Liquibase Commands: `rollbackOneUpdateSql`
-The `rollbackOneUpdateSql` command is a helper command that allows you to inspect the SQL Liquibase will run to revert all *changeSets* associated with the deploymentID specified in the [`rollbackOneUpdate`](/documentation/rollbackoneupdate.html) command. It is only available for Liquibase Pro users.
+The `rollbackOneUpdateSql` command is a helper command that allows you to inspect the SQL Liquibase will run to revert all *changeSets* associated with the `deploymentID` specified in the [`rollbackOneUpdate`](/documentation/rollbackoneupdate.html) command. It is only available for Liquibase Pro users.
 
 ## Uses
-The `rollbackOneUpdateSql` command is typically used when you want inspect the raw SQL that Liquibase uses to revert all *changeSets* associated with a specified deploymentID when you run the `rollbackOneUpdateSql` command, so you don't unintentionally make a mistake.
+The `rollbackOneUpdateSql` command is typically used when you want inspect the raw SQL that Liquibase uses to revert all *changeSets* associated with a specified `deploymentId` when you run the `rollbackOneUpdateSql` command, so you don't unintentionally make a mistake.
 
 ## Running the `rollbackOneUpdateSql` Command
 Before running the `rollbackOneUpdateSql` command, gather the following information from your DATABASECHANGELOG table:
@@ -46,8 +46,7 @@ For more command specific help, type `liquibase rollbackOneUpdateSql --help` int
 
  Parameter | Definition | Requirement
  --- | --- | ---
- `--listDeploymentIds` | Lists all available deploymentIDs in the target environment. | Required
- `--deploymentId` * | Specifies the deploymentId in the DATABASECHANGELOG table for all *changeSets* you want to rollback. | Required
+ `--deploymentId` * | Specifies the `deploymentId` in the DATABASECHANGELOG table for all *changeSets* you want to rollback. | Required
  
 > &#42; If the `deploymentId` is not specified, Liquibase Pro will use the most recently deployed `deploymentId` from the DATABASECHANGELOG table and use it for the rollback.
 

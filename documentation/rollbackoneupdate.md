@@ -4,17 +4,17 @@ title: Docs | rollbackOneUpdate Command
 ---
 
 # Liquibase Commands: `rollbackOneUpdate`
-The `rollbackOneUpdate` command reverts (rolls back) all non-sequential  *changeSets* related by a specific deploymentID that was made during a previous change to your database in a non-sequential manner. It is only available for Liquibase Pro users.
+The `rollbackOneUpdate` command reverts (rolls back) all *changeSets* related by a specific `deploymentId` that was made during a previous change to your database. It is only available for Liquibase Pro users.
 
 ## Uses
 The `rollbackOneUpdate` command is typically used when you want to undo a series of changes made to your database during a specific deployment and revert those *changeSets* to their previous state without affecting any other changes made to your database.
 
-The `rollbackOneUpdate` command allows you to target a specific *deploymentID* without impacting other changes or deployments that came before or after it.
+The `rollbackOneUpdate` command allows you to target a specific `deploymentId` without impacting other changes or deployments that came before or after it.
 
 <div align="center"><img src="/images/rollback_pro-target-one-update.jpg" width="450px" alt="Image example of rollbackOneUpdate" /></div>
 <br />
 
-The image above shows *deployments* 1 through 5, with *deployment* 2 incorporating all the *changeSets* we want to roll back. As you can see, the `rollbackOneUpdate` command allows you to target *deployment* 2 and revert all *changeSets* associated with the same deployment ID to its previous state without impacting the others.
+The image above shows `deploymentIds` 1 through 5, with `deploymentId` 2 incorporating all the *changeSets* we want to roll back. As you can see, the `rollbackOneUpdate` command allows you to target `deploymentId` 2 and revert all *changeSets* associated with the same `deploymentId` to its previous state without impacting the others.
 
 ## The Impacts of `rollbackOneUpdate`
 Like any cherry-picking tool, using the `rollbackOneUpdate` command comes with risks which may be unintended.
@@ -30,20 +30,20 @@ Running the `rollbackOneUpdate` command will remove the deployment record from t
 
 Depending on your desired outcome, consider doing one of the following:
 - Modify the *changeSet* in the *changelog* file and re-deploy it.
-- Do nothing to the *changeSet* in the *changelog* file and have it be re0deployed.
+- Do nothing to the *changeSet* in the *changelog* file and have it be re-deployed.
 - Delete the *changeSet* in the *changelog* file.
 
 ## Running the `rollbackOneUpdate` Command
 Before running the `rollbackOneUpdate` command, gather the following information from your DATABASECHANGELOG table:
-- The deploymentID of the deployment you want to revert
+- The `deploymentId` of the deployment you want to revert
 
->**Note:** If the deploymentID is not supplied, Liquibase Pro will look up the most recent deployment ID from the DATABASECHANGELOG table and use it for the rollback.
+>**Note:** If the `deploymentId` is not supplied, Liquibase Pro will look up the most recent `deploymentId` from the DATABASECHANGELOG table and use it for the rollback.
 
 Then run the `rollbackOneUpdate` command, with your information:
 
 {% highlight text %}
 
-WAITING FOR COMMAND SYNTAX FROM ERZSEBET
+liquibase --changeLogFile=sql.oracle.sql rollbackOneUpdateSQL --deploymentId=068379006
 
 {% endhighlight %}
 
@@ -65,17 +65,21 @@ For more command specific help, type `liquibase rollbackOneUpdate --help` into t
 
  Parameter | Definition | Requirement
  --- | --- | ---
- `--listDeploymentIds` | Lists all deploymentIDs available in the target environment for rollback. | Required
- `--deploymentId` * | Specifies the deploymentID of all from the DATABASECHANGELOG table related to the *changeSets* intended for rollback. | Required
+ `--deploymentId` * | Specifies the `deploymentId` of all from the DATABASECHANGELOG table related to the *changeSets* intended for rollback. | Required
  `--force` | A required parameter which indicates you intend to use this feature. | Required
 
-> &#42; If not supplied, LiquibasePro will lookup the most recent DeploymentId from the DATABASECHANGELOG table and use it for the rollback.
+> &#42; If not supplied, LiquibasePro will lookup the most recent `deploymentId` from the DATABASECHANGELOG table and use it for the rollback.
 
 ## Output
 When successful, the `rollbackOneUpdate` command produces the following output:
 
 {% highlight text %}
 
-WAITING FOR OUTPUT FROM ERZSEBET
+liquibase --changeLogFile=sql.oracle.sql rollbackOneUpdate --deploymentId=2126881174 --force
+Liquibase Pro 3.8.7-DAT-3917-SNAPSHOT by Datical licensed to Liquibase Pro Customer until Tue Nov 03 19:00:00 CST 2020
+Rolling Back Changeset:sql.oracle.sql::3-createTableForCC::Liquibase Pro User
+Rolling Back Changeset:sql.oracle.sql::2-createTableForView::Liquibase Pro User
+Rolling Back Changeset:sql.oracle.sql::1-createTableForSynonym::Liquibase Pro User
+Liquibase: Rollback has been successful.
 
 {% endhighlight %}

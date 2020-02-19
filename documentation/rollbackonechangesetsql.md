@@ -5,8 +5,8 @@ title: Docs | rollbackOneChangeSetSql Command
 
 # Liquibase Commands: `rollbackOneChangeSetSql`
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/1AH5SKuSyRY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
 <br />
+
 The `rollbackOneChangeSetSql` command is a helper command that allows you to inspect the SQL Liquibase will run to revert the *changeSet* specified in the [`rollbackOneChangeSet`](/documentation/rollbackonechangeset.html) command. It is only available for Liquibase Pro users.
 
 ## Uses
@@ -32,12 +32,12 @@ For more command specific help, type `liquibase rollbackonechangesetSQL --help` 
 
  Parameter | Definition | Requirement
  --- | --- | ---
- --changeLogFile | The root *changelog* | Required
- --url | The JDBC database connection URL | Required
- --username | The database username | Required
- --password | The database password | Required
- --liquibaseProLicenseKey | Your Liquibase Pro license key | Required
- --outputFile | The path to the file where the Rollback SQL will be written | Optional *
+ `--changeLogFile` | The root *changelog* | Required
+ `--url` | The JDBC database connection URL | Required
+ `--username` | The database username | Required
+ `--password`| The database password | Required
+ `--liquibaseProLicenseKey` | Your Liquibase Pro license key | Required
+ `--outputFile` | The path to the file where the Rollback SQL will be written | Optional *
 
 > &#42; If not specified, Rollback SQL output goes to `STDOUT`.
 
@@ -45,10 +45,10 @@ For more command specific help, type `liquibase rollbackonechangesetSQL --help` 
 
  Parameter | Definition | Requirement
  --- | --- | ---
- --changesetId |The *changeSet* ID from the *changelog*. | Required
- --changesetAuthor | The name of the author for the *changeSet* | Required
- --changesetPath | The path to the *changelog* containing the *changeSet* you want to roll back | Required
- --rollbackScript | The path to the script to use to perform the rollback | Optional **
+ `--changesetId` |The *changeSet* ID from the *changelog*. | Required
+ `--changesetAuthor` | The name of the author for the *changeSet* | Required
+ `--changesetPath` | The path to the *changelog* containing the *changeSet* you want to roll back | Required
+ `--rollbackScript` | The path to the script to use to perform the rollback | Optional **
 
 > &#42;&#42; This option is only needed if the rollback is not already defined in the *changelog*, and if it is not a rollback that is automatically provided by Liquibase.
 
