@@ -1,5 +1,5 @@
 ---
-layout: side-search
+layout: default
 title: Docs | Using the Liquibase Installer 
 subnav: subnav_workflows.md
 includeDaticalBox: true
