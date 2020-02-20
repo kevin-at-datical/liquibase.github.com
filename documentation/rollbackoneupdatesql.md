@@ -1,21 +1,21 @@
 ---
 layout: default
-title: Docs | rollbackOneUpdateSql Command 
+title: Docs | rollbackOneUpdateSQL Command 
 ---
 
-# Liquibase Commands: `rollbackOneUpdateSql`
-The `rollbackOneUpdateSql` command is a helper command that allows you to inspect the SQL Liquibase will run to revert all *changeSets* associated with the `deploymentID` specified in the [`rollbackOneUpdate`](/documentation/rollbackoneupdate.html) command. It is only available for Liquibase Pro users.
+# Liquibase Commands: `rollbackOneUpdateSQL`
+The `rollbackOneUpdateSQL` command is a helper command that allows you to inspect the SQL Liquibase will run to revert all *changeSets* associated with the `deploymentID` specified in the [`rollbackOneUpdate`](/documentation/rollbackoneupdate.html) command. It is only available for Liquibase Pro users.
 
 ## Uses
-The `rollbackOneUpdateSql` command is typically used when you want inspect the raw SQL that Liquibase uses to revert all *changeSets* associated with a specified `deploymentId` when you run the `rollbackOneUpdateSql` command, so you don't unintentionally make a mistake.
+The `rollbackOneUpdateSQL` command is typically used when you want inspect the raw SQL that Liquibase uses to revert all *changeSets* associated with a specified `deploymentId` when you run the `rollbackOneUpdateSQL` command, so you don't unintentionally make a mistake.
 
-## Running the `rollbackOneUpdateSql` Command
-Before running the `rollbackOneUpdateSql` command, gather the following information from your DATABASECHANGELOG table:
-- The Author of the *changeSet* you want to revert
-- The *changeSet* ID of the *changeSet* you want to revert
-- The file name (*changeSet* path) of the *changeSet* you want to revert
+## Running the `rollbackOneUpdateSQL` Command
+Before running the `rollbackOneUpdateSQL` command, gather the following information from your DATABASECHANGELOG table:
+- The `deploymentId` of the *changeSet* group you want to revert
 
-Then run the `rollbackOneUpdateSql` command, with your information:
+>**Note:** You can also run the [history](/documentation/history.html) command to find your `deploymentId`.
+
+Then run the `rollbackOneUpdateSQL` command, with your information:
 
 {% highlight text %}
 
@@ -25,9 +25,9 @@ liquibase --changeLogFile=sql.oracle.sql rollbackOneUpdateSQL --deploymentId=206
 
 >**Note:** Unlike the [rollbackOneChangeSet](/documentation/rollbackonechangeset.html) command, there is NO impact to the DATABASECHANGELOG table. See the [rollbackOneUpdate](/documentation/rollbackoneupdate.html) topic for more information.
 
-For more command specific help, type `liquibase rollbackOneUpdateSql --help` into the command prompt.
+For more command specific help, type `liquibase rollbackOneUpdateSQL --help` into the command prompt.
 
-### `rollbackOneUpdateSql` Global Parameters
+### `rollbackOneUpdateSQL` Global Parameters
 
  Parameter | Definition | Requirement
  --- | --- | ---
@@ -42,16 +42,16 @@ For more command specific help, type `liquibase rollbackOneUpdateSql --help` int
 
 > &#42;&#42; If not specified, Rollback SQL output goes to `STDOUT`.
 
-### `rollbackOneUpdateSql` Command Parameters
+### `rollbackOneUpdateSQL` Command Parameters
 
  Parameter | Definition | Requirement
  --- | --- | ---
  `--deploymentId` * | Specifies the `deploymentId` in the DATABASECHANGELOG table for all *changeSets* you want to rollback. | Required
  
-> &#42; If the `deploymentId` is not specified, Liquibase Pro will use the most recently deployed `deploymentId` from the DATABASECHANGELOG table and use it for the rollback.
+> &#42; If the `deploymentId` is not specified, Liquibase Pro will use the most recently deployed `deploymentId` from the DATABASECHANGELOG table and use it to generate the rollback SQL.
 
 ## Output
-When successful, the `rollbackOneUpdateSql` command produces the following output:
+When successful, the `rollbackOneUpdateSQL` command produces the following output:
 
 {% highlight sql %}
 
