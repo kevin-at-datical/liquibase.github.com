@@ -19,7 +19,7 @@ Then run the `rollbackOneUpdateSql` command, with your information:
 
 {% highlight text %}
 
-WAITING ON SYNTAX FROM ERZSEBET
+liquibase --changeLogFile=sql.oracle.sql rollbackOneUpdateSQL --deploymentId=2068379006
 
 {% endhighlight %}
 
@@ -55,6 +55,27 @@ When successful, the `rollbackOneUpdateSql` command produces the following outpu
 
 {% highlight sql %}
 
-Waiting on Output Info
+-- *********************************************************************
+-- Rollback deployment ID '2068379006'
+-- *********************************************************************
+-- Change Log: sql.oracle.sql
+-- Ran at: 2/18/20 5:27 PM
+-- Against: PROSCHEMA@jdbc:oracle:thin:@3.219.82.47:1521/orcl
+-- Liquibase version: 3.8.7-DAT-3917-SNAPSHOT
+-- *********************************************************************
+
+-- Lock Database
+UPDATE PROSCHEMA.DATABASECHANGELOGLOCK SET LOCKED = 1, LOCKEDBY = 'gemfire-PC (10.8.8.200)', LOCKGRANTED = TO_TIMESTAMP('2020-02-18 17:27:20.364', 'YY
+YY-MM-DD HH24:MI:SS.FF') WHERE ID = 1 AND LOCKED = 0;
+
+-- Rolling Back ChangeSet: sql.oracle.sql::2-createPackageBody::Liquibase Pro User
+DROP PACKAGE BODY PROSCHEMA.PKG1;
+
+DELETE FROM PROSCHEMA.DATABASECHANGELOG WHERE ID = '2-createPackageBody' AND AUTHOR = 'Liquibase Pro User' AND FILENAME = 'sql.oracle.sql';
+
+-- Rolling Back ChangeSet: sql.oracle.sql::1-createPackage::Liquibase Pro User
+DROP PACKAGE PROSCHEMA.PKG1;
+
+DELETE FROM PROSCHEMA.DATABASECHANGELOG WHERE ID = '1-createPackage' AND AUTHOR = 'Liquibase Pro User' AND FILENAME = 'sql.oracle.sql';
 
 {% endhighlight %}
