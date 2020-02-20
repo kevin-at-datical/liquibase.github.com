@@ -46,6 +46,9 @@ includeDaticalBox: true
         <li><a href="generating_changelogs.html">generateChangeLog</a></li>
         <li><a href="rollbackonechangeset.html">rollbackOneChangeSet</a></li>
         <li><a href="rollbackonechangesetsql.html">rollbackOneChangeSetSql</a></li>
+        <li><a href="rollbackoneupdate.html">rollbackOneUpdate</a></li>
+        <li><a href="rollbackoneupdatesql.html">rollbackOneUpdateSql</a></li>
+        <li><a href="history.html">history</a></li>
     </ul>
   </div>
   <div class="docs-column">
