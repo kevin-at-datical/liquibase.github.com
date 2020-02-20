@@ -27,11 +27,6 @@ liquibase --outputFile=history.txt history
  `--url` | The JDBC database connection URL | Required
  `--username` | The database username | Required
  `--password` | The database password | Required
-
- ### `history` Command Parameters
-
- Parameter | Definition | Requirement
- --- | --- | ---
  `--outputFile` | Lists all available `deploymentIds` in the target environment. | Optional
  
 ## Output
