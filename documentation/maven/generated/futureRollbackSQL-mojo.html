@@ -9,7 +9,7 @@
       
 <p><b>Full name</b>:</p>
       
-<p>org.liquibase:liquibase-maven-plugin:3.8.3:futureRollbackSQL</p>
+<p>org.liquibase:liquibase-maven-plugin:3.8.7:futureRollbackSQL</p>
       
 <p><b>Description</b>:</p>
       
@@ -49,8 +49,8 @@ current state after the next update.</p></div>
             
 <td>-</td>
             
-<td>Specifies the change log directory into which liquibase can find
-the change log file.<br /></td>
+<td>Specifies the directory where Liquibase can find your
+<i>changelog</i> file.<br /></td>
           </tr>
           
 <tr class="a">
@@ -61,7 +61,7 @@ the change log file.<br /></td>
             
 <td>-</td>
             
-<td>Specifies the change log file to use for Liquibase.<br /></td>
+<td>Specifies the <i>changelog</i> file for Liquibase to use.<br /></td>
           </tr>
           
 <tr class="b">
@@ -72,7 +72,8 @@ the change log file.<br /></td>
             
 <td>-</td>
             
-<td>Schema against which Liquibase changelog tables will be created.<br /></td>
+<td>Specifies the schema Liquibase will use to create your
+<i>changelog</i> tables.<br /></td>
           </tr>
           
 <tr class="a">
@@ -83,7 +84,8 @@ the change log file.<br /></td>
             
 <td>-</td>
             
-<td>Schema against which Liquibase changelog tables will be created.<br /></td>
+<td>Specifies the schema Liquibase will use to create your changelog
+table.<br /></td>
           </tr>
           
 <tr class="b">
@@ -94,8 +96,8 @@ the change log file.<br /></td>
             
 <td>-</td>
             
-<td>Flag for forcing the checksums to be cleared from the
-DatabaseChangeLog table.<br /><b>Default value is</b>: false.</td>
+<td>A flag that forces checksums to be cleared from the
+DATABASECHANGELOG table.<br /><b>Default value is</b>: false.</td>
           </tr>
           
 <tr class="a">
@@ -106,9 +108,9 @@ DatabaseChangeLog table.<br /><b>Default value is</b>: false.</td>
             
 <td>-</td>
             
-<td>The Liquibase contexts to execute, which can be &quot;,&quot; separated if
-multiple contexts are required. If no context is specified then ALL
-contexts will be executed.<br /></td>
+<td>Specifies which contexts Liquibase will execute, which can be
+separated by a comma if multiple contexts are required. If a
+context is not specified, then ALL contexts will be executed.<br /></td>
           </tr>
           
 <tr class="b">
@@ -119,7 +121,8 @@ contexts will be executed.<br /></td>
             
 <td>-</td>
             
-<td>Table name to use for the databasechangelog.<br /></td>
+<td>Specifies the table name to use for the DATABASECHANGELOGLOCK
+table.<br /></td>
           </tr>
           
 <tr class="a">
@@ -130,7 +133,7 @@ contexts will be executed.<br /></td>
             
 <td>-</td>
             
-<td>Table name to use for the databasechangelog.<br /></td>
+<td>Specifies the table name to use for the DATABASECHANGELOG table.<br /></td>
           </tr>
           
 <tr class="b">
@@ -141,7 +144,7 @@ contexts will be executed.<br /></td>
             
 <td>-</td>
             
-<td>The class to use as the database object.<br /></td>
+<td>Specifies the database object class.<br /></td>
           </tr>
           
 <tr class="a">
@@ -152,7 +155,8 @@ contexts will be executed.<br /></td>
             
 <td>-</td>
             
-<td>The default catalog name to use the for database connection.<br /></td>
+<td>Specifies the default catalog name to use for the database
+connection.<br /></td>
           </tr>
           
 <tr class="b">
@@ -163,7 +167,8 @@ contexts will be executed.<br /></td>
             
 <td>-</td>
             
-<td>The default schema name to use the for database connection.<br /></td>
+<td>Specifies the default schema name to use for the database
+connection.<br /></td>
           </tr>
           
 <tr class="a">
@@ -174,8 +179,7 @@ contexts will be executed.<br /></td>
             
 <td>-</td>
             
-<td>The fully qualified name of the driver class to use to connect to
-the database.<br /></td>
+<td>Specifies the driver class name to use for the database connection.<br /></td>
           </tr>
           
 <tr class="b">
@@ -186,8 +190,8 @@ the database.<br /></td>
             
 <td>-</td>
             
-<td>Location of a properties file containing JDBC connection properties
-for use by the driver.<br /></td>
+<td>Specifies the location of a JDBC connection-properties file which
+contains properties the driver will use.<br /></td>
           </tr>
           
 <tr class="a">
@@ -209,7 +213,7 @@ for use by the driver.<br /></td>
             
 <td>-</td>
             
-<td>Array to put a expression variable to maven plugin.<br /></td>
+<td>A map-based collection of <i>changelog</i> properties to apply.<br /></td>
           </tr>
           
 <tr class="a">
@@ -220,7 +224,8 @@ for use by the driver.<br /></td>
             
 <td>-</td>
             
-<td>Array to put a expression variable to maven plugin.<br /></td>
+<td>A property-based collection of <i>changelog</i> properties to
+apply.<br /></td>
           </tr>
           
 <tr class="b">
@@ -231,9 +236,8 @@ for use by the driver.<br /></td>
             
 <td>-</td>
             
-<td>Allows for the maven project artifact to be included in the class
-loader for obtaining the Liquibase property and DatabaseChangeLog
-files.<br /><b>Default value is</b>: true.</td>
+<td>Includes a Maven project artifact in the class loader which obtains
+the liquibase.properties and changelog files.<br /><b>Default value is</b>: true.</td>
           </tr>
           
 <tr class="a">
@@ -244,9 +248,8 @@ files.<br /><b>Default value is</b>: true.</td>
             
 <td>-</td>
             
-<td>Allows for the maven test output directory to be included in the
-class loader for obtaining the Liquibase property and
-DatabaseChangeLog files.<br /><b>Default value is</b>: true.</td>
+<td>Includes the Maven test output directory in the class loader which
+obtains the liquibase.properties and changelog files.<br /><b>Default value is</b>: true.</td>
           </tr>
           
 <tr class="b">
@@ -257,9 +260,10 @@ DatabaseChangeLog files.<br /><b>Default value is</b>: true.</td>
             
 <td>-</td>
             
-<td>The Liquibase labels to execute, which can be &quot;,&quot; separated if
-multiple labels are required or a more complex expression. If no
-label is specified then ALL all will be executed.<br /></td>
+<td>Specifies which Liquibase labels Liquibase will execute, which can
+be separated by a comma if multiple labels are required or you need
+to designate a more complex expression. If a label is not
+specified, then ALL labels will be executed.<br /></td>
           </tr>
           
 <tr class="a">
@@ -270,7 +274,7 @@ label is specified then ALL all will be executed.<br /></td>
             
 <td>-</td>
             
-<td>Liquibase PRO license key value<br /></td>
+<td>Specifies your Liquibase Pro license key.<br /></td>
           </tr>
           
 <tr class="b">
@@ -281,9 +285,9 @@ label is specified then ALL all will be executed.<br /></td>
             
 <td>-</td>
             
-<td>Controls the level of logging from Liquibase when executing. The
-value can be &quot;debug&quot;, &quot;info&quot;, &quot;warning&quot;, &quot;severe&quot;, or &quot;off&quot;. The
-value is case insensitive.<br /><b>Default value is</b>: INFO.</td>
+<td>Controls the amount of logging detail Liquibase outputs when
+executing. The values can be &quot;DEBUG&quot;, &quot;INFO&quot;, &quot;WARNING&quot;, &quot;SEVERE&quot;,
+or &quot;OFF&quot;. The value is not case sensitive.<br /><b>Default value is</b>: INFO.</td>
           </tr>
           
 <tr class="a">
@@ -294,7 +298,7 @@ value is case insensitive.<br /><b>Default value is</b>: INFO.</td>
             
 <td>-</td>
             
-<td>Whether to ignore the catalog/database name.<br /></td>
+<td>Specifies whether to ignore the catalog/database name.<br /><b>Default value is</b>: false.</td>
           </tr>
           
 <tr class="b">
@@ -305,7 +309,7 @@ value is case insensitive.<br /><b>Default value is</b>: INFO.</td>
             
 <td>-</td>
             
-<td>Whether to ignore the schema name.<br /></td>
+<td>Specifies whether to ignore the schema name.<br /><b>Default value is</b>: false.</td>
           </tr>
           
 <tr class="a">
@@ -328,8 +332,8 @@ be overwritten.<br /><b>Default value is</b>: ${project.build.directory}/liquiba
             
 <td>-</td>
             
-<td>Flag to set the character encoding of the output file produced by
-Liquibase during the updateSQL phase.<br /></td>
+<td>A flag which indicates you want to set the character encoding of
+the output file during the updateSQL phase.<br /></td>
           </tr>
           
 <tr class="a">
@@ -340,7 +344,7 @@ Liquibase during the updateSQL phase.<br /></td>
             
 <td>-</td>
             
-<td>The database password to use to connect to the specified database.<br /></td>
+<td>Specifies the database password for database connection.<br /></td>
           </tr>
           
 <tr class="b">
@@ -351,9 +355,8 @@ Liquibase during the updateSQL phase.<br /></td>
             
 <td>-</td>
             
-<td>Controls the prompting of users as to whether or not they really
-want to run the changes on a database that is not local to the
-machine that the user is current executing the plugin on.<br /><b>Default value is</b>: true.</td>
+<td>Controls whether users are prompted before executing changeSet to a
+non-local database.<br /><b>Default value is</b>: true.</td>
           </tr>
           
 <tr class="a">
@@ -364,8 +367,8 @@ machine that the user is current executing the plugin on.<br /><b>Default value 
             
 <td>-</td>
             
-<td>The Liquibase properties file used to configure the Liquibase
-Liquibase.<br /></td>
+<td>Specifies the <i>liquibase.properties</i> you want to use to
+configure Liquibase.<br /></td>
           </tr>
           
 <tr class="b">
@@ -376,10 +379,10 @@ Liquibase.<br /></td>
             
 <td>-</td>
             
-<td>Flag allowing for the Liquibase properties file to override any
-settings provided in the Maven plugin configuration. By default if
-a property is explicity specified it is not overridden if it also
-appears in the properties file.<br /><b>Default value is</b>: false.</td>
+<td>A flag which indicates you want the <i>liquibase.properties</i>
+file to override any settings provided in the Maven plugin
+configuration. By default, if a property is explicitly specified it
+is not overridden if it also appears in the properties file.<br /><b>Default value is</b>: false.</td>
           </tr>
           
 <tr class="a">
@@ -390,8 +393,8 @@ appears in the properties file.<br /><b>Default value is</b>: false.</td>
             
 <td>-</td>
             
-<td>The class to use as the property provider (must be a
-java.util.Properties implementation).<br /></td>
+<td>Specifies the property provider which must be a
+java.util.Properties implementation.<br /></td>
           </tr>
           
 <tr class="b">
@@ -438,7 +441,8 @@ plugin is executing on.<br /></td>
             
 <td>-</td>
             
-<td>The server id in settings.xml to use when authenticating with.<br /></td>
+<td>Specifies the server ID in the Maven <i>settings.xml</i> to use
+when authenticating.<br /></td>
           </tr>
           
 <tr class="b">
@@ -449,8 +453,8 @@ plugin is executing on.<br /></td>
             
 <td>-</td>
             
-<td>Set this to 'true' to skip running liquibase. Its use is NOT
-RECOMMENDED, but quite convenient on occasion.<br /><b>Default value is</b>: false.</td>
+<td>Specifies whether to skip running Liquibase. The use of this
+parameter is NOT RECOMMENDED but can be used when needed.<br /><b>Default value is</b>: false.</td>
           </tr>
           
 <tr class="a">
@@ -461,7 +465,8 @@ RECOMMENDED, but quite convenient on occasion.<br /><b>Default value is</b>: fal
             
 <td>-</td>
             
-<td>List of system properties to pass to the database.<br /></td>
+<td>Specifies a list of system properties you want to to pass to the
+database.<br /></td>
           </tr>
           
 <tr class="b">
@@ -472,7 +477,7 @@ RECOMMENDED, but quite convenient on occasion.<br /><b>Default value is</b>: fal
             
 <td>-</td>
             
-<td>The Database URL to connect to for executing Liquibase.<br /></td>
+<td>Specifies the database URL you want to use to execute Liquibase.<br /></td>
           </tr>
           
 <tr class="a">
@@ -483,7 +488,7 @@ RECOMMENDED, but quite convenient on occasion.<br /><b>Default value is</b>: fal
             
 <td>-</td>
             
-<td>The database username to use to connect to the specified database.<br /></td>
+<td>Specifies the database username for database connection.<br /></td>
           </tr>
           
 <tr class="b">
@@ -494,7 +499,7 @@ RECOMMENDED, but quite convenient on occasion.<br /><b>Default value is</b>: fal
             
 <td>-</td>
             
-<td>Controls the verbosity of the output from invoking the plugin.<br /><b>Default value is</b>: false.</td>
+<td>Controls the amount of output detail when you call the plugin.<br /><b>Default value is</b>: false.</td>
           </tr>
         </table>
       </section>
@@ -503,8 +508,8 @@ RECOMMENDED, but quite convenient on occasion.<br /><b>Default value is</b>: fal
         
 <p><b><a name="liquibase.changeLogDirectory">liquibase.changeLogDirectory</a>:</b></p>
         
-<div>Specifies the change log directory into which liquibase can find
-the change log file.</div>
+<div>Specifies the directory where Liquibase can find your
+<i>changelog</i> file.</div>
         
 <ul>
           
@@ -514,7 +519,7 @@ the change log file.</div>
         </ul><hr />
 <p><b><a name="liquibase.changeLogFile">liquibase.changeLogFile</a>:</b></p>
         
-<div>Specifies the change log file to use for Liquibase.</div>
+<div>Specifies the <i>changelog</i> file for Liquibase to use.</div>
         
 <ul>
           
@@ -524,7 +529,8 @@ the change log file.</div>
         </ul><hr />
 <p><b><a name="liquibase.changelogCatalogName">liquibase.changelogCatalogName</a>:</b></p>
         
-<div>Schema against which Liquibase changelog tables will be created.</div>
+<div>Specifies the schema Liquibase will use to create your
+<i>changelog</i> tables.</div>
         
 <ul>
           
@@ -534,7 +540,8 @@ the change log file.</div>
         </ul><hr />
 <p><b><a name="liquibase.changelogSchemaName">liquibase.changelogSchemaName</a>:</b></p>
         
-<div>Schema against which Liquibase changelog tables will be created.</div>
+<div>Specifies the schema Liquibase will use to create your changelog
+table.</div>
         
 <ul>
           
@@ -544,8 +551,8 @@ the change log file.</div>
         </ul><hr />
 <p><b><a name="liquibase.clearCheckSums">liquibase.clearCheckSums</a>:</b></p>
         
-<div>Flag for forcing the checksums to be cleared from the
-DatabaseChangeLog table.</div>
+<div>A flag that forces checksums to be cleared from the
+DATABASECHANGELOG table.</div>
         
 <ul>
           
@@ -557,9 +564,9 @@ DatabaseChangeLog table.</div>
         </ul><hr />
 <p><b><a name="liquibase.contexts">liquibase.contexts</a>:</b></p>
         
-<div>The Liquibase contexts to execute, which can be &quot;,&quot; separated if
-multiple contexts are required. If no context is specified then ALL
-contexts will be executed.</div>
+<div>Specifies which contexts Liquibase will execute, which can be
+separated by a comma if multiple contexts are required. If a
+context is not specified, then ALL contexts will be executed.</div>
         
 <ul>
           
@@ -569,7 +576,8 @@ contexts will be executed.</div>
         </ul><hr />
 <p><b><a name="liquibase.databaseChangeLogLockTableName">liquibase.databaseChangeLogLockTableName</a>:</b></p>
         
-<div>Table name to use for the databasechangelog.</div>
+<div>Specifies the table name to use for the DATABASECHANGELOGLOCK
+table.</div>
         
 <ul>
           
@@ -579,7 +587,7 @@ contexts will be executed.</div>
         </ul><hr />
 <p><b><a name="liquibase.databaseChangeLogTableName">liquibase.databaseChangeLogTableName</a>:</b></p>
         
-<div>Table name to use for the databasechangelog.</div>
+<div>Specifies the table name to use for the DATABASECHANGELOG table.</div>
         
 <ul>
           
@@ -589,7 +597,7 @@ contexts will be executed.</div>
         </ul><hr />
 <p><b><a name="liquibase.databaseClass">liquibase.databaseClass</a>:</b></p>
         
-<div>The class to use as the database object.</div>
+<div>Specifies the database object class.</div>
         
 <ul>
           
@@ -599,7 +607,8 @@ contexts will be executed.</div>
         </ul><hr />
 <p><b><a name="liquibase.defaultCatalogName">liquibase.defaultCatalogName</a>:</b></p>
         
-<div>The default catalog name to use the for database connection.</div>
+<div>Specifies the default catalog name to use for the database
+connection.</div>
         
 <ul>
           
@@ -609,7 +618,8 @@ contexts will be executed.</div>
         </ul><hr />
 <p><b><a name="liquibase.defaultSchemaName">liquibase.defaultSchemaName</a>:</b></p>
         
-<div>The default schema name to use the for database connection.</div>
+<div>Specifies the default schema name to use for the database
+connection.</div>
         
 <ul>
           
@@ -619,8 +629,7 @@ contexts will be executed.</div>
         </ul><hr />
 <p><b><a name="liquibase.driver">liquibase.driver</a>:</b></p>
         
-<div>The fully qualified name of the driver class to use to connect to
-the database.</div>
+<div>Specifies the driver class name to use for the database connection.</div>
         
 <ul>
           
@@ -630,8 +639,8 @@ the database.</div>
         </ul><hr />
 <p><b><a name="driverPropertiesFile">driverPropertiesFile</a>:</b></p>
         
-<div>Location of a properties file containing JDBC connection properties
-for use by the driver.</div>
+<div>Specifies the location of a JDBC connection-properties file which
+contains properties the driver will use.</div>
         
 <ul>
           
@@ -657,7 +666,7 @@ setting.</div>
         </ul><hr />
 <p><b><a name="expressionVariables">expressionVariables</a>:</b></p>
         
-<div>Array to put a expression variable to maven plugin.</div>
+<div>A map-based collection of <i>changelog</i> properties to apply.</div>
         
 <ul>
           
@@ -667,7 +676,8 @@ setting.</div>
         </ul><hr />
 <p><b><a name="expressionVars">expressionVars</a>:</b></p>
         
-<div>Array to put a expression variable to maven plugin.</div>
+<div>A property-based collection of <i>changelog</i> properties to
+apply.</div>
         
 <ul>
           
@@ -677,9 +687,8 @@ setting.</div>
         </ul><hr />
 <p><b><a name="liquibase.includeArtifact">liquibase.includeArtifact</a>:</b></p>
         
-<div>Allows for the maven project artifact to be included in the class
-loader for obtaining the Liquibase property and DatabaseChangeLog
-files.</div>
+<div>Includes a Maven project artifact in the class loader which obtains
+the liquibase.properties and changelog files.</div>
         
 <ul>
           
@@ -691,9 +700,8 @@ files.</div>
         </ul><hr />
 <p><b><a name="liquibase.includeTestOutputDirectory">liquibase.includeTestOutputDirectory</a>:</b></p>
         
-<div>Allows for the maven test output directory to be included in the
-class loader for obtaining the Liquibase property and
-DatabaseChangeLog files.</div>
+<div>Includes the Maven test output directory in the class loader which
+obtains the liquibase.properties and changelog files.</div>
         
 <ul>
           
@@ -705,9 +713,10 @@ DatabaseChangeLog files.</div>
         </ul><hr />
 <p><b><a name="liquibase.labels">liquibase.labels</a>:</b></p>
         
-<div>The Liquibase labels to execute, which can be &quot;,&quot; separated if
-multiple labels are required or a more complex expression. If no
-label is specified then ALL all will be executed.</div>
+<div>Specifies which Liquibase labels Liquibase will execute, which can
+be separated by a comma if multiple labels are required or you need
+to designate a more complex expression. If a label is not
+specified, then ALL labels will be executed.</div>
         
 <ul>
           
@@ -717,7 +726,7 @@ label is specified then ALL all will be executed.</div>
         </ul><hr />
 <p><b><a name="liquibase.liquibaseProLicenseKey">liquibase.liquibaseProLicenseKey</a>:</b></p>
         
-<div>Liquibase PRO license key value</div>
+<div>Specifies your Liquibase Pro license key.</div>
         
 <ul>
           
@@ -727,9 +736,9 @@ label is specified then ALL all will be executed.</div>
         </ul><hr />
 <p><b><a name="liquibase.logging">liquibase.logging</a>:</b></p>
         
-<div>Controls the level of logging from Liquibase when executing. The
-value can be &quot;debug&quot;, &quot;info&quot;, &quot;warning&quot;, &quot;severe&quot;, or &quot;off&quot;. The
-value is case insensitive.</div>
+<div>Controls the amount of logging detail Liquibase outputs when
+executing. The values can be &quot;DEBUG&quot;, &quot;INFO&quot;, &quot;WARNING&quot;, &quot;SEVERE&quot;,
+or &quot;OFF&quot;. The value is not case sensitive.</div>
         
 <ul>
           
@@ -741,23 +750,27 @@ value is case insensitive.</div>
         </ul><hr />
 <p><b><a name="liquibase.outputDefaultCatalog">liquibase.outputDefaultCatalog</a>:</b></p>
         
-<div>Whether to ignore the catalog/database name.</div>
+<div>Specifies whether to ignore the catalog/database name.</div>
         
 <ul>
           
 <li><b>Type</b>: boolean</li>
           
 <li><b>Required</b>: No</li>
+          
+<li><b>Default</b>: false</li>
         </ul><hr />
 <p><b><a name="liquibase.outputDefaultSchema">liquibase.outputDefaultSchema</a>:</b></p>
         
-<div>Whether to ignore the schema name.</div>
+<div>Specifies whether to ignore the schema name.</div>
         
 <ul>
           
 <li><b>Type</b>: boolean</li>
           
 <li><b>Required</b>: No</li>
+          
+<li><b>Default</b>: false</li>
         </ul><hr />
 <p><b><a name="liquibase.outputFile">liquibase.outputFile</a>:</b></p>
         
@@ -774,8 +787,8 @@ be overwritten.</div>
         </ul><hr />
 <p><b><a name="liquibase.outputFileEncoding">liquibase.outputFileEncoding</a>:</b></p>
         
-<div>Flag to set the character encoding of the output file produced by
-Liquibase during the updateSQL phase.</div>
+<div>A flag which indicates you want to set the character encoding of
+the output file during the updateSQL phase.</div>
         
 <ul>
           
@@ -785,7 +798,7 @@ Liquibase during the updateSQL phase.</div>
         </ul><hr />
 <p><b><a name="liquibase.password">liquibase.password</a>:</b></p>
         
-<div>The database password to use to connect to the specified database.</div>
+<div>Specifies the database password for database connection.</div>
         
 <ul>
           
@@ -795,9 +808,8 @@ Liquibase during the updateSQL phase.</div>
         </ul><hr />
 <p><b><a name="liquibase.promptOnNonLocalDatabase">liquibase.promptOnNonLocalDatabase</a>:</b></p>
         
-<div>Controls the prompting of users as to whether or not they really
-want to run the changes on a database that is not local to the
-machine that the user is current executing the plugin on.</div>
+<div>Controls whether users are prompted before executing changeSet to a
+non-local database.</div>
         
 <ul>
           
@@ -809,8 +821,8 @@ machine that the user is current executing the plugin on.</div>
         </ul><hr />
 <p><b><a name="liquibase.propertyFile">liquibase.propertyFile</a>:</b></p>
         
-<div>The Liquibase properties file used to configure the Liquibase
-Liquibase.</div>
+<div>Specifies the <i>liquibase.properties</i> you want to use to
+configure Liquibase.</div>
         
 <ul>
           
@@ -820,10 +832,10 @@ Liquibase.</div>
         </ul><hr />
 <p><b><a name="liquibase.propertyFileWillOverride">liquibase.propertyFileWillOverride</a>:</b></p>
         
-<div>Flag allowing for the Liquibase properties file to override any
-settings provided in the Maven plugin configuration. By default if
-a property is explicity specified it is not overridden if it also
-appears in the properties file.</div>
+<div>A flag which indicates you want the <i>liquibase.properties</i>
+file to override any settings provided in the Maven plugin
+configuration. By default, if a property is explicitly specified it
+is not overridden if it also appears in the properties file.</div>
         
 <ul>
           
@@ -835,8 +847,8 @@ appears in the properties file.</div>
         </ul><hr />
 <p><b><a name="liquibase.propertyProviderClass">liquibase.propertyProviderClass</a>:</b></p>
         
-<div>The class to use as the property provider (must be a
-java.util.Properties implementation).</div>
+<div>Specifies the property provider which must be a
+java.util.Properties implementation.</div>
         
 <ul>
           
@@ -881,7 +893,8 @@ plugin is executing on.</div>
         </ul><hr />
 <p><b><a name="liquibase.server">liquibase.server</a>:</b></p>
         
-<div>The server id in settings.xml to use when authenticating with.</div>
+<div>Specifies the server ID in the Maven <i>settings.xml</i> to use
+when authenticating.</div>
         
 <ul>
           
@@ -891,8 +904,8 @@ plugin is executing on.</div>
         </ul><hr />
 <p><b><a name="liquibase.skip">liquibase.skip</a>:</b></p>
         
-<div>Set this to 'true' to skip running liquibase. Its use is NOT
-RECOMMENDED, but quite convenient on occasion.</div>
+<div>Specifies whether to skip running Liquibase. The use of this
+parameter is NOT RECOMMENDED but can be used when needed.</div>
         
 <ul>
           
@@ -904,7 +917,8 @@ RECOMMENDED, but quite convenient on occasion.</div>
         </ul><hr />
 <p><b><a name="systemProperties">systemProperties</a>:</b></p>
         
-<div>List of system properties to pass to the database.</div>
+<div>Specifies a list of system properties you want to to pass to the
+database.</div>
         
 <ul>
           
@@ -914,7 +928,7 @@ RECOMMENDED, but quite convenient on occasion.</div>
         </ul><hr />
 <p><b><a name="liquibase.url">liquibase.url</a>:</b></p>
         
-<div>The Database URL to connect to for executing Liquibase.</div>
+<div>Specifies the database URL you want to use to execute Liquibase.</div>
         
 <ul>
           
@@ -924,7 +938,7 @@ RECOMMENDED, but quite convenient on occasion.</div>
         </ul><hr />
 <p><b><a name="liquibase.username">liquibase.username</a>:</b></p>
         
-<div>The database username to use to connect to the specified database.</div>
+<div>Specifies the database username for database connection.</div>
         
 <ul>
           
@@ -934,7 +948,7 @@ RECOMMENDED, but quite convenient on occasion.</div>
         </ul><hr />
 <p><b><a name="liquibase.verbose">liquibase.verbose</a>:</b></p>
         
-<div>Controls the verbosity of the output from invoking the plugin.</div>
+<div>Controls the amount of output detail when you call the plugin.</div>
         
 <ul>
           
