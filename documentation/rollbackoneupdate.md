@@ -34,7 +34,7 @@ Depending on your desired outcome, consider doing one of the following:
 - Delete the *changeSet* in the *changelog* file.
 
 ## Running the `rollbackOneUpdate` Command
-Before running the `rollbackOneUpdate` command, gather the following information from your DATABASECHANGELOG table:
+Before running the rollbackOneUpdate command, you can get the optional deploymentId by running the [history](/documentation/history.html) command:
 - The `deploymentId` of the deployment you want to revert
 
 >**Note:** If the `deploymentId` is not supplied, Liquibase Pro will look up the most recent `deploymentId` from the DATABASECHANGELOG table and use it for the rollback.
@@ -43,7 +43,7 @@ Then run the `rollbackOneUpdate` command, with your information:
 
 {% highlight text %}
 
-liquibase --changeLogFile=sql.oracle.sql rollbackOneUpdateSQL --deploymentId=068379006
+liquibase rollbackOneUpdateSQL --deploymentId=068379006
 
 {% endhighlight %}
 
@@ -65,7 +65,7 @@ For more command specific help, type `liquibase rollbackOneUpdate --help` into t
 
  Parameter | Definition | Requirement
  --- | --- | ---
- `--deploymentId` * | Specifies the `deploymentId` of all from the DATABASECHANGELOG table related to the *changeSets* intended for rollback. | Required
+ `--deploymentId` * | Specifies the `deploymentId` of all from the DATABASECHANGELOG table related to the *changeSets* intended for rollback. | Optional
  `--force` | A required parameter which indicates you intend to use this feature. | Required
 
 > &#42; If not supplied, LiquibasePro will lookup the most recent `deploymentId` from the DATABASECHANGELOG table and use it for the rollback.
@@ -75,7 +75,7 @@ When successful, the `rollbackOneUpdate` command produces the following output:
 
 {% highlight text %}
 
-liquibase --changeLogFile=sql.oracle.sql rollbackOneUpdate --deploymentId=2126881174 --force
+liquibase rollbackOneUpdate --deploymentId=2126881174 --force
 Liquibase Pro 3.8.7-DAT-3917-SNAPSHOT by Datical licensed to Liquibase Pro Customer until Tue Nov 03 19:00:00 CST 2020
 Rolling Back Changeset:sql.oracle.sql::3-createTableForCC::Liquibase Pro User
 Rolling Back Changeset:sql.oracle.sql::2-createTableForView::Liquibase Pro User
