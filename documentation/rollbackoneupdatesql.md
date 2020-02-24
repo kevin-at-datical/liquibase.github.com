@@ -7,23 +7,21 @@ title: Docs | rollbackOneUpdateSQL Command
 The `rollbackOneUpdateSQL` command is a helper command that allows you to inspect the SQL Liquibase will run to revert all *changeSets* associated with the `deploymentID` specified in the [`rollbackOneUpdate`](/documentation/rollbackoneupdate.html) command. It is only available for Liquibase Pro users.
 
 ## Uses
-The `rollbackOneUpdateSQL` command is typically used when you want inspect the raw SQL that Liquibase uses to revert all *changeSets* associated with a specified `deploymentId` when you run the `rollbackOneUpdateSQL` command, so you don't unintentionally make a mistake.
+The `rollbackOneUpdateSQL` command is typically used when you want inspect the raw SQL that Liquibase uses to revert all *changeSets* associated with a specified `deploymentId` when you run the `rollbackOneUpdate` command, so you don't unintentionally make a mistake.
 
 ## Running the `rollbackOneUpdateSQL` Command
-Before running the `rollbackOneUpdateSQL` command, gather the following information from your DATABASECHANGELOG table:
+Before running the rollbackOneUpdateSQL command, you can get the optional deploymentId by running the [history](/documentation/history.html) command:
 - The `deploymentId` of the *changeSet* group you want to revert
-
->**Note:** You can also run the [history](/documentation/history.html) command to find your `deploymentId`.
 
 Then run the `rollbackOneUpdateSQL` command, with your information:
 
 {% highlight text %}
 
-liquibase --changeLogFile=sql.oracle.sql rollbackOneUpdateSQL --deploymentId=2068379006
+liquibase rollbackOneUpdateSQL --deploymentId=2068379006
 
 {% endhighlight %}
 
->**Note:** Unlike the [rollbackOneChangeSet](/documentation/rollbackonechangeset.html) command, there is NO impact to the DATABASECHANGELOG table. See the [rollbackOneUpdate](/documentation/rollbackoneupdate.html) topic for more information.
+>**Note:** Unlike the [rollbackOneUpdate](/documentation/rollbackoneupdate.html) command, there is NO impact to the DATABASECHANGELOG table. See the [rollbackOneUpdate](/documentation/rollbackoneupdate.html) topic for more information.
 
 For more command specific help, type `liquibase rollbackOneUpdateSQL --help` into the command prompt.
 
