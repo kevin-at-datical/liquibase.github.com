@@ -1,5 +1,5 @@
 ---
-layout: side-search
+layout: default
 title: Database Version Control
 includeDaticalBox: true
 extraStyleSheets:

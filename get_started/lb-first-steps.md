@@ -1,5 +1,5 @@
 ---
-layout: side-search
+layout: default
 title: Docs | Liquibase First Steps 
 subnav: subnav_quickstart.md
 includeDaticalBox: true

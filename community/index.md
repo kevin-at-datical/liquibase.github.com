@@ -1,5 +1,5 @@
 ---
-layout: side-search
+layout: default
 title: Community
 includeDaticalBox: true
 ---
@@ -9,6 +9,13 @@ includeDaticalBox: true
 **Have Questions On How To Use Liquibase?**
 
 Most questions on general Liquibase usage are best handled on Stack Overflow using the "liquibase" tag [http://stackoverflow.com/tags/liquibase](http://stackoverflow.com/tags/liquibase).
+
+** Want to Use Liquibase with different databases? **
+
+Liquibase works with many different databases - you can see [the list of supported databases](/databases.html).
+
+There may also be an extension for your database - check out [the extension portal](../extensions/index.html).
+
 
 **Have A Feature Idea? Did You Find A Bug In Liquibase?**
 

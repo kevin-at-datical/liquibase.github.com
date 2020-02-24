@@ -1,5 +1,5 @@
 ---
-layout: side-search
+layout: default
 title: Docs | Generating SQL 
 subnav: subnav_quickstart.md
 includeDaticalBox: true

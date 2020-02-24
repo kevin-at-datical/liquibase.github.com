@@ -34,3 +34,7 @@ the world that are using Liquibase.
   Robert Reeves with another great article on why it is important to have a great developer onboarding experience,
   and the basic things your organization should have in place to make that happen. No surprise that a database schema change tool
   is a key factor!
+
+* [Integrate Java Database Versioning with Liquibase using MySQL, A Step by Step Guide](https://hackernoon.com/integrate-java-database-versioning-with-liquibase-using-mysql-a-step-by-step-guide-n8b23aw5)
+
+  A very comprehensive 'getting started with Liquibase and Spring Boot' article that has lots of examples.
