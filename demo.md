@@ -25,7 +25,7 @@ extraJavascriptFiles:
         <div class="landing-page__demo-type__info">Reserve your spot in an interactive 45-minute product demo with expert
           Q&A. <br><br> Next Session March 12th at 11:00 AM</div>
         <div class="landing-page__demo-type__cta">
-          <a href="/demo-live">Register</a>
+          <a href="/demo-live.html">Register</a>
         </div>
       </div>
     </div>
@@ -37,7 +37,7 @@ extraJavascriptFiles:
         <div class="landing-page__demo-type__title">On-Demand Demo</div>
         <div class="landing-page__demo-type__info">Prefer not to wait for the next live demo? Watch this 25 min demo video now.</div>
         <div class="landing-page__demo-type__cta">
-          <a href="/demo-on-demand">View Demo</a>
+          <a href="/demo-on-demand.html">View Demo</a>
         </div>
       </div>
     </div>
