@@ -9,63 +9,37 @@ extraJavascriptFiles:
 ---
 
 <div class="landing-page">
-  <div class="landing-page__main-content span-12">
+  <div class="landing-page__main-content landing-page__main-content--large span-12">
     <h1 style="margin-top: 24px">See a Liquibase Demo</h1>
     <div class="landing-page__main-content__text">
-      See how Liquibase helps teams track, version, and deploy database schema changes and get your questions answered.
-    </div>
-    <div class="landing-page__main-content__text landing-page__main-content__info">
-      <div class="landing-page__main-content__info__item">
-        <strong>Date:</strong>
-        <span>Thursday, March 12th, 2020</span>
-      </div>
-      <div class="landing-page__main-content__info__item">
-        <strong>Time:</strong>
-        <span>11:00AM CT / 12:00PM ET</span>
-      </div>
-      <div class="landing-page__main-content__info__item">
-        <strong>Duration</strong>
-        <span>45 min</span>
-      </div>
-    </div>
-    <div class="landing-page__main-content__text">
-      Complete the form to join our next live demonstration of Liquibase!
+      Choose the demo experience that works best for you.
     </div>
   </div>
-  <div class="landing-page__cta-block span-10 push-2">
-    <script src="//app-ab14.marketo.com/js/forms2/js/forms2.min.js"></script>
-    <form id="mktoForm_3623"></form>
-    <script>MktoForms2.loadForm("//app-ab14.marketo.com", "522-INH-443", 3623);</script>
-    <script async src="https://marketo.clearbit.com/assets/v1/marketo/forms.js" data-clearbit-publishable-key="pk_a7c07aac0af9ac5ec657ff5f9ab23f4a"></script>
-    <script> 
-      (function() {
-      var el = document.createElement('script');
-      el.setAttribute('src', 'https://marketo.clearbit.com/assets/v1/marketo/forms.js');
-      el.setAttribute('data-clearbit-publishable-key', 'pk_a7c07aac0af9ac5ec657ff5f9ab23f4a');
-      document.body.appendChild(el);
-      })();
-    </script>
-    <style>
-      form#mktoForm_3623 {
-        width: 100% !important;
-        background: none !important;
-        padding: 0 !important;
-      }
-      form#mktoForm_3623 input.mktoField:not([type=checkbox]) {
-        width: 100% !important;
-      }
-      .mktoFormCol {
-        width: 100% !important;
-      }
-      .mktoFieldWrap {
-        width: 100% !important;
-      }
-      .mktoLogicalField {
-        width: 100% !important;
-      }
-      .mktoForm .mktoOffset {
-        height: 0;
-      }
-    </style>
+  <div class="landing-page__demo-types span-10 push-2">
+    <div class="landing-page__demo-type">
+      <div class="landing-page__demo-type__icon">
+        <img src="images/demo/on-air.png" alt="live broadcast on air icon">
+      </div>
+      <div class="landing-page__demo-type__text">
+        <div class="landing-page__demo-type__title">Live Online Demo</div>
+        <div class="landing-page__demo-type__info">Reserve your spot in an interactive 45-minute product demo with expert
+          Q&A. <br><br> Next Session March 12th at 11:00 AM</div>
+        <div class="landing-page__demo-type__cta">
+          <a href="/demo-live.html">Register</a>
+        </div>
+      </div>
+    </div>
+    <div class="landing-page__demo-type">
+      <div class="landing-page__demo-type__icon">
+        <img src="images/demo/downlink.png" alt="download to computer icon">
+      </div>
+      <div class="landing-page__demo-type__text">
+        <div class="landing-page__demo-type__title">On-Demand Demo</div>
+        <div class="landing-page__demo-type__info">Prefer not to wait for the next live demo? Watch this 25 min demo video now.</div>
+        <div class="landing-page__demo-type__cta">
+          <a href="/demo-on-demand.html">View Demo</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
