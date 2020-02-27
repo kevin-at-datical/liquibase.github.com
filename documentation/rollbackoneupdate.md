@@ -53,11 +53,11 @@ For more command specific help, type `liquibase rollbackOneUpdate --help` into t
 
  Parameter | Definition | Requirement
  --- | --- | ---
- `--changeLogFile` * | The root *changelog* | Required
- `--url` | The JDBC database connection URL | Required
- `--username` | The database username | Required
- `--password` | The database password | Required
- `--liquibaseProLicenseKey` | Your Liquibase Pro license key | Required
+ --changeLogFile * | The root *changelog* | Required
+ --url | The JDBC database connection URL | Required
+ --username | The database username | Required
+ --password | The database password | Required
+ --liquibaseProLicenseKey | Your Liquibase Pro license key | Required
 
 > &#42; Liquibase will check nested changelogs for definitions of the *changeSets* to rollback
 
@@ -65,8 +65,8 @@ For more command specific help, type `liquibase rollbackOneUpdate --help` into t
 
  Parameter | Definition | Requirement
  --- | --- | ---
- `--deploymentId` * | Specifies the `deploymentId` of all from the DATABASECHANGELOG table related to the *changeSets* intended for rollback. | Optional
- `--force` | A required parameter which indicates you intend to use this feature. | Required
+ --deploymentId * | Specifies the `deploymentId` of all from the DATABASECHANGELOG table related to the *changeSets* intended for rollback. | Optional
+ --force | A required parameter which indicates you intend to use this feature. | Required
 
 > &#42; If not supplied, LiquibasePro will lookup the most recent `deploymentId` from the DATABASECHANGELOG table and use it for the rollback.
 
@@ -76,7 +76,7 @@ When successful, the `rollbackOneUpdate` command produces the following output:
 {% highlight text %}
 
 liquibase rollbackOneUpdate --deploymentId=2126881174 --force
-Liquibase Pro 3.8.7-DAT-3917-SNAPSHOT by Datical licensed to Liquibase Pro Customer until Tue Nov 03 19:00:00 CST 2020
+Liquibase Pro 3.8.7 by Datical licensed to Liquibase Pro Customer until Tue Nov 03 19:00:00 CST 2020
 Rolling Back Changeset:sql.oracle.sql::3-createTableForCC::Liquibase Pro User
 Rolling Back Changeset:sql.oracle.sql::2-createTableForView::Liquibase Pro User
 Rolling Back Changeset:sql.oracle.sql::1-createTableForSynonym::Liquibase Pro User

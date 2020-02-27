@@ -5,9 +5,9 @@ title: Targeted Rollback - One Update
 ---
 # Targeted Rollback One Update
 
-We recently rolled out [Targeted Rollback](https://www.liquibase.org/2020/02/targeted-rollback.html) in Liquibase 3.8.6 for rolling back one specific changeSet. Now, we’re very happy to announce Liquibase 3.8.7 for rolling back a specific update. 
+We recently rolled out [Targeted Rollback](/2020/02/targeted-rollback.html) in Liquibase 3.8.6 for rolling back one specific changeSet. Now, we’re very happy to announce Liquibase 3.8.7 for rolling back a specific update. 
 
-Our most recent [Liquibase community survey](https://www.liquibase.org/2020/01/top-10-findings-liquibase-survey.html) revealed that many Liquibase users are interested in advanced rollback features that allow greater control over selecting the updates that they would like to roll back. The latest command, `rollbackOneUpdate` makes Liquibase Pro’s rollback powers even greater. 
+Our most recent [Liquibase community survey](/2020/01/top-10-findings-liquibase-survey.html) revealed that many Liquibase users are interested in advanced rollback features that allow greater control over selecting the updates that they would like to roll back. The latest command, `rollbackOneUpdate` makes Liquibase Pro’s rollback powers even greater. 
 
 It’s important to state that it’s almost always a better idea to roll forward. But sometimes you need to roll back and it’s extremely handy to be able to target the exact update you need to remove without rolling back everything that came after it. That’s why we are adding on to our **Targeted Rollback** powers, allowing users to cherry-pick a whole set of changes to undo with `rollbackOneUpdate` in addition to our previous release that introduced the ability to `rollbackOnechangeSet`. 
 
@@ -27,7 +27,7 @@ Rollback is also the only official technique for altering your DATABASECHANGELOG
 ## RollbackOneUpdate Workflow
 Here’s a general workflow a Liquibase Pro user would take to target a set of changes in an update they would like to rollback:
 1. Danielle determines she needs to rollback all of the changesets in the Dev environment from a previous deployment. 
-2. Danielle inspects the changelog table to look up the deploymentID of the changesets she wants to roll back.
+2. Danielle inspects the changelog table using the [history command](/documentation/history.html) to look up the deploymentID of the changesets she wants to roll back.
 3. Danielle checks to make sure all of the changesets have rollback SQL associated with them by running the following command on the command line:
 ``` liquibase <global parameters> rollbackOneUpdateSQL --deploymentID=deploymentID``` 
 5. Danielle inspects the rollback SQL presented in STDOUT and sees that the rollback SQL looks correct.
@@ -41,7 +41,7 @@ Targeted Rollback is powerful. Remember that with great rollback power comes gre
 
 ### Some guardrails
 Since targeted rollbacks, like all rollbacks, can be detrimental when misused, we added some guardrails. 
-The --force flag is required to execute the rollbackOneUpdate command, serving as a clear indicator that you wish to proceed. Think of this as a safety on a firearm. Just pulling the trigger isn't enough, you have to disable the safety and then pull the trigger.
+The `--force` flag is required to execute the `rollbackOneUpdate` command, serving as a clear indicator that you wish to proceed. Think of this as a safety on a firearm. Just pulling the trigger isn't enough, you have to disable the safety and then pull the trigger.
 
 The helper command, `rollbackOneUpdateSQL` allows you to preview and inspect the rollback SQL before you execute `rollbackOneUpdate`. We’ve documented this in the suggested workflow so that it’s easier to remember to use this helper command.
 
