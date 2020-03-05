@@ -36,7 +36,7 @@ liquibase --changeLogFile=mssql_lbpro_master_changelog.xml updateSQL
 -- Change Log: mssql_lbpro_master_changelog_no_catalog.xml
 -- Ran at: 11/15/19 1:56 PM
 -- Against: datical_login@jdbc:sqlserver://3.219.82.47:1433;sslProtocol=TLS;jaasConfigurationName=SQLJDBCDriver;statementPoolingCacheSize=10;serverPreparedStatementDiscardThreshold=10;enablePrepareOnFirstPreparedStatementCall=false;fips=false;socketTimeout=0;authentication=NotSpecified;authenticationScheme=nativeAuthentication;xopenStates=false;sendTimeAsDatetime=true;trustStoreType=JKS;trustServerCertificate=false;TransparentNetworkIPResolution=true;serverNameAsACE=false;sendStringParametersAsUnicode=true;selectMethod=direct;responseBuffering=adaptive;queryTimeout=-1;packetSize=8000;multiSubnetFailover=false;loginTimeout=15;lockTimeout=-1;lastUpdateCount=true;encrypt=false;disableStatementPooling=false;databaseName=proCatalog;columnEncryptionSetting=Disabled;applicationName=Microsoft JDBC Driver for SQL Server;applicationIntent=readwrite;
--- Liquibase version: 3.8.2-DAT-3598-SNAPSHOT
+-- Liquibase version: 3.8.2
 -- *********************************************************************
 
 USE proCatalog;
@@ -325,7 +325,7 @@ The following is an example of the `updateSQL` command output with the labels pa
 -- Change Log: changelog.xml
 -- Ran at: 11/12/19 3:48 PM
 -- Against: jenkinsci@jdbc:postgresql://localhost:5432/jenkinsci
--- Liquibase version: 3.8.1-local-SNAPSHOT
+-- Liquibase version: 3.8.1
 -- *********************************************************************
 
 -- Create Database Lock Table

@@ -24,10 +24,10 @@ liquibase --outputFile=history.txt history
 
  Parameter | Definition | Requirement
  --- | --- | ---
- `--url` | The JDBC database connection URL | Required
- `--username` | The database username | Required
- `--password` | The database password | Required
- `--outputFile` | Lists all available `deploymentIds` in the target environment. | Optional
+ --url | The JDBC database connection URL | Required
+ --username | The database username | Required
+ --password | The database password | Required
+ --outputFile | Specifies that the output should go to a file rather than to STDOUT | Optional
  
 ## Output
 When successful, the `history` command produces the following output:
@@ -35,7 +35,7 @@ When successful, the `history` command produces the following output:
 {% highlight text %}
 
 C:\dev\DaticalDB-testing\liquibase-pro-cli-project\oracle_lbpro_master>..\liquibase history
-Liquibase Pro 3.8.7-DAT-4131-SNAPSHOT by Datical licensed to Liquibase Pro Customer until Tue Nov 03 19:00:00 CST 2020
+Liquibase Pro 3.8.7 by Datical licensed to Liquibase Pro Customer until Tue Nov 03 19:00:00 CST 2020
 Liquibase History for jdbc:oracle:thin:@3.219.82.47:1521/orcl - Database updated at 2/17/20 10:54 AM. Applied 3 changeSet(s) in 0.485s, DeploymentId: 1958497040
   oracle_lbpro_master_changelog.xml::1::createTableforSynonym-PROSCHEMA::Liquibase Pro User
   oracle_lbpro_master_changelog.xml::2::createTableForView-PROSCHEMA::Liquibase Pro User

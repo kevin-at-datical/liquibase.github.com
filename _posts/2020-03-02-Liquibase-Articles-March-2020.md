@@ -38,3 +38,8 @@ the world that are using Liquibase.
 * [Integrate Java Database Versioning with Liquibase using MySQL, A Step by Step Guide](https://hackernoon.com/integrate-java-database-versioning-with-liquibase-using-mysql-a-step-by-step-guide-n8b23aw5)
 
   A very comprehensive 'getting started with Liquibase and Spring Boot' article that has lots of examples.
+
+* [Databases also getting the full DevOps treatment, survey shows](https://www.zdnet.com/article/databases-also-getting-the-full-devops-treatment-survey-shows/)
+
+  Summary of a survey done by our friends at Redgate showing that while lots of teams are automating database deployments, there are still
+  many that have yet to tackle this problem. 

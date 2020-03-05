@@ -29,12 +29,12 @@ For more command specific help, type `liquibase rollbackOneUpdateSQL --help` int
 
  Parameter | Definition | Requirement
  --- | --- | ---
- `--changeLogFile` * | Specifies the root *changelog*. | Required
- `--url` | Specifies the JDBC database connection URL. | Required
- `--username` | Specifies the database username. | Required
- `--password` | Specifies the database password. | Required
- `--liquibaseProLicenseKey` | Your Liquibase Pro license key. | Required
- `--outputFile` ** | Specifies the file path to where the Rollback SQL will be written. | Optional
+ --changeLogFile * | Specifies the root *changelog*. | Required
+ --url | Specifies the JDBC database connection URL. | Required
+ --username | Specifies the database username. | Required
+ --password | Specifies the database password. | Required
+ --liquibaseProLicenseKey | Your Liquibase Pro license key. | Required
+ --outputFile ** | Specifies the file path to where the Rollback SQL will be written. | Optional
 
 > &#42; Liquibase checks the *changelog* and any nested *changelogs* for the definitions of the *changeSets* to roll back.
 
@@ -44,7 +44,7 @@ For more command specific help, type `liquibase rollbackOneUpdateSQL --help` int
 
  Parameter | Definition | Requirement
  --- | --- | ---
- `--deploymentId` * | Specifies the `deploymentId` in the DATABASECHANGELOG table for all *changeSets* you want to rollback. | Required
+ --deploymentId * | Specifies the `deploymentId` in the DATABASECHANGELOG table for all *changeSets* you want to rollback. | Required
  
 > &#42; If the `deploymentId` is not specified, Liquibase Pro will use the most recently deployed `deploymentId` from the DATABASECHANGELOG table and use it to generate the rollback SQL.
 
@@ -59,7 +59,7 @@ When successful, the `rollbackOneUpdateSQL` command produces the following outpu
 -- Change Log: sql.oracle.sql
 -- Ran at: 2/18/20 5:27 PM
 -- Against: PROSCHEMA@jdbc:oracle:thin:@3.219.82.47:1521/orcl
--- Liquibase version: 3.8.7-DAT-3917-SNAPSHOT
+-- Liquibase version: 3.8.7
 -- *********************************************************************
 
 -- Lock Database
