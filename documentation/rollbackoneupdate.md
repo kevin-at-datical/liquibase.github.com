@@ -4,6 +4,11 @@ title: Docs | rollbackOneUpdate Command
 ---
 
 # Liquibase Commands: `rollbackOneUpdate`
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P3SL1XnCB7s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br />
+
 The `rollbackOneUpdate` command reverts (rolls back) all *changeSets* related by a specific `deploymentId` that was made during a previous change to your database. It is only available for Liquibase Pro users.
 
 ## Uses

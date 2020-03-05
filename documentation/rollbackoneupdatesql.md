@@ -4,6 +4,11 @@ title: Docs | rollbackOneUpdateSQL Command
 ---
 
 # Liquibase Commands: `rollbackOneUpdateSQL`
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P3SL1XnCB7s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br />
+
 The `rollbackOneUpdateSQL` command is a helper command that allows you to inspect the SQL Liquibase will run to revert all *changeSets* associated with the `deploymentID` specified in the [`rollbackOneUpdate`](/documentation/rollbackoneupdate.html) command. It is only available for Liquibase Pro users.
 
 ## Uses
