@@ -26,6 +26,41 @@ extraJavascriptFiles:
     <script>MktoForms2.loadForm("//app-ab14.marketo.com", "522-INH-443", 3661);</script>
     <script async src="https://marketo.clearbit.com/assets/v1/marketo/forms.js"
       data-clearbit-publishable-key="pk_a7c07aac0af9ac5ec657ff5f9ab23f4a"></script>
+    <script>MktoForms2.whenReady(function(form) {
+ 
+      form.submittable(false);
+
+      let clearbitPolling = false;
+
+      form.onValidate(function(valid) {
+        let values = form.getValues();
+        if(clearbitPolling || !valid) {
+          return form.submittable(false);
+        } else {
+          if(valid && values.clearbitFormStatus && values.clearbitFormStatus !== "") {
+            return form.submittable(true);
+        }
+        else {
+        clearbitPolling = true;
+ 
+        let start = Date.now();
+        let poll = setInterval(function() {
+          if(form.getValues().clearbitFormStatus && form.getValues().clearbitFormStatus !== "") {
+            clearInterval(poll);
+            clearbitPolling = false;
+          } else {
+            if (Date.now() - start > 2000) {
+              form.setValues({
+                clearbitFormStatus: "not Enriched"
+              })
+            }
+          }
+        },100)
+      }
+    }
+  })
+})
+</script> 
     <style>
       form#mktoForm_3661 {
         width: 100% !important;
