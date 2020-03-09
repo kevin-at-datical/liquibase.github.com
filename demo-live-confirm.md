@@ -35,7 +35,7 @@ extraJavascriptFiles:
       </div>
     </div>
     <div class="landing-page__main-content__text">
-      Thank you for signing up for our next live demonstration of Liquibase! Check your email for details on how to join the demo...
+      Complete the form to join our next live demonstration of Liquibase!
     </div>
   </div>
   </div>
