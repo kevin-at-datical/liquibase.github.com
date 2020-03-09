@@ -34,9 +34,18 @@ extraJavascriptFiles:
         <span>45 min</span>
       </div>
     </div>
-    <div class="landing-page__main-content__text">
-      Complete the form to join our next live demonstration of Liquibase!
-    </div>
+
   </div>
+  <div class="landing-page__cta-block span-10 push-2">
+    <style>
+      form#mktoForm_3623 {
+        width: 100% !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+       <div class="landing-page__main-content__text">
+      Thank you for registering. Check your email for details.
+    </div>
   </div>
 </div>
