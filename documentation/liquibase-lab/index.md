@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docs | Changelog parameters 
+title: Docs | Liquibase Lab
 subnav: subnav_liquibase-lab.md
 ---
 # Liquibase Lab
