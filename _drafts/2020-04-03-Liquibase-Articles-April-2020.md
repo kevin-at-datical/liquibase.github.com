@@ -18,4 +18,7 @@ the world that are using Liquibase.
 
   Tim Hall at the oracle-base blog shares a video demonstrating the use of Oracle's SQLcl, which uses Liquibase internally. 
   
-  
+* [A Tool to Compare PostgreSQL Database Schema Versions](https://www.endpoint.com/blog/2020/02/11/compare-postgresql-schema-versions)
+
+  End Point is a custom software development consultancy (they also make a really nice [immersive display system](https://liquidgalaxy.endpoint.com/)). 
+  This blog post describes how they used Liquibase to help them detect differences in two Postgres schemas for a data migration project. 
