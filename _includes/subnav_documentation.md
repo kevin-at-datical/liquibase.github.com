@@ -4,6 +4,5 @@
 <li><a href="/documentation/core-concepts/index.html"><span>Core Concepts</span></a></li>
 <li><a href="/documentation/tutorials/index.html"><span>Tutorials</span></a></li>
 <li><a href="/documentation/changes/index.html"><span>Refactoring Commands</span></a></li>
-<li><a href="/documentation/liquibase-lab/index.html"><span>Liquibase Lab</span></a></li>
 <li><a href="/documentation/sdk/index.html"><span>Liquibase SDK</span></a></li>
 
