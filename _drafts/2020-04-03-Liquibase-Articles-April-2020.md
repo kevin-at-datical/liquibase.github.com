@@ -22,3 +22,19 @@ the world that are using Liquibase.
 
   End Point is a custom software development consultancy (they also make a really nice [immersive display system](https://liquidgalaxy.endpoint.com/)). 
   This blog post describes how they used Liquibase to help them detect differences in two Postgres schemas for a data migration project. 
+
+* [SQL Server deployment options for Octopus Deploy](https://octopus.com/blog/sql-server-deployment-options-for-octopus-deploy)
+
+  When deploying your application, you need to deploy your database too! This article discusses the why of that, why you should not
+  be writing your own tool, touches on the difference between state-based and migration-based solutions, and then talks about what
+  tools are most popular with the Octopus Deploy community. Sadly, Liquibase is not in that list. The tendency of Microsoft shops
+  to use all Microsoft tooling seems to be a strong factor.
+  
+* [Critiquing two different approaches to delivering databases: Migrations vs state](http://workingwithdevs.com/delivering-databases-migrations-vs-state/)
+
+  An article linked from the previous article that I wanted to call out separately. Goes into more details on the
+  state-based vs migration-based decision, and how each has benefits and drawbacks. Some good discussion in the comments also.
+  
+* [DevOps Chats: Liquibase, Open Source and Databases, with Datical](https://devops.com/devops-chats-liquibase-open-source-and-databases-with-datical/)
+
+  Alan Shimel at DevOps.com interviews Datical president Dion Cornett about Datical, Liquibase, and open source software. Listen or read the transcript!
