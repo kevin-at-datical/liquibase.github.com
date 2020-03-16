@@ -23,7 +23,7 @@ extraJavascriptFiles:
       Next session:
       <div class="landing-page__main-content__info__item">
         <strong>Date:</strong>
-        <span>Thursday, March 12th, 2020</span>
+        <span>Thursday, April 9, 2020</span>
       </div>
       <div class="landing-page__main-content__info__item">
         <strong>Time:</strong>
