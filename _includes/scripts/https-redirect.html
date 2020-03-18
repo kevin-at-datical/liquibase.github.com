@@ -1,4 +1,4 @@
-{% if jekyll.environment == "development" %}
+{% if jekyll.environment != "development" %}
   <!-- HTTP => HTTPS Client Side Redirect -->
   <script>
     if (location.protocol !== 'https:') {
