@@ -38,3 +38,17 @@ the world that are using Liquibase.
 * [DevOps Chats: Liquibase, Open Source and Databases, with Datical](https://devops.com/devops-chats-liquibase-open-source-and-databases-with-datical/)
 
   Alan Shimel at DevOps.com interviews Datical president Dion Cornett about Datical, Liquibase, and open source software. Listen or read the transcript!
+
+* [Integrate Java Database Versioning with Liquibase using MySQL - A Step by Step Guide](https://hackernoon.com/integrate-java-database-versioning-with-liquibase-using-mysql-a-step-by-step-guide-n8b23aw5)
+
+  By [Tiago Melo](https://hackernoon.com/@tiago-melo)
+  
+  Folks really seem to like writing up really good introductory articles on using Liquibase! This one has source code and shows how
+  to integrate Liquibase with Spring Boot to evolve the database schema of a Java application using MySQL. He likes using Liquibase over MySQL
+  because of its database agnosticicism, and the flexibility to specify the changes in different formats. He used YAML.
+
+* [autodiff - Automatic changelog generation for Liquibase with Spring Boot & Hibernate](https://github.com/erikhofer/autodiff)
+
+  By [Erik Hofer](https://github.com/erikhofer)
+  
+  This is a utility Gradle script for generating Liquibase changelogs for your Spring Boot / Hibernate JPA projects. 
