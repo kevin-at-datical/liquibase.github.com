@@ -21,7 +21,9 @@ Want to partner with us to add your extension to the main code base for Liquibas
 
 **Have A Feature Idea? Did You Find A Bug In Liquibase?**
 
-If it is a bug in the main Liquibase library, log it in [Liquibase Jira](http://liquibase.jira.com/browse/CORE).
+If it is a bug in the main Liquibase library, log it in [GitHub Issues](https://github.com/liquibase/liquibase/issues). Liquibase has used Jira to track issues in
+the past, and there are still many open issues there. You can still comment on issues there, but no new issues can be created. We will be migrating
+the most important issues to GitHub over time. 
 
 If it is a bug with an extension, log it in the issues section of the extension's github page.
 For example [https://github.com/liquibase/liquibase-hibernate/issues](https://github.com/liquibase/liquibase-hibernate/issues) or [https://github.com/liquibase/liquibase-oracle/issues](https://github.com/liquibase/liquibase-oracle/issues).
