@@ -62,9 +62,11 @@ To add this *changeSet*, open the sample *changelog* file in your existing edito
 
 ### SQL *changelog* example code
 {% highlight sql %}
-    TODO:
-    	--changeSet
-    	ALTER TABLE PUBLIC.person ADD worksfor_company_id INT;
+--changeset your.name:4
+ALTER TABLE person ADD worksfor_company_id INT;
+
+--changeset your.name:5
+ALTER TABLE person ADD CONSTRAINT fk_person_worksfor FOREIGN KEY (worksfor_company_id) REFERENCES company(id);
 {% endhighlight %}
 
 > **Note:** It's best practice to wrap every statement in its own *changeSet* block.
