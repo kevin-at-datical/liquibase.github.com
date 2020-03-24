@@ -131,7 +131,7 @@ the schema in JSON format, and that JSON snapshot can serve as a comparison data
 <tr><td>--help</td><td>Output command line parameter help.</td></tr>
 <tr><td>--dataOutputDirectory</td><td>Directory where insert statement csv files will be kept (required by generateChangeLog command).</td></tr>
 <tr><td>--propertyProviderClass=&lt;properties.ClassName&gt;</td><td>custom Properties implementation to use</td></tr>
-<tr><td>--schemas=&lt;name1,name2&gt;</td><td>A comma-separated list of database schemas from which to include objects when executing a command, such as snapshot, generatechaelog or diffchangelog. This flag is required when you are referencing multiple schemas in a command.</td></tr>
+<tr><td>--schemas=&lt;name1,name2&gt;</td><td>A comma-separated list of database schemas from which to include objects when executing a command, such as snapshot, generatechangelog or diffchangelog. This flag is required when you are referencing multiple schemas in a command.</td></tr>
 </table>
 
 
