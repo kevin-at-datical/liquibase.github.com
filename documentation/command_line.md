@@ -20,7 +20,7 @@ validate whether the command line parameters are allowed for the current command
 parameters or the parameter appears to be an incorrect format, then an error message of 'unexpected command parameter' will be logged 
 and the execution will terminate.
 
-The command line migrator also allows you to
+The command line migrator also allows you to:
 
 * [perform rollback operations and generate rollback scripts](rollback.html)
 * [generate "diffs"](diff.html)
@@ -131,6 +131,7 @@ the schema in JSON format, and that JSON snapshot can serve as a comparison data
 <tr><td>--help</td><td>Output command line parameter help.</td></tr>
 <tr><td>--dataOutputDirectory</td><td>Directory where insert statement csv files will be kept (required by generateChangeLog command).</td></tr>
 <tr><td>--propertyProviderClass=&lt;properties.ClassName&gt;</td><td>custom Properties implementation to use</td></tr>
+<tr><td>--schemas=&lt;name1,name2&gt;</td><td>A comma-separated list of database schemas from which to include objects when executing a command, such as snapshot, generatechaelog or diffchangelog. This flag is required when you are referencing multiple schemas in a command.</td></tr>
 </table>
 
 
