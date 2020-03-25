@@ -51,4 +51,5 @@ the world that are using Liquibase.
 
   By [Erik Hofer](https://github.com/erikhofer)
   
-  This is a utility Gradle script for generating Liquibase changelogs for your Spring Boot / Hibernate JPA projects. 
+  This is a utility Gradle script for generating Liquibase changelogs for your Spring Boot / Hibernate JPA projects. As with any diff-based workflow,
+  you will need to carefully review the changes generated!
