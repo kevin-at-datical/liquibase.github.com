@@ -114,7 +114,7 @@ You can also learn how to create your [First Migrations with SQL](/get_started/q
 ### Summary
 In this tutorial we covered:
 - Creating/Generating *changelogs*
-- Adding Changesets to your *changelog*
+- Adding *changeSets* to your *changelog*
 - Running your *changelog*
 - Checking your Database
 

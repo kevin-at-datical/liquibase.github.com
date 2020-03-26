@@ -3,11 +3,12 @@ layout: default
 title: Docs | Generating changelogs 
 ---
 
-# Liquibase Commands: generateChangeLog
+# Liquibase Commands: `generateChangeLog`
 
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/8AdiGIb2SY4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <br>
+
 The `generateChangeLog` command creates a *changelog* file that has a sequence of *changeSets* which describes how to re-create the current state of the database.
 
 ## Uses
@@ -15,11 +16,11 @@ The `generateChangeLog` command is typically used when you want to capture the c
 
 > **Note:** When using the [update command](update.html) to apply the changes in the *changelog*, Liquibase will not create a new database or schema. You must create them ***before*** applying the *changelog* to it.
 
-## Running the generateChangeLog command
+## Running the `generateChangeLog` command
 To generate a *changelog*:
 1. Configure the *liquibase.properties* file to include your driver class path, URL, and user authentication information for the database you want to capture.
 
-> **Note:** For information on how to configure your *liquibase.properties* file, view the [Creating & Configuring your liquibase.properties File](config_properties.html) topic in the knowledge base. Instead of using a liquibase.properties file, you can also pass the necessary information on the command line.
+> **Note:** For information on how to configure your `liquibase.properties` file, view the [Creating & Configuring your liquibase.properties File](config_properties.html) topic in the knowledge base. Instead of using a `liquibase.properties` file, you can also pass the necessary information on the command line.
 
 2. Open your command prompt or Linux terminal and run the following command:
 
@@ -29,17 +30,38 @@ liquibase --changeLogFile=dbchangelog.xml generateChangeLog
 
 {% endhighlight %}
 
+<!--
+### `generateChangeLog` Global Parameters
+
+Parameter | Definition | Requirement
+ --- | --- | --- 
+ --changeLogFile | Specifies the root *changelog*. | Required
+ --url | Specifies the JDBC database connection URL. | Required
+ --username | Specifies the database username. | Required
+ --password | Specifies the database password. | Required
+ --liquibaseProLicenseKey | Your Liquibase Pro license key | Required 
+ -->
+<br />
+
+### `generateChangeLog` Command Parameters
+
+Parameter | Definition | Requirement
+ --- | --- | --- 
+ --includeTablespace=[boolean] | Includes a tablespace *changeSet* in your generated *changelog* | Optional *
+ 
+> **Note:** The default value of `--includeTablespace` is **False**. `--includeTablespace` only captures the tablespace if it was specified in the create table statement.
+
 ## Output
 
 The `generateChangeLog` command generates a *changelog* that contains all of your *Objects* (represented as *changeSets*) and places the file in the same directory where the command was ran. 
 
 The extension provided determines the format of the *changelog*, so if you specify the filename as `changelog.xml` you will get an XML formatted *changelog*. However, if you specify the filename as `changelog.yaml` or `changelog.json` or `changelog.postgresql.sql` you will get *changelogs* formatted in YAML or JSON or SQL, respectively.
 
->**Note:** When generating an SQL formatted changelog, you must specify the short name of the targeted database type as part of the filename (as shown above).
+>**Note:** When generating an SQL formatted *changelog*, you must specify the short name of the targeted database type as part of the filename (as shown above).
 
 ### Example
 <details>
-<summary style="font-size:125%;color:blue;">Liquibase Community changelog</summary>
+<summary style="font-size:125%;color:blue;">Liquibase Community <i>changelog</i></summary>
 <br>
 {% highlight xml %}
 
@@ -125,7 +147,7 @@ While Liquibase Community stores all *changeSets* in a *changelog*, Liquibase Pr
 ### Example 
 
 <details>
-<summary style="font-size:125%;color:blue;">Liquibase Pro changelog</summary>
+<summary style="font-size:125%;color:blue;">Liquibase Pro <i>changelog</i></summary>
 
 <br>
 {% highlight xml %}
