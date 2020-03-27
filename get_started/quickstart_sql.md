@@ -70,7 +70,7 @@ have been run against the database. The `DATABASECHANGELOGLOCK` table is used to
 View [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOGLOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
 
 ### Additional Information
-This topic is great when you only have a handful of SQL scripts. However, if your list of scripts becomes too large to maintain in a formatted SQL changelog, you may want to break up your scripts into smaller more manageable chunks. 
+This topic is great when you only have a handful of SQL scripts. However, if your list of scripts becomes too large to maintain in a formatted SQL *changelog*, you may want to break up your scripts into smaller more manageable chunks. 
 
 See the [Database Migrations with Multiple SQL Files](/documentation/multiple-sql-migration.html) topic for more information on how to Migrate with Multiple SQL files.
 
@@ -79,7 +79,7 @@ You can also learn how to create your [First Migrations with Liquibase Functions
 ### Summary
 In this tutorial we covered:
 - Creating Formatted SQL *changelogs*
-- Adding Changesets to your *changelog*
+- Adding *changeSets* to your *changelog*
 - Running your *changelog*
 - Checking your Database
 

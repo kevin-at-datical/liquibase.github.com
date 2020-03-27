@@ -30,7 +30,8 @@ liquibase --changeLogFile=dbchangelog.xml generateChangeLog
 
 {% endhighlight %}
 
-<!--
+<br />
+
 ### `generateChangeLog` Global Parameters
 
 Parameter | Definition | Requirement
@@ -39,17 +40,25 @@ Parameter | Definition | Requirement
  --url | Specifies the JDBC database connection URL. | Required
  --username | Specifies the database username. | Required
  --password | Specifies the database password. | Required
- --liquibaseProLicenseKey | Your Liquibase Pro license key | Required 
- -->
-<br />
+ --liquibaseProLicenseKey | Your Liquibase Pro license key. | Required 
 
 ### `generateChangeLog` Command Parameters
 
 Parameter | Definition | Requirement
  --- | --- | --- 
- --includeTablespace=[boolean] | Includes a tablespace *changeSet* in your generated *changelog* | Optional *
+ --defaultCatalogName=&lt;name&gt; | Default database catalog to use. | Required
+ --defaultSchemaName=&lt;name&gt; | Default database schema to use. | Required
+ --schemas=&lt;name1, name2&gt; | Database schemas you want to include. | Required
+ --outputSchemaAs=&lt;name1,name2&gt; | On | Required
+ --includeCatalog=[boolean] |If true, the catalog will be included in generated *changeSets*. Defaults to false. |Required
+ --includeSchema=[boolean] | If true, the schema will beincluded in generated *changeSets*. Defaults to false. | Required
+ --includeTablespace=[boolean] | If true, the tablespace of tables and indexes will be included. Defaults to false. | Optional *
+ --dataOutputDirectory=DIR | Output data as CSV in the given directory | Required
+ --diffTypes |List of diff types to include in *changelog* expressed as a comma separated list from: tables, views, columns, indexes, foreignkeys, primarykeys, uniqueconstraints data. | Required **
  
-> **Note:** The default value of `--includeTablespace` is **False**. `--includeTablespace` only captures the tablespace if it was specified in the create table statement.
+> &#42; The default value of `--includeTablespace` is **False**. `--includeTablespace` only captures the tablespace if it was specified in the create table statement.
+
+> &#42;&#42; If this is null then the default types will be: tables, views, columns, indexes, foreignkeys, primarykeys, uniqueconstraints.
 
 ## Output
 

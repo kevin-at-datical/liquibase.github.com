@@ -18,7 +18,7 @@ In this tutorial, you will learn how to get up and running with Liquibase.
 If you are brand new to Liquibase, we recommend you begin by downloading the <a href="https://download.liquibase.org/download/?frm=n" target="_blank">Liquibase Installer</a>. You can then skip ahead to the <a href="/documentation/workflows/using-the-lb-installer.html">Using the Liquibase Installer</a> topic to learn more about the Liquibase Developer Workflow.
 
 ### What if I would rather manually install Liquibase?
-There are many ways to download and install Liquibase manually depending how you choose to use it. If you decide not to use the Liquibase installer (which comes with tons of example files to help you learn the Liquibase Develop workflow **before** using your own database), then you can view the [Liquibase Installation Documentation](/documentation/installation/index.html) for more information on other ways to download and install Liquibase.
+There are many ways to download and install Liquibase manually depending on how you choose to use it. If you decide not to use the Liquibase installer (which comes with tons of example files to help you learn the Liquibase Develop workflow **before** using your own database), then you can view the [Liquibase Installation Documentation](/documentation/installation/index.html) for more information on other ways to download and install Liquibase.
 </div>
 </div>
 
@@ -60,7 +60,7 @@ The purpose of these files is to walk you through the Liquibase Developer workfl
 ### **I installed Liquibase Manually**
 If you installed Liquibase using a manual method, there are two ways Liquibase allows you to define changes to the database:
 
-#### Liquibase Commands
+#### Liquibase Change Types
 
 <div class="tile-container">
   <div class="tile-item" align="center">
@@ -72,7 +72,7 @@ If you installed Liquibase using a manual method, there are two ways Liquibase a
 Choosing this path means that your changes are defined in XML, JSON, or YAML formats. Liquibase will create XML formatted *changelogs* that define your *changeSets*, then generate and deploy SQL to your database based on those *changeSets*. Liquibase will also track all database migrations in your *changelog*. 
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
-<div class="cta cta--block"><a href="/get_started/quickstart_lb.html">Your First Migration: Liquibase Commands ►</a></div></div>
+<div class="cta cta--block"><a href="/get_started/quickstart_lb.html">Your First Migration: Liquibase Change Types ►</a></div></div>
 </div>
 </div>
 <div class="tile-container">

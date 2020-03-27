@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Docs | Migrations with Liquibase Commands
+title: Docs | Migrations with Liquibase Change Types
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---
-# Your First Migration with Liquibase Commands
+# Your First Migration with Liquibase Change Types
 
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/lbZxAvftCX0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -18,7 +18,7 @@ You can also view the [Database Tutorials](/documentation/tutorials/index.html) 
 
 ## Step 1: Create or Generate a *changelog* File
 
-To complete your first migration, you must have a [database changelog file](/documentation/databasechangelog.html). The *changelog* file is where all your database changes are defined. Using Liquibase Commands allows you to define these changes with XML, JSON, or YAML. For this walkthrough, we will use XML examples.
+To complete your first migration, you must have a [database changelog file](/documentation/databasechangelog.html). The *changelog* file is where all your database changes are defined. Using Liquibase Change Types allows you to define these changes with XML, JSON, or YAML. For this walkthrough, we will use XML examples.
 
 **<u>Creating changelog Files Manually</u>**
 

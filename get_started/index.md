@@ -38,8 +38,8 @@ It's easy to get up and running with Liquibase. Select a topic below to get star
         <h3>Using Version Control</h3>
     </div>
     <div class="tile-item" align="center">
-        <a href="/get_started/quickstart_lb.html"><img src="/images/quickstart/liquibase-functions.png" width="150px" alt="Liquibase Commands"></a>
-        <h3>Migrations with <br> Liquibase Commands</h3>
+        <a href="/get_started/quickstart_lb.html"><img src="/images/quickstart/liquibase-functions.png" width="150px" alt="Liquibase Change Types"></a>
+        <h3>Migrations with <br> Liquibase Change Types</h3>
     </div>
     <div class="tile-item" align="center">
         <a href="/get_started/quickstart_sql.html"><img src="/images/quickstart/migrations-with-sql.png" width="150px" alt="SQL Migrations"></a>

@@ -15,8 +15,8 @@ environments that a team uses - from local development databases, to test, stagi
 *changeSets* are the *units of change* that Liquibase tracks execution of. Each *changeSet* is uniquely identified by the `author`, `id`, and `filename` attributes. When Liquibase runs, it queries the `DATABASECHANGELOG` table for the *changeSets* that are marked as executed and then executes all *changeSets* in the *changelog* file that have not yet been executed. See the [*changeSet*](/documentation/changeset.html) documentation for more information.
 
 
-### *changeTypes*
-Each *changeSet* contains one or more *changeTypes* that describe a type of change you want to apply to the database. Liquibase supports both descriptive *changeTypes* that generate SQL for supported databases and raw SQL. Generally there should be just one *changeType* per *changeSet* to avoid failed autocommit statements that can leave the database in an unexpected state. See the [*changeTypes*](/documentation/changes/index.html) documentation for a list of available *changeTypes*.
+### *Change Types*
+Each *changeSet* contains one or more Change Types that describe a type of change or action you want to apply to the database. Liquibase supports both descriptive Change Types that generate SQL for supported databases and raw SQL. Generally there should only be one Change Type per *changeSet* to avoid failed autocommit statements that can leave the database in an unexpected state. See the [Change Type](/documentation/changes/index.html) documentation for a list of available Change Types.
 
 
 ### Preconditions
