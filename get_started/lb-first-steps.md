@@ -18,7 +18,7 @@ In this tutorial, you will learn how to get up and running with Liquibase.
 If you are brand new to Liquibase, we recommend you begin by downloading the <a href="https://download.liquibase.org/download/?frm=n" target="_blank">Liquibase Installer</a>. You can then skip ahead to the <a href="/documentation/workflows/using-the-lb-installer.html">Using the Liquibase Installer</a> topic to learn more about the Liquibase Developer Workflow.
 
 ### What if I would rather manually install Liquibase?
-If you choose not to use the Liquibase installer (which comes with tons of example files to help you learn the Liquibase Develop workflow **before** using your own database), then you can view the [Liquibase Installation Documentation](/documentation/installation/index.html) for more information on other ways to download and install Liquibase.
+There are many ways to download and install Liquibase manually depending on how you choose to use it. If you decide not to use the Liquibase installer (which comes with tons of example files to help you learn the Liquibase Develop workflow **before** using your own database), then you can view the [Liquibase Installation Documentation](/documentation/installation/index.html) for more information on other ways to download and install Liquibase.
 </div>
 </div>
 
@@ -28,7 +28,7 @@ If you choose not to use the Liquibase installer (which comes with tons of examp
 
 Liquibase allows you to specify options on the command line which means the Liquibase CLI does not require configuration. 
 
-However, creating a liquibase.properties file allows you to save default values so you don't have to specify them in the CLI unless you want to. 
+However, creating a `liquibase.properties` file allows you to save default values so you don't have to specify them in the CLI unless you want to. 
 Liquibase will always override a `liquibase.properties` file in favor of a value specified on the command line.
 
 If you used the installer, your Liquibase download includes example `liquibase.properties` files for both XML and SQL formats in your Liquibase directory. 
@@ -58,9 +58,9 @@ The purpose of these files is to walk you through the Liquibase Developer workfl
 <div class="cta cta--block"><a href="/documentation/workflows/using-the-lb-installer.html">Your First Migration using Sample Liquibase Files ►</a></div></div>
 
 ### **I installed Liquibase Manually**
-If you installed Liquibase manually with a `.zip` or `.tar.gz` file, there are two ways Liquibase allows you to define changes to the database:
+If you installed Liquibase using a manual method, there are two ways Liquibase allows you to define changes to the database:
 
-#### Liquibase Functions
+#### Liquibase Change Types
 
 <div class="tile-container">
   <div class="tile-item" align="center">
@@ -68,16 +68,18 @@ If you installed Liquibase manually with a `.zip` or `.tar.gz` file, there are t
   </div>
 
 <div class="tile-item" markdown="1">
-Choosing this path means that your changes are defined in XML, JSON or YAML formats. Liquibase will create XML formatted changelogs that define your changeSets, then generate and deploy SQL to your database based on those changeSets. Liquibase will also track all database migrations in your *changelog*. 
+
+Choosing this path means that your changes are defined in XML, JSON, or YAML formats. Liquibase will create XML formatted *changelogs* that define your *changeSets*, then generate and deploy SQL to your database based on those *changeSets*. Liquibase will also track all database migrations in your *changelog*. 
+
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
-<div class="cta cta--block"><a href="/get_started/quickstart_lb.html">Your First Migration: Liquibase Functions ►</a></div></div>
+<div class="cta cta--block"><a href="/get_started/quickstart_lb.html">Your First Migration: Liquibase Change Types ►</a></div></div>
 </div>
 </div>
 <div class="tile-container">
 <div class="tile-item" markdown="1">
 
 #### SQL Format
-Choosing this path means that you can define your own changes in SQL format. Liquibase will create SQL formatted changelogs that define your *changeSets*, then generate and deploy those changes to your database automatically. Liquibase supports plain SQL scripts designed to be custom or specific to your database and can even reference multiple script files in your *changelogs*.  
+Choosing this path means that you can define your own changes in SQL format. Liquibase will create SQL formatted *changelogs* that define your *changeSets*, then generate and deploy those changes to your database automatically. Liquibase supports plain SQL scripts designed to be custom or specific to your database and can even reference multiple script files in your *changelogs*.  
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
 <div class="cta cta--block"><a href="/get_started/quickstart_sql.html">Your First Migration: SQL Format ►</a>
 </div></div></div>

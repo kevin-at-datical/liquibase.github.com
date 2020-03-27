@@ -5,7 +5,7 @@ subnav: subnav_workflows.md
 includeDaticalBox: true
 ---
 # Liquibase Developer Workflow
-Let's go through the standard workflow from beginning to end!
+Let's go through the entire developer workflow from beginning to end!
 
 ## Step One
 On your local development machine, add new *changeSet(s)* to your *changelog*. The changes are your choice to make.
