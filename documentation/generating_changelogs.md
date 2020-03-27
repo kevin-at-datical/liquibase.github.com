@@ -12,7 +12,7 @@ title: Docs | Generating changelogs
 The `generateChangeLog` command creates a *changelog* file that has a sequence of *changeSets* which describes how to re-create the current state of the database.
 
 ## Uses
-The `generateChangeLog` command is typically used when you want to capture the current state of a database, then apply those changes to any number of databases.
+The `generateChangeLog` command is typically used when you want to capture the current state of a database, then apply those changes to any number of databases. This is typically only done when a project has an existing database, but hasn't used Liquibase before. See [Adding Liquibase to an Existing project](/documentation/existing_project.html) for more details.
 
 > **Note:** When using the [update command](update.html) to apply the changes in the *changelog*, Liquibase will not create a new database or schema. You must create them ***before*** applying the *changelog* to it.
 
@@ -40,21 +40,21 @@ Parameter | Definition | Requirement
  --url | Specifies the JDBC database connection URL. | Required
  --username | Specifies the database username. | Required
  --password | Specifies the database password. | Required
- --liquibaseProLicenseKey | Your Liquibase Pro license key. | Required 
+ --liquibaseProLicenseKey | Your Liquibase Pro license key. | Optional 
 
 ### `generateChangeLog` Command Parameters
 
 Parameter | Definition | Requirement
  --- | --- | --- 
- --defaultCatalogName=&lt;name&gt; | Default database catalog to use. | Required
- --defaultSchemaName=&lt;name&gt; | Default database schema to use. | Required
- --schemas=&lt;name1, name2&gt; | Database schemas you want to include. | Required
- --outputSchemaAs=&lt;name1,name2&gt; | On | Required
- --includeCatalog=[boolean] |If true, the catalog will be included in generated *changeSets*. Defaults to false. |Required
- --includeSchema=[boolean] | If true, the schema will beincluded in generated *changeSets*. Defaults to false. | Required
+ --defaultCatalogName=&lt;name&gt; | Default database catalog to use. | Optional
+ --defaultSchemaName=&lt;name&gt; | Default database schema to use. | Optional
+ --schemas=&lt;name1, name2&gt; | Database schemas you want to include. | Optional
+ --outputSchemaAs=&lt;name1,name2&gt; | Can be used to  | Optional
+ --includeCatalog=[boolean] |If true, the catalog will be included in generated *changeSets*. Defaults to false. | Optional
+ --includeSchema=[boolean] | If true, the schema will beincluded in generated *changeSets*. Defaults to false. | Optional
  --includeTablespace=[boolean] | If true, the tablespace of tables and indexes will be included. Defaults to false. | Optional *
- --dataOutputDirectory=DIR | Output data as CSV in the given directory | Required
- --diffTypes |List of diff types to include in *changelog* expressed as a comma separated list from: tables, views, columns, indexes, foreignkeys, primarykeys, uniqueconstraints data. | Required **
+ --dataOutputDirectory=DIR | Output data as CSV in the given directory | Optional
+ --diffTypes |List of diff types to include in *changelog* expressed as a comma separated list from: tables, views, columns, indexes, foreignkeys, primarykeys, uniqueconstraints, data. | Optional **
  
 > &#42; The default value of `--includeTablespace` is **False**. `--includeTablespace` only captures the tablespace if it was specified in the create table statement.
 
