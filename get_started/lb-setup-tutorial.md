@@ -25,7 +25,7 @@ Ensure that it runs successfully and displays your installed Java version.
 
 ## Step 3: Download the H2 JDBC Driver
 1. The tutorials make use of an H2 database. You will need to download the H2 JDBC driver, which can be found <a href="http://www.h2database.com/html/cheatSheet.html">here</a>.
-2. Copy the h2 `.jar` file into the `lib` subdirectory of the `LB_HOME` directory where you extracted the Liquibase archive.
+2. Copy the `h2*.jar` file into the `lib` subdirectory of the `LB_HOME` directory where you extracted the Liquibase archive.
 
 ## Step 4: Setup the liquibase.properties File
 1. The tutorials use the CLI. While it is possible to pass all required parameters, such as the JDBC driver and database URL on the command line, it is much easier to 
@@ -44,7 +44,7 @@ changeLogFile: myChangeLog.xml
 
 {% endhighlight %}
 
->**Note:** Be sure to use the actual version of the h2 `.jar` file that you copied into the extracted `LB_HOME/lib` directory.
+>**Note:** Be sure to use the actual version of the `h2*.jar` file that you copied into the extracted `LB_HOME/lib` directory.
 
 > **Note:** If you already have a Liquibase Pro key and want to apply it to
 > your project, add the following property to your `liquibase.properties`
