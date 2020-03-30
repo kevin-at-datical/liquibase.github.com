@@ -62,6 +62,10 @@ the names of objects, for example Oracle converts everything to uppercase (unles
 <code>LEGACY</code> - Same behavior as in Liquibase 2.0<br/>
 <code>QUOTE_ALL_OBJECTS</code> - Every object gets quoted. e.g. person becomes "person".<br/>
 <code>QUOTE_ONLY_RESERVED_WORDS</code> - Quote reserved keywords and invalid column names.</td></tr>
+<tr><td>onValidationFail</td><td>What behavior should Liquibase have when a changeset has a `dbms` attribute that doesn't match the dbms being used during
+and update command. https://forum.liquibase.org/topic/does-onvalidationfail-work-for-checksum-errors
+onValidationFail flag is not for checksums, but for "can this change work on the given database" check.</td></tr>
+
 </table>
 
 
