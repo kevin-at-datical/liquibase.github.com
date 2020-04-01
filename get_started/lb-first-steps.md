@@ -18,7 +18,7 @@ In this tutorial, you will learn how to get up and running with Liquibase.
 If you are brand new to Liquibase, we recommend you begin by downloading the <a href="https://download.liquibase.org/download/?frm=n" target="_blank">Liquibase Installer</a>. You can then skip ahead to the <a href="/documentation/workflows/using-the-lb-installer.html">Using the Liquibase Installer</a> topic to learn more about the Liquibase Developer Workflow.
 
 ### What if I would rather manually install Liquibase?
-There are many ways to download and install Liquibase manually depending on how you choose to use it. If you decide not to use the Liquibase installer (which comes with tons of example files to help you learn the Liquibase Develop workflow **before** using your own database), then you can view the [Liquibase Installation Documentation](/documentation/installation/index.html) for more information on other ways to download and install Liquibase.
+There are many ways to download and install Liquibase manually depending on how you choose to use it. If you decide not to use the Liquibase installer (which comes with tons of example files to help you learn the Liquibase Developer Workflow **before** using your own database), then you can view the [Liquibase Installation Documentation](/documentation/installation/index.html) for more information on other ways to download and install Liquibase.
 </div>
 </div>
 
