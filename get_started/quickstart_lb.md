@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Docs | Migrations with Liquibase Functions
+title: Docs | Migrations with Liquibase Change Types
 subnav: subnav_quickstart.md
 includeDaticalBox: true
 ---
-# Your First Migration with Liquibase Functions
+# Your First Migration with Liquibase Change Types
 
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/lbZxAvftCX0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -16,11 +16,11 @@ Before performing any of these steps, you must be able to connect to a local or 
 View the [Supported Databases](/databases.html) topic for more information on which databases we support.
 You can also view the [Database Tutorials](/documentation/tutorials/index.html) topic for more information on running each database with Liquibase.
 
-## Step 1: Create or Generate a Changelog File
+## Step 1: Create or Generate a *changelog* File
 
-To complete your first migration, you must have a [database changelog file](/documentation/databasechangelog.html). The Changelog file is where all your database changes are defined. Using Liquibase Functions allows you to define these changes with XML, JSON, or YAML. For this walkthrough, we will use XML examples.
+To complete your first migration, you must have a [database changelog file](/documentation/databasechangelog.html). The *changelog* file is where all your database changes are defined. Using Liquibase Change Types allows you to define these changes with XML, JSON, or YAML. For this walkthrough, we will use XML examples.
 
-**<u>Creating Changelog Files Manually</u>**
+**<u>Creating changelog Files Manually</u>**
 
 1. Create a file in your liquibase project directory called `myChangeLog.xml`
 2. For this example, enter the following information into the `myChangeLog.xml` file, then save your file:
@@ -41,12 +41,12 @@ To complete your first migration, you must have a [database changelog file](/doc
 
 **<u>Generating Changelog Files</u>**
 
-If you have an existing database, you can generate a changelog file that reflects the current state of your database. For more information on how to
-generate a changelog, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic, and read the article on
+If you have an existing database, you can generate a *changelog* file that reflects the current state of your database. For more information on how to
+generate a *changelog*, visit the [Liquibase Commands: generateChangelog](/documentation/generating_changelogs.html) topic, and read the article on
 [adding Liquibase on an existing project.](/documentation/existing_project.html)
 
-## Step 2: Add a Change Set
-ChangeSets are (units of change) that Liquibase can execute on a database. When adding a changeSet, your change must be defined by both an "id" attribute and an "author" attribute. Using only an "id" attribute can cause accidental duplications when dealing with multiple developers and code branches. It is best practice to only include one change in each changeset.
+## Step 2: Add a *changeSet*
+*changeSets* are (units of change) that Liquibase can execute on a database. When adding a *changeSet*, your change must be defined by both an `id` attribute and an `author` attribute. Using only an `id` attribute can cause accidental duplications when dealing with multiple developers and code branches. It is best practice to only include one change in each *changeset*.
 
 View the [changeSet tag](/documentation/changeset.html) topic for more information.
 
@@ -78,16 +78,16 @@ View the [changeSet tag](/documentation/changeset.html) topic for more informati
 </databaseChangeLog>
 {% endhighlight %}
 
-## Step 3: Run the Change Set
-When you add a changeSet, Liquibase reads your list of changeSets in order, then checks the `DATABASECHANGELOG` table for anything that was previously run.
+## Step 3: Run the *changeSet*
+When you add a *changeSet*, Liquibase reads your list of *changeSets* in order, then checks the `DATABASECHANGELOG` table for anything that was previously run.
 
-**<u>To run the changeset:</u>**
+**<u>To run the *changeSet*:</u>**
 1. Open your terminal.
 2. Run one of the following commands:
 - **Linux/Unix/Mac:** `LB_HOME/liquibase update`
 - **Windows:** `LB_HOME\liquibase.bat update`
 
-> **Note:** In place of *LB_HOME* use the folder name where you extracted liquibase.
+> **Note:** In place of `LB_HOME` use the folder name where you extracted liquibase.
 
 Your database now contains a table called **department**.
 
@@ -96,16 +96,16 @@ Your database now contains a table called **department**.
 To check your database:
 1. Open your terminal.
 2. Navigate to the folder where you placed your driver jar.
-3. Run: `java -jar (driver-version.jar)
+3. Run: `java -jar (driver-version.jar)`
 
 > **Note:** Where (driver-version.jar) is listed, enter your driver name and version number. Example: <br> `java -jar h2-1.4.199.jar`.
 
 If you used a `liquibase.properties` file, enter the JDBC URL, User Name, and Password. Notice that two tables were created:
-- DATABASECHANGELOG
-- DATABASECHANGELOGLOCK
+- `DATABASECHANGELOG`
+- `DATABASECHANGELOGLOCK`
 
-The DATABASECHANGELOG table contains a list of all the changes that
-have been run against the database. The DATABASECHANGELOGLOCK table is used to make sure two machines don't attempt to modify the database at the same time.
+The `DATABASECHANGELOG` table contains a list of all the changes that
+have been run against the database. The `DATABASECHANGELOGLOCK` table is used to make sure two machines don't attempt to modify the database at the same time.
 
 View [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOGLOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
 
@@ -113,9 +113,9 @@ You can also learn how to create your [First Migrations with SQL](/get_started/q
 
 ### Summary
 In this tutorial we covered:
-- Creating/Generating Changelogs
-- Adding Changesets to your Changelog
-- Running your Changelog
+- Creating/Generating *changelogs*
+- Adding *changeSets* to your *changelog*
+- Running your *changelog*
 - Checking your Database
 
 ## **Next Up:**

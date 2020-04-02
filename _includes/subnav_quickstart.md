@@ -11,6 +11,6 @@
 
 <li><a href="/documentation/config_properties.html"><span>Configure Properties</span></a></li>           <!-- not on main index yet -->
 
-<li><a href="/get_started/quickstart_lb.html"><span>Migrations: LB Functions</span></a></li>              <!-- Migration with Liquibase Functions -->
+<li><a href="/get_started/quickstart_lb.html"><span>Migrations: Change Types</span></a></li>              <!-- Migration with Liquibase Functions -->
 <li><a href="/get_started/quickstart_sql.html"><span>Migrations: SQL Scripts</span></a></li>              <!-- Migrations with SQL -->
 <li><a href="/bestpractices.html"><span>Best Practices</span></a></li>                                    <!-- Best Practices -->

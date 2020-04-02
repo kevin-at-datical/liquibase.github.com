@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Docs | Change executeCommand 
+title: Docs | Liquibase Change Types
 ---
 
-# Bundled Liquibase Changes
+# Liquibase Change Types
 
 Liquibase ships with a large number of refactoring/changes that can be applied to your database as well as the ability to write more through the
 [extension system](../../extensions/index.html).
 
-The bundled changes are listed on the left.
+All Change Types are listed on the left.

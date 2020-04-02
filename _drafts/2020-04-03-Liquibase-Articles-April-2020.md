@@ -11,8 +11,7 @@ the world that are using Liquibase.
 
 * [Evolving Your Database Using Spring Boot and Liquibase](https://medium.com/@harittweets/evolving-your-database-using-spring-boot-and-liquibase-844fcd7931da)
 
-  Another nice tutorial with source code available on GitHub. Describes the benefits of using Liquibase with
-  Spring Boot.
+  Another nice tutorial with source code available on GitHub. Describes the benefits of using Liquibase with Spring Boot.
   
 * [Video : SQLcl and Liquibase : Automating Your SQL and PL/SQL Deployments](https://oracle-base.com/blog/2020/03/02/video-sqlcl-and-liquibase-automating-your-sql-and-pl-sql-deployments/)
 
@@ -51,4 +50,5 @@ the world that are using Liquibase.
 
   By [Erik Hofer](https://github.com/erikhofer)
   
-  This is a utility Gradle script for generating Liquibase changelogs for your Spring Boot / Hibernate JPA projects. 
+  This is a utility Gradle script for generating Liquibase changelogs for your Spring Boot / Hibernate JPA projects. As with any diff-based workflow,
+  you will need to carefully review the changes generated!

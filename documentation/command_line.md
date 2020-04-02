@@ -20,7 +20,7 @@ validate whether the command line parameters are allowed for the current command
 parameters or the parameter appears to be an incorrect format, then an error message of 'unexpected command parameter' will be logged 
 and the execution will terminate.
 
-The command line migrator also allows you to
+The command line migrator also allows you to:
 
 * [perform rollback operations and generate rollback scripts](rollback.html)
 * [generate "diffs"](diff.html)
@@ -117,7 +117,7 @@ the schema in JSON format, and that JSON snapshot can serve as a comparison data
 <tr><th>Option</th><th>Description</th></tr>
 <tr><td>--classpath=&lt;value&gt;</td><td>Classpath containing migration files and JDBC Driver. List multiple items using the standard 
           path separator for your platform, which is a colon (:) on Mac/Linux, and a semicolon (;) on Windows.</td></tr>
-<tr><td>--contexts=&lt;value&gt;</td><td>ChangeSet <a href="/documentation/contexts.html">contexts</a> to execute.  </td></tr>
+<tr><td>--contexts=&lt;value&gt;</td><td>changeSet <a href="/documentation/contexts.html">contexts</a> to execute.  </td></tr>
 <tr><td>--defaultSchemaName=&lt;schema&gt;</td><td>Specifies the default schema to use for managed database objects and for Liquibase control tables.  </td></tr>
 <tr><td>--databaseClass=&lt;custom.DatabaseImpl&gt;</td><td>Specifies a custom <a href="/javadoc/liquibase/database/Database.html">Database</a> implementation to use  </td></tr>
 <tr><td>--defaultsFile=&lt;/path/to/file&gt;</td><td>File containing default option values. (default: ./liquibase.properties)  </td></tr>
@@ -130,7 +130,8 @@ the schema in JSON format, and that JSON snapshot can serve as a comparison data
 <tr><td>--liquibaseProLicenseKey=&lt;licenKey&gt;</td><td>A Liquibase Pro license key (base64 encoded string) unlocks additional features.</td></tr>
 <tr><td>--help</td><td>Output command line parameter help.</td></tr>
 <tr><td>--dataOutputDirectory</td><td>Directory where insert statement csv files will be kept (required by generateChangeLog command).</td></tr>
-<tr><td>--propertyProviderClass=&lt;properties.ClassName&gt;</td><td>custom Properties implementation to use</td></tr>
+<tr><td>--propertyProviderClass=&lt;properties.ClassName&gt;</td><td>Custom properties implementation to use</td></tr>
+<tr><td>--schemas=&lt;name1,name2&gt;</td><td>A comma-separated list of database schemas from which to include objects when executing a command, such as snapshot, generatechangelog or diffchangelog. This flag is required when you are referencing multiple schemas in a command.</td></tr>
 </table>
 
 
@@ -153,16 +154,16 @@ the schema in JSON format, and that JSON snapshot can serve as a comparison data
 </table>
 
 
-## Change Log Properties ##
+## *changelog* Properties
 <table>
 <tr><th>Option</th><th>Description</th></tr>
-<tr><td>-D&lt;property.name&gt;=&lt;property.value&gt;</td><td>Pass a name/value pair for <a href="changelog_parameters.html">substitution of ${} blocks</a> in the change log(s).</td></tr>
+<tr><td>-D&lt;property.name&gt;=&lt;property.value&gt;</td><td>Pass a name/value pair for <a href="changelog_parameters.html">substitution of ${} blocks</a> in the changelogs.</td></tr>
 </table>
 
 
-## Using a liquibase.properties file ##
+## Using a `liquibase.properties` file
 
-If you do not want to always specify options on the command line, you can create a [properties file](config_properties.html) that contains default values. By default, Liquibase will look for a file called "liquibase.properties" in the current working directory, but you can specify an alternate location with the `--defaultsFile` flag. If you have specified an option in a properties file and specify the same option on the command line, the value on the command line will override the properties file value.
+If you do not want to always specify options on the command line, you can create a [properties file](config_properties.html) that contains default values. By default, Liquibase will look for a file called `liquibase.properties` in the current working directory, but you can specify an alternate location with the `--defaultsFile` flag. If you have specified an option in a properties file and specify the same option on the command line, the value on the command line will override the properties file value.
 
 
 ## Examples ##
@@ -180,7 +181,7 @@ java -jar liquibase.jar \
       update
 {% endhighlight %}
 
-### Run update pulling changelogs from a .WAR file ###
+### Run update pulling *changelogs* from a .WAR file
 
 {% highlight bat %}
 java -jar liquibase.jar \
@@ -193,7 +194,7 @@ java -jar liquibase.jar \
       update
 {% endhighlight %}
 
-### Run update pulling changelogs from an .EAR file ###
+### Run update pulling *changelogs* from an .EAR file ###
 
 {% highlight bat %}
 java -jar liquibase.jar \
@@ -206,7 +207,7 @@ java -jar liquibase.jar \
       update
 {% endhighlight %}
 
-### Don't execute changesets, save SQL to /tmp/script.sql ###
+### Don't execute *changeSets*, save SQL to /tmp/script.sql ###
 
 {% highlight bat %}
 java -jar liquibase.jar \
@@ -218,7 +219,7 @@ java -jar liquibase.jar \
         updateSQL > /tmp/script.sql
 {% endhighlight %}
 
-### List locks on the database change log lock table ###
+### List locks on the `DATABASECHANGELOGLOCK` table ###
 
 {% highlight bat %}
 java -jar liquibase.jar \
@@ -230,13 +231,13 @@ java -jar liquibase.jar \
         listLocks
 {% endhighlight %}
 
-### Runs Liquibase using defaults from ./liquibase.properties ###
+### Runs Liquibase using defaults from `./liquibase.properties`
 
 {% highlight bat %}
 java -jar liquibase.jar update
 {% endhighlight %}
 
-#### liquibase.properties
+#### `liquibase.properties`
 
 {% highlight properties %}
 driver: oracle.jdbc.OracleDriver
@@ -246,20 +247,20 @@ username: scott
 password: tiger
 {% endhighlight %}
 
-### Export Data from Database ###
+### Export Data from Database
 This will export the data from the targeted database and put it in a folder "data" in a file name specified with &lt;insert file name&gt;.
 
 {% highlight bat %}
 java -jar liquibase.jar --changeLogFile="./data/<insert file name> " --diffTypes="data" generateChangeLog
 {% endhighlight %}
 
-### Update passing changelog parameters ###
+### Update passing *changelog* parameters
 {% highlight bat %}
 liquibase.bat update -Dengine=myisam
 {% endhighlight %}
 
-# Unicode #
-### MySQL ###
+# Unicode
+### MySQL
 Add url parameters useUnicode=true and characterEncoding=UTF-8 to set character encoding to utf8.
 
 _Since v5.1.3 Connector/J now auto-detects servers configured with character_set_server=utf8mb4 or treats the Java encoding utf-8 passed using characterEncoding=... as utf8mb4._

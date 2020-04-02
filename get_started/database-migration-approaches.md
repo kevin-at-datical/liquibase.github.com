@@ -36,7 +36,7 @@ In a migration-based database deployment, specific migrations for altering the s
 This approach allows you to iteratively modify the structure of your database over time, just as you do with your application code.
 
 ## Can both approaches be used?
-**Yes!** While Liquibase does include comparative [(diff) capabilities](/documentation/diff.html), Liquibase is primarily a migration-based tool. The diff capabilities are mostly intended to assist with onboarding new projects or ensuring that your database migrations are applied correctly.
+**Yes!** While Liquibase does include comparative [`diff` capabilities](/documentation/diff.html), Liquibase is primarily a migration-based tool. The `diff` capabilities are mostly intended to assist with onboarding new projects or ensuring that your database migrations are applied correctly.
 
 <div class="cta-container" style="margin-left: auto; margin-right: auto; width: 300px; height: 50px">
 <div class="cta cta--block"><a href="/get_started/index.html">Return to Get Started Home ►</a></div></div>

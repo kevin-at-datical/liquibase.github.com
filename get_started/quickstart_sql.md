@@ -13,11 +13,11 @@ Before performing any of these steps, you must be able to connect to a local or 
 
 You can also view the [Database Tutorials](/documentation/tutorials/index.html) topic for more information on running each database with Liquibase.
 
-## Step 1: Create a Formatted SQL Changelog
+## Step 1: Create a Formatted SQL *changelog*
 
-To complete your first migration, you must create a formatted `SQL` changelog in your Liquibase project directory so Liquibase can track, version, and deploy changes to your database.
+To complete your first migration, you must create a formatted SQL *changelog* in your Liquibase project directory so Liquibase can track, version, and deploy changes to your database.
 
-**<u>To Create your Changelog</u>**
+**<u>To Create your changelog</u>**
 1. Create a file in your Liquibase project directory called `changelog.sql`.
 2. For this example, enter the following information into the `changelog.sql` file.
 
@@ -27,14 +27,14 @@ To complete your first migration, you must create a formatted `SQL` changelog in
 
 {% endhighlight %}
 
-## Step 2: Add a Change Set
-Change sets are units of change that Liquibase can execute on a database. When adding a change set, your change must be defined by both an "id" attribute and an "author" attibute. It is best practice to only include one change in each changeset.
+## Step 2: Add a *changeSet*
+*changeSets* are units of change that Liquibase can execute on a database. When adding a *changeSet*, your change must be defined by both an `id` attribute and an `author` attibute. It is best practice to only include one change in each changeset.
 
-**<u>To Add your Changeset</u>**
+**<u>To Add your changeSet</u>**
 1. Locate and open the `changelog.sql` file.
 2. For this example, enter the following information into the `changelog.sql` file, then save it. 
 
-See the [Formatted SQL Changelogs](/documentation/sql_format.html) topic for more information about SQL Syntax.
+See the [Formatted SQL changelogs](/documentation/sql_format.html) topic for more information about SQL Syntax.
 
 {% highlight sql %}
 --liquibase formatted sql
@@ -47,11 +47,11 @@ name varchar(255)
 
 {% endhighlight %}
 
-## Step 3: Deploy your Changelog
+## Step 3: Deploy your *changelog*
 
-To deploy the changelog and your new changeset, you run the `update` command. When running this command, Liquibase reads your list of change sets in order and checks the DATABASECHANGELOG table for anything that was previously run. Any changsets that have *not* already been applied to the database will get applied, and Liquibase will track that information.
+To deploy the *changelog* and your new *changeSet*, you run the `update` command. When running this command, Liquibase reads your list of *changeSets* in order and checks the `DATABASECHANGELOG` table for anything that was previously run. Any *changSets* that have *not* already been applied to the database will get applied, and Liquibase will track that information.
 
-**<u>To Apply the Change Set</u>**
+**<u>To Apply the changeSet</u>**
 1. Open your command prompt or terminal.
 2. Run the following command: `liquibase --changeLogFile=changelog.sql update`
 
@@ -61,16 +61,16 @@ Your database now contains a table called **test1**.
 To check your database, open your database IDE to find the change that you made.
 
 Notice that two tables were created along with test1: 
-- DATABASECHANGELOG
-- DATABASECHANGELOGLOCK
+- `DATABASECHANGELOG`
+- `DATABASECHANGELOGLOCK`
 
-The DATABASECHANGELOG table contains a list of all the changes that 
-have been run against the database. The DATABASECHANGELOGLOCK table is used to make sure two machines don't attempt to modify the database at the same time.
+The `DATABASECHANGELOG` table contains a list of all the changes that 
+have been run against the database. The `DATABASECHANGELOGLOCK` table is used to make sure two machines don't attempt to modify the database at the same time.
 
 View [DATABASECHANGELOG Table](/documentation/databasechangelog_table.html) and [DATABASECHANGELOGLOCK Table](/documentation/databasechangeloglock_table.html) topics for more information.
 
 ### Additional Information
-This topic is great when you only have a handful of SQL scripts. However, if your list of scripts becomes too large to maintain in a formatted SQL changelog, you may want to break up your scripts into smaller more manageable chunks. 
+This topic is great when you only have a handful of SQL scripts. However, if your list of scripts becomes too large to maintain in a formatted SQL *changelog*, you may want to break up your scripts into smaller more manageable chunks. 
 
 See the [Database Migrations with Multiple SQL Files](/documentation/multiple-sql-migration.html) topic for more information on how to Migrate with Multiple SQL files.
 
@@ -78,9 +78,9 @@ You can also learn how to create your [First Migrations with Liquibase Functions
 
 ### Summary
 In this tutorial we covered:
-- Creating Formatted SQL Changelogs
-- Adding Changesets to your Changelog
-- Running your Changelog
+- Creating Formatted SQL *changelogs*
+- Adding *changeSets* to your *changelog*
+- Running your *changelog*
 - Checking your Database
 
 ## **Next Up:** 
