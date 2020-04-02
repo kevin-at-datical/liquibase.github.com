@@ -21,9 +21,9 @@ extraJavascriptFiles:
     </div>
   </div>
   <div class="landing-page__cta-block span-10 push-2">
-    <script src="//app-ab14.marketo.com/js/forms2/js/forms2.min.js"></script>
+    <script src="//pages.liquibase.org/js/forms2/js/forms2.min.js"></script>
     <form id="mktoForm_3661"></form>
-    <script>MktoForms2.loadForm("//app-ab14.marketo.com", "522-INH-443", 3661);</script>
+    <script>MktoForms2.loadForm("//pages.liquibase.org", "522-INH-443", 3661);</script>
     <script async src="https://marketo.clearbit.com/assets/v1/marketo/forms.js"
       data-clearbit-publishable-key="pk_a7c07aac0af9ac5ec657ff5f9ab23f4a"></script>
     <script>MktoForms2.whenReady(function(form) {
