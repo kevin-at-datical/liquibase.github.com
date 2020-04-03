@@ -23,7 +23,7 @@ extraJavascriptFiles:
       <div class="landing-page__demo-type__text">
         <div class="landing-page__demo-type__title">Live Online Demo</div>
         <div class="landing-page__demo-type__info">Reserve your spot in an interactive 45-minute product demo with expert
-          Q&A. <br><br> Next Session April 9th at 11:00 AM CT</div>
+          Q&A. <br><br> Next Session April 8th at 11:00 AM CT</div>
         <div class="landing-page__demo-type__cta">
           <a href="/demo-live.html">Register</a>
         </div>
