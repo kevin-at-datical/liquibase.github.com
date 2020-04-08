@@ -21,7 +21,7 @@ The root Liquibase repository is at [http://github.com/liquibase/liquibase](http
 
 ## Git crash course ##
 
-If you have not used Git or GitHub before, there are many resources available including [Git - SVN Crash Cource](http://git.or.cz/course/svn.html) and the general [GitHub Help](http://help.github.com).
+If you have not used Git or GitHub before, there are many resources available including [Git - SVN Crash Course](http://git.or.cz/course/svn.html) and the general [GitHub Help](http://help.github.com).
 
 If you would prefer to use subversion, GitHub [transparently supports SVN clients as well](https://github.com/blog/1178-collaborating-on-github-with-subversion)
 
